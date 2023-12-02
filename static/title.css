@@ -1,0 +1,41 @@
+/* title.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.title {
+    background-color: rgb(0, 201, 87);
+    color: white;
+    padding: 0.1px;
+    text-align: center;
+}
+
+.title-container {
+    text-align: center;
+}
+
+/* Estilos para las celdas de la tabla */
+th,
+td {
+    background-color: lightgrey;
+    height: 4px;
+}

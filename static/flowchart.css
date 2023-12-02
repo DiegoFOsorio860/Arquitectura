@@ -1,0 +1,156 @@
+/* Estilos para los botones de fase */
+.phase-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
+    gap: 30px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px 25px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #6ba7ce; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
+
+.objetive-button {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px 25px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #dfc336; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+}
+
+.phase-button:hover {
+    background-color: #10a9dc; /* Color de fondo al pasar el ratón */
+}
+
+.trimestre-button {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px 25px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #da951d; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    margin-right: 20px; /* Ajusta el espacio entre los botones */
+}
+
+.trimestre-button:hover {
+    background-color: #8e9395; /* Color de fondo al pasar el ratón */
+}
+
+.objetive-button:hover {
+    background-color: #857f0b; /* Color de fondo al pasar el ratón */
+}
+
+.button-description {
+    /* ... */
+    bottom: -40px; /* Ajusta la posición vertical */
+    left: 0;
+    right: 0;
+    margin-top: 5px; /* Espacio entre el texto principal y la descripción */
+    color: #000; /* Color del texto */
+    /* Elimina el ancho máximo para que el texto se ajuste automáticamente */
+    width: auto;
+    /* Ajusta el color del texto si es necesario */
+    color: #000; /* Color del texto */
+}
+
+/* Flechas entre los botones de fase y objetivos */
+.phase1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+    top: 50%;
+    left: 100%; /* Ajusta la posición a la derecha del botón */
+    transform: translateY(-50%);
+}
+
+.objective1::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid black;
+    top: 50%;
+    right: 100%; /* Ajusta la posición a la derecha del botón */
+    transform: translateY(-50%);
+}
+
+/* Estilos para los nuevos botones de fase */
+.new-phase {
+    background-color: #2ecc71;
+    margin-right: 10px; /* Ajusta el margen entre botones */
+}
+
+.new-phase:hover {
+    background-color: #27ae60;
+}
+
+.button-text {
+    margin-bottom: 10px; /* Ajusta el espacio entre los textos */
+}
+
+.button_trimestre {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none; /* Quita la subrayado del enlace */
+    color: black; /* Color del texto */
+    background-color: lightgrey; /* Color de fondo */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.button_trimestre:hover {
+    background-color: grey; /* Color de fondo al pasar el ratón */
+}
