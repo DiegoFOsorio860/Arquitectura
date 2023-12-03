@@ -4,6 +4,8 @@ from openpyxl import load_workbook
 
 app = Flask(__name__)
 
+datos= pd.read_excel('02122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
+
 @app.route('/')
 def header():
     with open('templates/header.html', 'r') as header_file:
@@ -16,24 +18,36 @@ def header():
     return render_template('header.html', header=header_html, intro=intro_html)
 
 @app.route('/estructura')
-def pagina_dos():
+def mostrar_estructura():
     # Lee el contenido de estructura.html
     with open('templates/estructura.html', 'r') as estructura_file:
         estructura_html = estructura_file.read()
 
-    return render_template('estructura.html', estructura=estructura_html)
-
-datos= pd.read_excel('30112023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
-datos = datos.iloc[[1],[1]]
-
-@app.route('/estructura')
-def TimeFase1():
-    # Extraer dos valores específicos de la hoja 'TIME'
-    valor1 = datos.iloc[[1], [1]]  # Reemplaza 'fila' y 'columna' por los índices correspondientes
-    valor2 = datos.iloc[[1], [4]]  # Otro valor que desees obtener
-
-    # Renderizar la plantilla con los valores extraídos
-    return render_template('templates/estructura.html', valor1=valor1, valor2=valor2)
+    # Suponiendo que 'datos' es un DataFrame que contiene la información necesaria
+    valor1 = datos.iloc[245,2]  # Reemplaza con los índices correspondientes
+    valor2 = datos.iloc[245,3]  # Reemplaza con los índices correspondientes
+    valor2 = round(valor2, 2)*100  # Redondear a 2 decimales
+    valor3 = datos.iloc[245,4]  # Reemplaza con los índices correspondientes
+    valor4 = datos.iloc[245,5]  # Reemplaza con los índices correspondientes
+    valor4 = round(valor4, 2)*100  # Redondear a 2 decimales
+    valor5 = datos.iloc[245,6]  # Reemplaza con los índices correspondientes
+    valor6 = datos.iloc[194,2]  # Reemplaza con los índices correspondientes
+    valor7 = datos.iloc[194,3]  # Reemplaza con los índices correspondientes
+    valor7 = round(valor7,2)*100
+    valor8 = datos.iloc[194,4]  # Reemplaza con los índices correspondientes
+    valor9 = datos.iloc[194,5]  # Reemplaza con los índices correspondientes
+    valor9 = round(valor9,2)*100
+    valor10 = datos.iloc[223,2]  # Reemplaza con los índices correspondientes
+    valor11 = datos.iloc[223,3]  # Reemplaza con los índices correspondientes
+    valor11 = round(valor11,2)*100
+    valor12 = datos.iloc[223,4]  # Reemplaza con los índices correspondientes
+    valor13 = datos.iloc[223,5]  # Reemplaza con los índices correspondientes
+    valor13 = round(valor13,2)*100
+    # Renderizar la plantilla con los valores extraídos y el contenido de la estructuraaa
+    return render_template('estructura.html', valor1=valor1, valor2=valor2, valor3=valor3, 
+                           valor4=valor4,valor5=valor5, valor6=valor6, 
+                           valor7 = valor7, valor8 = valor8, valor9 = valor9, 
+                           valor10 = valor10, valor11 = valor11, valor12=valor12, valor13=valor13, estructura=estructura_html)
 
 @app.route('/fase1')
 def fase1():
@@ -68,5 +82,4 @@ def trimestre1():
     return render_template('trimestre1.html', trimestre1=trimestre1_html)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5002)
-
+    app.run(debug=True, host='0.0.0.0', port=5001)
