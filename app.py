@@ -35,30 +35,46 @@ def mostrar_estructura():
         estructura_html = estructura_file.read()
 
     # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_1 = datos_TIME.iloc[245,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_2 = datos_TIME.iloc[245,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_2 = round(valor_TIME_T1_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_3 = datos_TIME.iloc[245,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_4 = datos_TIME.iloc[245,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_4 = round(valor_TIME_T1_4, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_5 = datos_TIME.iloc[245,6]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_6 = datos_TIME.iloc[194,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_7 = datos_TIME.iloc[194,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_7 = round(valor_TIME_T1_7,2)*100
-    valor_TIME_T1_8 = datos_TIME.iloc[194,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_9 = datos_TIME.iloc[194,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_9 = round(valor_TIME_T1_9,2)*100
-    valor_TIME_T1_10 = datos_TIME.iloc[223,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_11 = datos_TIME.iloc[223,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_11 = round(valor_TIME_T1_11,2)*100
-    valor_TIME_T1_12 = datos_TIME.iloc[223,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_13 = datos_TIME.iloc[223,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_13 = round(valor_TIME_T1_13,2)*100
+    valor_TIME_T1_1 = datos_TIME.iloc[194,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_2 = datos_TIME.iloc[194,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_2 = round(valor_TIME_T1_2,2)*100
+    valor_TIME_T1_3 = datos_TIME.iloc[194,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_4 = datos_TIME.iloc[194,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_4 = round(valor_TIME_T1_4,2)*100
+
+    valor_TIME_T2_1 = datos_TIME.iloc[223,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T2_2 = datos_TIME.iloc[223,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T2_2 = round(valor_TIME_T2_2,2)*100
+    valor_TIME_T2_3 = datos_TIME.iloc[223,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T2_4 = datos_TIME.iloc[223,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T2_4 = round(valor_TIME_T2_4,2)*100
+
+    valor_TIME_F1_1 = datos_TIME.iloc[245,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_F1_2 = datos_TIME.iloc[245,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_F1_2 = round(valor_TIME_F1_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_F1_3 = datos_TIME.iloc[245,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_F1_4 = datos_TIME.iloc[245,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_F1_4 = round(valor_TIME_F1_4, 2)*100  # Redondear a 2 decimales
+    
+
     # Renderizar la plantilla con los valor_TIME_T1_es extraídos y el contenido de la estructuraaa
-    return render_template('estructura.html', valor_TIME_T1_1=valor_TIME_T1_1, valor_TIME_T1_2=valor_TIME_T1_2, valor_TIME_T1_3=valor_TIME_T1_3, 
-                           valor_TIME_T1_4=valor_TIME_T1_4,valor_TIME_T1_5=valor_TIME_T1_5, valor_TIME_T1_6=valor_TIME_T1_6, 
-                           valor_TIME_T1_7 = valor_TIME_T1_7, valor_TIME_T1_8 = valor_TIME_T1_8, valor_TIME_T1_9 = valor_TIME_T1_9, 
-                           valor_TIME_T1_10 = valor_TIME_T1_10, valor_TIME_T1_11 = valor_TIME_T1_11, valor_TIME_T1_12=valor_TIME_T1_12, valor_TIME_T1_13=valor_TIME_T1_13, estructura=estructura_html)
+    return render_template('estructura.html', 
+                           valor_TIME_T1_1=valor_TIME_T1_1, 
+                           valor_TIME_T1_2=valor_TIME_T1_2, 
+                           valor_TIME_T1_3=valor_TIME_T1_3, 
+                           valor_TIME_T1_4=valor_TIME_T1_4,
+                            
+                           valor_TIME_T2_1=valor_TIME_T2_1, 
+                           valor_TIME_T2_2=valor_TIME_T2_2, 
+                           valor_TIME_T2_3=valor_TIME_T2_3, 
+                           valor_TIME_T2_4=valor_TIME_T2_4,
+
+                           valor_TIME_F1_1=valor_TIME_F1_1, 
+                           valor_TIME_F1_2=valor_TIME_F1_2, 
+                           valor_TIME_F1_3=valor_TIME_F1_3, 
+                           valor_TIME_F1_4=valor_TIME_F1_4,
+  
+                           estructura=estructura_html)
 
 @app.route('/fase1')
 def fase1():
@@ -126,6 +142,37 @@ def trimestre1():
     valor_TIME_T1_INGLES_4 = datos_TIME.iloc[189,5]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_INGLES_4 = round(valor_TIME_T1_INGLES_4, 2)*100  # Redondear a 2 decimales
 
+            # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_MATEMATICAS_1 = datos_TIME.iloc[190,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_MATEMATICAS_2 = datos_TIME.iloc[190,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_MATEMATICAS_2 = round(valor_TIME_T1_MATEMATICAS_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_MATEMATICAS_3 = datos_TIME.iloc[190,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_MATEMATICAS_4 = datos_TIME.iloc[190,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_MATEMATICAS_4 = round(valor_TIME_T1_MATEMATICAS_4, 2)*100  # Redondear a 2 decimales
+
+                # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_BIOLOGIA_1 = datos_TIME.iloc[191,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_BIOLOGIA_2 = (datos_TIME.iloc[191,3])*100  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_BIOLOGIA_2 = "{:.3}".format(valor_TIME_T1_BIOLOGIA_2)  # Redondear a 2 decimales
+    valor_TIME_T1_BIOLOGIA_3 = datos_TIME.iloc[191,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_BIOLOGIA_4 = datos_TIME.iloc[191,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_BIOLOGIA_4 = round(valor_TIME_T1_BIOLOGIA_4, 2)*100  # Redondear a 2 decimales
+
+                    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_COMUNICACION_1 = datos_TIME.iloc[192,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_COMUNICACION_2 = datos_TIME.iloc[192,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_COMUNICACION_2 = round(valor_TIME_T1_COMUNICACION_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_COMUNICACION_3 = datos_TIME.iloc[192,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_COMUNICACION_4 = datos_TIME.iloc[192,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_COMUNICACION_4 = round(valor_TIME_T1_COMUNICACION_4, 2)*100  # Redondear a 2 decimales
+
+                        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_LOGISTICA_1 = datos_TIME.iloc[193,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_LOGISTICA_2 = datos_TIME.iloc[193,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_LOGISTICA_2 = round(valor_TIME_T1_LOGISTICA_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_LOGISTICA_3 = datos_TIME.iloc[193,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_LOGISTICA_4 = datos_TIME.iloc[193,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_LOGISTICA_4 = round(valor_TIME_T1_LOGISTICA_4, 2)*100  # Redondear a 2 decimales
 
     return render_template('trimestre1.html', 
                             valor_TIME_T1_HIDRAULICA_1=valor_TIME_T1_HIDRAULICA_1, 
@@ -142,6 +189,28 @@ def trimestre1():
                            valor_TIME_T1_INGLES_2= valor_TIME_T1_INGLES_2, 
                            valor_TIME_T1_INGLES_3= valor_TIME_T1_INGLES_3, 
                            valor_TIME_T1_INGLES_4= valor_TIME_T1_INGLES_4,
+
+                           valor_TIME_T1_MATEMATICAS_1= valor_TIME_T1_MATEMATICAS_1, 
+                           valor_TIME_T1_MATEMATICAS_2= valor_TIME_T1_MATEMATICAS_2, 
+                           valor_TIME_T1_MATEMATICAS_3= valor_TIME_T1_MATEMATICAS_3, 
+                           valor_TIME_T1_MATEMATICAS_4= valor_TIME_T1_MATEMATICAS_4,
+
+                           valor_TIME_T1_BIOLOGIA_1= valor_TIME_T1_BIOLOGIA_1, 
+                           valor_TIME_T1_BIOLOGIA_2= valor_TIME_T1_BIOLOGIA_2, 
+                           valor_TIME_T1_BIOLOGIA_3= valor_TIME_T1_BIOLOGIA_3, 
+                           valor_TIME_T1_BIOLOGIA_4= valor_TIME_T1_BIOLOGIA_4,
+
+                           valor_TIME_T1_COMUNICACION_1= valor_TIME_T1_COMUNICACION_1, 
+                           valor_TIME_T1_COMUNICACION_2= valor_TIME_T1_COMUNICACION_2, 
+                           valor_TIME_T1_COMUNICACION_3= valor_TIME_T1_COMUNICACION_3, 
+                           valor_TIME_T1_COMUNICACION_4= valor_TIME_T1_COMUNICACION_4,
+
+                           valor_TIME_T1_LOGISTICA_1= valor_TIME_T1_LOGISTICA_1, 
+                           valor_TIME_T1_LOGISTICA_2= valor_TIME_T1_LOGISTICA_2, 
+                           valor_TIME_T1_LOGISTICA_3= valor_TIME_T1_LOGISTICA_3, 
+                           valor_TIME_T1_LOGISTICA_4= valor_TIME_T1_LOGISTICA_4,
+
+
                            trimestre1=trimestre1_html)
 
 @app.route('/T1_RecoleccionMuestras')
@@ -349,4 +418,4 @@ def resultado():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    app.run(debug=True, host='0.0.0.0', port=5005)
