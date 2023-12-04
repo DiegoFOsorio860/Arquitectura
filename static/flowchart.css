@@ -15,9 +15,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 15px 25px;
+    padding: 25px;
     margin: 10px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
@@ -39,7 +39,7 @@
     position: relative;
     padding: 15px 25px;
     margin: 10px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
@@ -64,7 +64,7 @@
     position: relative;
     padding: 15px 25px;
     margin: 10px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
@@ -155,6 +155,111 @@
     background-color: grey; /* Color de fondo al pasar el ratón */
 }
 
+/* ################################################################# */
+/* ##################### FASE 1 ############################## */
+/* ################################################################# */
+
+.phase-buttons_FASE {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 1fr); /* Una fila */
+    gap: 0px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: flex-start; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-buttons_FASE1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 1fr); /* Cuatro filas */
+    gap: 1px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_FASE1 {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #88cbc6; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
+
+.phase-buttons_FASE2 {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 2fr); /* Cuatro filas */
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_FASE2 {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #50cfc4; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
+
+.phase-buttons_FASE3 {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 2fr); /* Cuatro filas */
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_FASE3 {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #179287; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
 
 /* ################################################################# */
 /* #####################TRIMESTRE 1 ############################## */
@@ -247,6 +352,37 @@
     cursor: pointer;
     text-align: center;
     background-color: #bcb8b6; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
+
+.phase-buttons_T1_Complementaria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 1fr); /* Cuatro filas */
+    gap: 5px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_T1_Complementaria {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #159494; /* Color de fondo */
     color: #fff; /* Color del texto */
     font-size: 15px;
     font-weight: none;

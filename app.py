@@ -101,6 +101,17 @@ def trimestre1():
 
     return render_template('trimestre1.html', trimestre1=trimestre1_html)
 
+@app.route('/recoleccion_muestras_T1')
+def recoleccion_muestras_T1():
+    """
+    Muestra la información correspondiente a la fase 3.
+    Lee el contenido de recoleccion_muestras_T1.html y lo renderiza en la plantilla 'recoleccion_muestras_T1.html'.
+    """
+    with open('templates/recoleccion_muestras_T1.html', 'r') as recoleccion_muestras_T1_file:
+        recoleccion_muestras_T1_html = recoleccion_muestras_T1_file.read()
+
+    return render_template('recoleccion_muestras_T1.html', recoleccion_muestras_T1=recoleccion_muestras_T1_html)
+
 ############################
 ############################
 
@@ -279,4 +290,4 @@ def resultado():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8000)

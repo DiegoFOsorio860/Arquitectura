@@ -59,14 +59,14 @@
         <!-- Agregué un párrafo vacío como separador -->
         <p style="margin-bottom: 0;"></p>
         <div>
-            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> PROYECTO DE FORMACIÓN | FASES - OBJETIVOS </b></h1>
+            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> FASES </b></h1>
         </div>    
         <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
-        
     </div>
 </body>
 
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -74,71 +74,72 @@
     <link rel="stylesheet" href="static/flowchart.css">
 </head>
 <body>
-    <div class="phase-buttons">
-        <div class="phase-button" id="fase1">
-            <a class="button_text"><b>Fase 1 [F1]</b></a>
-            <span class="button-description"><b>DIAGNÓSTICO</b></span>
-            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
-            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+    <div class="phase-buttons_FASE">     
+        <div class="phase-buttons_FASE1">
+            <div class="phase-button_FASE1" id="fase1">
+                <a href="/fase1" class="button">Fase 1 [F1]</a>
+            <div class="phase-button_FASE1" id="fase1">
+                <a href="/trimestre1" class="button">Trimestre 1 [T1]</a>
+                <span class="phase-button_T1_Agua"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
+            <div class="phase-button_FASE1" id="fase1">
+                <a href="/trimestre2" class="button">Trimestre 2 [T2]</a>
+                <span class="button-description"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
         </div>
-        <div class="objetive-button" id="proyecto1">
-            <span class="button-text" style="font-size: 20px;"><b>Objetivo Proyecto 1 [OP1]</b></span>
-            <span class="button-description"><b>Diagnosticar las condiciones de la prestación del servicio de agua potable y saneamiento básico.</b></span>
-            <span><b>Formación Total:</b> {{ valor5 }} Horas</span>
+    </div>
+        <div class="phase-buttons_FASE2">
+            <div class="phase-button_FASE2" id="fase1">
+                <a href="/fase1" class="button">Fase 2 [F2]</a>
+            <div class="phase-button_FASE2" id="fase1">
+                <a href="/trimestre1" class="button">Trimestre 3 [T3]</a>
+                <span class="button-description"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
+            <div class="phase-button_FASE2" id="fase1">
+                <a href="/trimestre2" class="button">Trimestre 4 [T4]</a>
+                <span class="button-description"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
+            <div class="phase-button_FASE2" id="fase1">
+                <a href="/trimestre2" class="button">Trimestre 5 [T5]</a>
+                <span class="button-description"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
+            <div class="phase-button_FASE2" id="fase1">
+                <a href="/trimestre2" class="button">Trimestre 6 [T6]</a>
+                <span class="button-description"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
         </div>
-            <div class="trimestre-button">
-                <a href="/trimestre1" class="button_trimestre">
-                    <div class="trimestre-text" style="font-size: 20px;"><b>Trimestre 1 [T1]</b></div>
-                    <div class="trimestre-content">
-                        <span style="font-size: 14px;"><b>Formación Directa:</b> {{ valor6 }} Horas [{{ valor7 }}%]</span>
-                        <br>
-                        <span style="font-size: 14px;"><b>Formación Autónoma:</b> {{ valor8 }} Horas [{{ valor9 }}%]</span>
-                    </div>
-                </a>
-                <a href="/trimestre2" class="button_trimestre">
-                    <div class="trimestre-text" style="font-size: 20px;"><b>Trimestre 2 [T2]</b></div>
-                    <div class="trimestre-content">
-                        <span style="font-size: 14px;"><b>Formación Directa:</b> {{ valor10 }} Horas [{{ valor11 }}%]</span>
-                        <br>
-                        <span style="font-size: 14px;"><b>Formación Autónoma:</b> {{ valor12 }} Horas [{{ valor13 }}%]</span>
-                    </div>
-                </a>
+    </div>
+        <div class="phase-buttons_FASE3">
+            <div class="phase-button_FASE3" id="fase1">
+                <a href="/fase1" class="button">Fase 3 [F3]</a>
+            <div class="phase-button_FASE3" id="fase1">
+                <a href="/trimestre1" class="button">Trimestre 7 [T]</a>
+                <span class="button-description"><br></span>
+                <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+                <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+            </div>
         </div>
     </div>
 </body>
-  
-       <!-- Flecha que conecta Fase 1 con Objetivo Proyecto a1 a-aa->
-        <div class="arrow arrow-down"></div>
-        <div class="phase-button">
-            <a href="/fase2" class="button">Fase 2 [F2]</a>
-            <span class="button-description">EJECUCIÓN</span>
-        </div>
-        <div class="objetive-button">
-            <span class="button-text">Objetivo Proyecto 2 [OP2]</span>
-            <span class="button-description">Ejecutar las  acciones de monitoreo, medición y seguimiento de la  prestación del servicios de agua potable y saneamiento básico.</span>
-        </div>
-        <div class="trimestre-button" id="trimestre2">
-            <span class="button-text">Trimestre 2 [T2]</span>
-        </div>
-        <!-- Flecha que conecta Fase 1 con Objetivo Proyecto 1 -->
-        <div class="arrow arrow-down"></div>
-        <div class="phase-button">
-            <a href="/fase3" class="button">Fase 3 [F3]</a>
-            <span class="button-description">EVALUACIÓN</span>
-        </div>
-        <div class="objetive-button">
-            <span class="button-text">Objetivo Proyecto 3 [OP3]</span>
-            <span class="button-description">Elaborar informes de inspección y condiciones de la prestación de servicio de agua potable y saneamiento básico.</span>
-        </div>
-        <div class="objetive-button" id="trimestre3">
-            <span class="button-text">Trimestre 3 [T3]</span>
-        </div>
-    </div>
-</body>
+
+
+
 </html>
     <!-- Botón en la parte inferior -->
     <div class="button-container">
-        <a href="/" class="button">Ir a Presentación</a>
+        <a href="/" class="button">Ir a Presentación </a>
     </div>
 </body>
 </html>
