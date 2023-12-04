@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PRESENTACIÓN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+
+        .logo-container {
+            text-align: center;
+        }
+
+        .title {
+            background-color: rgb(0, 201, 87);
+            color: white;
+            padding: 0.1px;
+            text-align: center;
+        }
+
+        .title-container {
+            text-align: center;
+        }
+
+        /* Agregué un estilo para las celdas de la tabla */
+        th, td {
+            background-color: lightgrey;
+            height: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://certificadossena.net/wp-content/uploads/2022/10/logo-sena-verde-complementario-svg-2022.svg" alt="Logo SENA" style="width: 90px; height: 90px;">
+    </div>
+
+    <div class="title" style="margin-bottom: 1px;">
+        <h3 id="moving-title">REGIONAL ANTIOQUIA | CENTRO PARA EL DESARROLLO DEL HÁBITAT Y LA CONSTRUCCIÓN | CDHC</h3>
+    </div>
+    
+    <div class="title-container" style="margin-bottom: 1px;">
+        <h2 style="font-size: 100%; margin-bottom: 0; line-height: 0.5;"><b>PROCEDIMIENTO DE DESARROLLO CURRICULAR | ARQUITECTURA CURRICULAR - PROYECTO DE FORMACIÓN</b></h2>
+        <h2 style="font-size: 100%; color: blue; margin-bottom: 0; line-height: 0.5;"><b>SUPERVISIÓN EN SISTEMAS DE AGUA Y SANEAMIENTO | 921200</b></h2>
+        <!-- Agregué un párrafo vacío como separador -->
+        <p style="margin-bottom: 1;"></p>
+        <div>
+            <h4 style="font-size: 100%; margin-bottom: 20px;"><b> Implementación de un modelo de inteligencia artificial mediante el uso de redes neuronales multicapas (MLP) como alerta temprana de posible deserción de aprendices en condición de vulnerabilidad económica </b></h4>
+        </div>    
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+        
+    </div>
+</body>
+  <!-- Línea separadora -->
+  <hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+
+  <h2>ARTICULACIÓN INSTITUCIONAL:</h2>
+  <div class="image-container">
+    <img src="static/CDHC.png" alt="Descripción de la imagen" style="width: 500px; height: 500;">
+  </div>
+  <div class="text">
+    <p style="text-align: justify;">
+      En el año 2020, la Dirección de Formación Profesional, el grupo de Bienestar al Aprendiz y Atención al Egresado planteó la realización de una encuesta nacional dirigida a los aprendices que abandonaron sus estudios, con el objetivo de identificar las causas asociadas a la suspensión o abandono de su formación. Para cumplir con este compromiso, se estableció una colaboración con el grupo de Servicio al Ciudadano de la Dirección de Promoción y Relaciones Corporativas, quienes lideraron la caracterización de los grupos de valor e interés de la entidad.
+    </p>
+    <p style="text-align: justify;">
+      Para el Servicio Nacional de Aprendizaje (SENA), la caracterización de los grupos de valor e interés implica profundizar cada año en un grupo y/o en alguna de sus características. Esto permite a la entidad conocer los intereses, necesidades, gustos, canales de acceso, conocimientos, uso de los canales y beneficios buscados por los aprendices.
+    </p>
+      
+    <p style="text-align: justify;">
+      Los aprendices son considerados uno de los grupos de valor e interés institucional significativos, ya que en ellos se centran los procesos misionales de la entidad. Por lo tanto, conocer las razones que llevan a la suspensión o abandono de su formación, así como algunas de sus características sociodemográficas, brinda la oportunidad de sinergia para:
+    </p>
+      <ul style="text-align: justify;">
+        <li>Proporcionar información a la entidad que permita mejorar aspectos relacionados con la calidad de la formación.</li>
+        <li>Proporcionar información a la entidad que permita mejorar aspectos relacionados con los servicios institucionales y de apoyo para los aprendices.</li>
+        <li>Proporcionar a la entidad información sobre la percepción de los aprendices respecto al desempeño de los instructores, con el fin de formular planes de mejora y capacitación.</li>
+      </ul>
+    <p style="text-align: justify;">
+      Todo esto debe ser útil para tomar medidas estratégicas y administrativas que favorezcan la permanencia y certificación de los aprendices.
+    </p>
+    <p style="font-style: italic; font-size: smaller;">Fuente: Caracterización de usuarios grupos de valor y de interés del SENA 2019. Dirección de Promoción y Relaciones Corporativas Coordinación Nacional de Servicio al Ciudadano Bogotá, 2019.</p>
+
+    <p style="text-align: justify;">
+        De acuerdo a lo anteriormente expuesto, te invitamos a participar del siguiente formulario dando clic en el siguiente botón:
+    </p>
+    
+  <!-- Agregar el botón -->
+  <style>
+    .my-button {
+      background-color: #4CAF50; /* Color de fondo */
+      color: white; /* Color del texto */
+      padding: 10px 20px; /* Espacio alrededor del contenido */
+      border: none; /* Sin borde */
+      text-align: center; /* Alineación del texto */
+      text-decoration: none; /* Sin subrayado de texto */
+      display: inline-block; /* Mostrar como elemento en línea */
+      font-size: 16px; /* Tamaño de fuente */
+      margin: 10px; /* Margen exterior */
+      cursor: pointer; /* Cambiar el cursor al pasar por encima */
+      border-radius: 5px; /* Radio de esquina */
+    }
+  </style>
+  <a href="{{ url_for('formulario') }}"><button class="my-button">Ir al formulario</button></a>
+
+</body>
+</html>
+
+

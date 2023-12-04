@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Objetivos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .logo-container {
+      text-align: center;
+    }
+
+    .title {
+      background-color: rgb(0, 201, 87);
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='logo_sena.png') }}" alt="Logo SENA" style="width: 150px; height: 150px;">
+  </div>
+  <head>
+    <link rel="stylesheet" href="styles_1.css">
+  </head>
+  <body>
+  <div class="title">
+    <h1 id="moving-title">CENTRO PARA EL DESARROLLO DEL HÁBITAT Y LA CONSTRUCCIÓN</h1>
+  </div>
+</body>
+</html>
+
+  <h1>Implementación de un modelo de inteligencia artificial mediante el uso de redes neuronales multicapas (MLP) como alerta temprana de posible deserción de aprendices en condición de vulnerabilidad económica</h1>
+
+
+  <style>
+    .form-group {
+      margin-bottom: 20px; /* Espacio entre grupos de campos */
+    }
+  
+    .input-field {
+      width: 300px; /* Ancho del campo de entrada */
+      height: 30px; /* Altura del campo de entrada */
+      border: 1px solid #ccc; /* Borde del campo de entrada */
+      border-radius: 5px; /* Radio de esquina del campo de entrada */
+      padding: 5px; /* Espacio interno del campo de entrada */
+      font-size: 14px; /* Tamaño de fuente del campo de entrada */
+    }
+  </style>
+
+ <form action="/submit_form" method="POST">
+  <div id="formulario">
+    <style>
+      h2 {
+        font-weight: bold; /* Aplicar negrita al texto */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aplicar sombreado */
+      }
+    </style>
+    
+    <!-- Línea separadora -->
+    <hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+    
+<div style="background-color: rgba(188, 255, 227, 0.294); padding: 10px;">
+    
+    <h2>DATOS PERSONALES</h2>
+
+        <style>
+      .form-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .form-group label {
+        width: 200px;
+      }
+
+      .form-group input[type="text"],
+      .form-group select {
+        width: 300px;
+      }
+    </style>
+
+    <!-- Campo de Nombre -->
+    <div class="form-group">
+      <label for="nombre" style="width: 400px;" >NOMBRE COMPLETO:</label>
+      <input type="text" id="nombre" name="nombre"  style="width: 300px; height: 20px;">
+    </div>
+
+    <!-- Tipo de Identificación -->
+    <div class="form-group">
+      <label for="tipoIdentificacion" style="width: 400px;">TIPO DE IDENTIFICACIÓN:</label>
+      <select id="tipoIdentificacion" name="tipoIdentificacion" style="width: 300px; height: 20px;" oninput="changeColor(this)">
+        <option value="">Seleccionar...</option>
+        <option value="CC">CC</option>
+        <option value="TI">TI</option>
+        <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+      </select>
+    </div>
+
+    <!-- Agrega el resto de los campos del formulario -->
+
+    <div class="form-group">
+      <label for="numero" style="width: 400px;">NUMERO DE IDENTIFICACIÓN:</label>
+      <input type="tel" id="numero" name="numero" style="width: 300px; height: 20px;" oninput="changeBackground(this)">
+    </div>
+
+
+      <!-- Campo de Correo Electrónico -->
+      <div class="form-group">
+        <label for="correo" style="width: 400px;">CORREO ELECTRÓNICO:</label>
+        <input type="email" id="correo" name="correo" style="width: 300px; height: 20px"; oninput="changeBackground(this)">
+      </div>
+
+      <!-- Ficha de Caracterización -->
+      <div class="form-group">
+        <label for="ficha" style="width: 400px;">FICHA DE CARACTERIZACIÓN:</label>
+        <input type="text" id="ficha" name="ficha" style="width: 300px; height: 20px;">
+      </div>
+
+      <!-- Campo de Teléfono -->
+      <div class="form-group">
+        <label for="telefono" style="width: 400px;" >TELÉFONO CELULAR:</label>
+        <input type="tel" id="telefono" name="telefono" style="width: 300px; height: 20px;">
+      </div>
+</div>     
+
+      <!-- Línea separadora -->
+      <hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+
+      
+      <h2>DATOS DEMOGRÁFICOS</h2>
+
+      <!-- Pregunta 1 -->
+      <div class="form-group">
+        <label for="pregunta1" style="width: 400px;">1. ESTADO CIVIL:</label>
+        <select id="pregunta1" name="pregunta1" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Casado</option>
+          <option value="1">Soltero</option>
+          <option value="2">Separado</option>
+          <option value="3">Unión Libre o Unión de Hecho</option>
+          <option value="4">Divorciado</option>
+          <option value="5">Viudo</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="form-group">
+        <label for="pregunta2" style="width: 400px;">2. EDAD:</label>
+        <input type="number" id="pregunta2" name="pregunta2" style="width: 300px; height: 20px;">
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="form-group">
+        <label for="pregunta3" style="width: 400px;">3. GENERO:</label>
+        <select id="pregunta3" name="pregunta3" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Masculino</option>
+          <option value="1">Femenino</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="form-group">
+        <label for="pregunta4" style="width: 400px;">4. DEPARTAMENTO DE RESIDENCIA:</label>
+        <select id="pregunta4" name="pregunta4" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Amazonas</option>
+          <option value="1">Antioquia</option>
+          <option value="2">Arauca</option>
+          <option value="3">Atlántico</option>
+          <option value="4">Boyacá</option>
+          <option value="5">Bolívar</option>
+          <option value="6">Bogotá D.C.</option>
+          <option value="7">Caquetá</option>
+          <option value="8">Caldas</option>
+          <option value="9">Córdoba</option>
+          <option value="10">Cundinamarca</option>
+          <option value="11">Cesar</option>
+          <option value="12">Cauca</option>
+          <option value="13">Casanare</option>
+          <option value="14">Nariño</option>
+          <option value="15">Norte de Santander</option>
+          <option value="16">Risaralda</option>
+          <option value="17">Santander</option>
+          <option value="18">Sucre</option>
+          <option value="19">Tolima</option>
+          <option value="20">Valle del Cauca</option>
+          <option value="21">Putumayo</option>
+          <option value="22">Quindío</option>
+          <option value="23">Magdalena</option>
+          <option value="24">Huila</option>
+          <option value="25">La Guajira</option>
+          <option value="26">Meta</option>
+          <option value="27">Guainía</option>
+          <option value="28">Chocó</option>
+          <option value="29">Guaviare</option>
+          <option value="30">Vaupés</option>
+          <option value="31">Vichada</option>
+        </select>
+      </div>
+        
+      <!-- Línea separadora -->
+      <hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+
+      <style>
+        h2 {
+          font-weight: bold; /* Aplicar negrita al texto */
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aplicar sombreado */
+        }
+      </style>
+
+<h2>DATOS SOCIECONÓMICOS</h2>
+
+      <!-- Pregunta 5 -->
+      <div class="form-group">
+        <label for="pregunta5" style="width: 800px;">5. ¿EN TÉRMINOS GENERALES COMO PIENSA QUE ESTÁ SU SALUD?:</label>
+        <select id="pregunta5" name="pregunta5" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Buena</option>
+          <option value="1">Excelente</option>
+          <option value="2">Muy Buena</option>
+          <option value="3">Regular</option>
+          <option value="4">Mala</option>
+          <option value="5">Viudo</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- Pregunta 6 -->
+      <div class="form-group">
+        <label for="pregunta6" style="width: 800px;">6. ¿ HA CONSUMIDO ALGUNA SUSTANCIA PSICOACTIVA A LO LARGO DE SU VIDA?:</label>
+        <select id="pregunta6" name="pregunta6" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">No</option>
+          <option value="1">Si</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+
+      <!-- Pregunta 7 -->
+      <div class="form-group">
+        <label for="pregunta7" style="width: 800px;">7. ¿TIPO DE SUSTANCIA DE CONSUMO?:</label>
+        <select id="pregunta7" name="pregunta7" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Ninguna</option>
+          <option value="1">Licor</option>
+          <option value="2">Cigarrillo, marihuana, otro:</option>
+          <option value="3">Cigarrillo</option>
+          <option value="4">Licor, marihuana, cocaina</option>
+          <option value="5">Licor, marihuana</option>
+          <option value="6">Marihuana</option>
+          <option value="7">Licor, cigarrillo, marihuana, inhalables (popper, dick, pegante) o solventes, bazuco, lsd (papel, acido), anfetaminas</option>
+          <option value="8">Licor (alcohol)</option>
+          <option value="9">Licor (alcohol), cigarrillo, marihuana, inhalables (popper, dick, pegante, sacol) o solventes, cocaina, heroina, lsd (papel, acido), anfetaminas, kripa</option>
+          <option value="10">Licor (alcohol), cigarrillo, marihuana</option>
+          <option value="11">Gasolina, ninguna</option>
+          <option value="12">Marihuana, cocaina</option>
+          <option value="13">Licor (alcohol), marihuana, cocaina</option>
+          <option value="14">Licor (alcohol), ninguna</option>
+          <option value="15">Licor (alcohol), marihuana, inhalables (popper, dick, pegante, sacol) o solventes</option>
+          <option value="16">Cigarrillo, marihuana</option>
+          <option value="17">Licor (alcohol), cigarrillo</option>
+          <option value="18">Licor (alcohol), cigarrillo, marihuana, tusi</option>
+          <option value="19">Licor (alcohol), cigarrillo, marihuana, inhalables (popper, dick, pegante, sacol) o solventes, tusi, kripa</option>
+          <option value="20">Licor (alcohol), cigarrillo, marihuana, cocaina, tusi, bazuco</option>
+          <option value="21">Licor (alcohol), cigarrillo, marihuana, inhalables (popper, dick, pegante, sacol) o solventes, kripa</option>
+          <option value="22">Licor (alcohol), inhalables (popper, dick, pegante, sacol) o solventes</option>
+          <option value="23">Licor (alcohol), marihuana, tusi</option>
+          <option value="24">Licor (alcohol), cigarrillo, marihuana, tusi, lsd (papel, acido)</option>
+          <option value="25">Licor (alcohol), cigarrillo, tusi</option>
+          <option value="26">Licor (alcohol), cigarrillo, cocaina</option>
+          <option value="27">Licor (alcohol), cigarrillo, marihuana, cocaina</option>
+          <option value="28">Licor (alcohol), cigarrillo, marihuana, kripa</option>
+          <option value="29">Licor (alcohol), cigarrillo, inhalables (popper, dick, pegante, sacol) o solventes</option>
+          <option value="30">Licor (alcohol), marihuana, inhalables (popper, dick, pegante, sacol) o solventes, tusi, kripa</option>
+          <option value="31">Licor (alcohol), cigarrillo, marihuana, inhalables (popper, dick, pegante, sacol) o solventes</option>
+          <option value="32">Licor (alcohol), marihuana, inhalables (popper, dick, pegante, sacol) o solventes, lsd (papel, acido), otro:</option>
+          <option value="33">Marihuana, inhalables (popper, dick, pegante, sacol) o solventes</option>
+          <option value="34">Cigarrillo, marihuana, inhalables (popper, dick, pegante, sacol) o solventes, tusi, lsd (papel, acido)</option>
+          <option value="35">Licor (alcohol), cigarrillo, marihuana, inhalables (popper, dick, pegante, sacol) o solventes, cocaina, tusi, heroina, lsd (papel, acido), kripa</option>
+          <option value="36">Marihuana, inhalables (popper, dick, pegante, sacol) o solventes, tusi</option>
+          <option value="37">Licor, cigarrillo, marihuana, inhalables (popper, dick, pegante) o solventes</option>
+          <option value="38">Licor, cigarrillo, marihuana</option>
+          <option value="39">Marihuana, inhalables (popper, dick, pegante) o solventes, lsd (papel, acido), kripa</option>
+          <option value="40">Otro:</option>
+          <option value="41">Licor, cigarrillo, marihuana, cocaina, kripa</option>
+          <option value="42">Licor, cigarrillo, anfetaminas</option>
+          <option value="43">Licor, kripa</option>
+          <option value="44">Licor, cigarrillo, marihuana, cocaina, lsd (papel, acido)</option>
+          <option value="45">Licor, cigarrillo, marihuana, inhalables (popper, dick, pegante) o solventes, kripa</option>
+          <option value="46">Licor, marihuana, inhalables (popper, dick, pegante) o solventes</option>
+          <option value="47">Licor, cigarrillo, marihuana, cocaina</option>
+          <option value="48">Kripa</option>
+          <option value="49">Licor, marihuana, inhalables (popper, dick, pegante)
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- Pregunta 8 -->
+      <div class="form-group">
+        <label for="pregunta8" style="width: 800px;">8. ¿ CONSUMIÓ  LA SUSTANCIA SEÑALADA ANTERIORMENTE EN EL ÚLTIMO AÑO?:</label>
+        <select id="pregunta8" name="pregunta8" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Si</option>
+          <option value="1">No</option>
+          <option value="2">No Aplica</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- Pregunta 9  -->
+      <div class="form-group">
+        <label for="pregunta9" style="width: 800px;">9. ¿ CONSUMIÓ ESTA SUSTANCIA EN LOS ÚLTIMOS TRES MESES?:</label>
+        <select id="pregunta9" name="pregunta9" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Si</option>
+          <option value="1">No</option>
+          <option value="2">No Aplica</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+        <!-- Pregunta 10  -->
+      <div class="form-group">
+        <label for="pregunta10" style="width: 800px;">10. ESTRATO :</label>
+        <select id="pregunta10" name="pregunta10" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">1</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+          <option value="4">5</option>
+          <option value="5">6</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+
+      <!-- Pregunta 11 -->
+      <div class="form-group">
+        <label for="pregunta11" style="width: 800px;">11. ¿CUÁL ES EL VALOR DE LOS INGRESOS MENSUALES DE SU GRUPO FAMILIAR ?:</label>
+        <select id="pregunta11" name="pregunta11" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">De 3 a 4 salarios mínimos</option>
+          <option value="1">Más de 4 salarios mínimos</option>
+          <option value="2">Menos de un salario mínimo legal vigente</option>
+          <option value="3">No tiene ingresos el grupo familiar</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+
+      <!-- Pregunta 12 -->
+      <div class="form-group">
+        <label for="pregunta12" style="width: 800px;">12. ¿A CUÁL DE LOS SIGUIENTES GRUPOS POBLACIONALES PERTENECE?:</label>
+        <select id="pregunta12" name="pregunta12" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Ninguno</option>
+          <option value="1">Adolescente trabajador</option>
+          <option value="2">Ninguna de las anteriores, ninguno</option>
+          <option value="3">Hombre cabeza de hogar</option>
+          <option value="4">Ninguna de las anteriores</option>
+          <option value="5">Victima del conflicto armado, mujer cabeza de hogar</option>
+          <option value="6">Mujer cabeza de hogar</option>
+          <option value="7">Victima del conflicto armado</option>
+          <option value="8">Victima del conflicto armado, ninguna de las anteriores, ninguno</option>
+          <option value="9">Lgbti</option>
+          <option value="10">Lgbti, victima del conflicto armado</option>
+          <option value="11">Reincorporado y excombatiente</option>
+          <option value="12">Adolescente trabajador, desplazado por fenómenos naturales, lgbti, victima del conflicto armado</option>
+          <option value="13">Ninguna de las anteriores, mujer víctima de violencia</option>
+          <option value="14">Adolescente trabajador, hombre cabeza de hogar</option>
+          <option value="15">Victima del conflicto armado, fuerzas militares y la policía nacional</option>
+          <option value="16">Fuerzas militares y la policía nacional</option>
+          <option value="17">Mujer víctima de violencia, mujer cabeza de hogar</option>
+          <option value="18">Desplazado por fenómenos naturales, mujer cabeza de hogar</option>
+          <option value="19">Ninguna de las anteriores, mujer cabeza de hogar</option>
+          <option value="20">Victima del conflicto armado, hombre cabeza de hogar</option>
+          <option value="21">Adolescente trabajador, desplazado por fenómenos naturales</option>
+          <option value="22">Adolescente trabajador, victima del conflicto armado, hombre cabeza de hogar</option>
+          <option value="23">Desplazado por fenómenos naturales, victima del conflicto armado</option>
+          <option value="24">Adolescente desvinculado de grupos al margen de la ley</option>
+          <option value="25">Adolescente trabajador, victima del conflicto armado</option>
+          <option value="26">Desplazado por fenómenos naturales, ninguno</option>
+          <option value="27">Victima del conflicto armado, ninguno</option>
+          <option value="28">Adolescente trabajador, ninguna de las anteriores</option>
+          <option value="29">Fuerzas militares y la policía nacional, ninguno</option>
+          <option value="30">Soldado campesino</option>
+          <option value="31">Victima del conflicto armado, hombre cabeza de hogar, ninguno</option>
+          <option value="32">Adolescente trabajador, lgbti</option>
+          <option value="33">Lgbti, ninguna de las anteriores</option>
+          <option value="34">Lgbti, ninguna de las anteriores, ninguno</option>
+          <option value="35">Desplazado por fenómenos naturales</option>
+          <option value="36">Ninguna de las anteriores, hombre cabeza de hogar</option>
+          <option value="37">Mujer cabeza de hogar, hombre cabeza de hogar, ninguno</option>
+          <option value="38">Adolescente trabajador, desplazado por fenómenos naturales, hombre cabeza de hogar</option>
+          <option value="39">Lgbti, ninguno</option>
+          <option value="40">Victima del conflicto armado, mujer víctima de violencia</option>
+          <option value="41">Tercera edad</option>
+          <option value="42">Hombre cabeza de hogar, ninguno</option>
+          <option value="43">Victima del conflicto armado, soldado campesino</option>
+          <option value="44">Victima del conflicto armado, hombre cabeza de hogar, tercera edad</option>
+          <option value="45">Persona con libertad condicionada</option>
+          <option value="46">Adolescente desvinculado de grupos al margen de la ley, adolescente trabajador</option>
+          <option value="47">Adolescente trabajador, ninguno</option>
+          <option value="48">Mujer víctima de violencia</option>
+          <option value="49">Desplazado por fenómenos naturales, lgbti, hombre cabeza de hogar</option>
+          <option value="50">Mujer cabeza de hogar, hombre cabeza de hogar</option>
+          <option value="51">Adolescente trabajador, ninguna de las anteriores, ninguno</option>
+          <option value="52">Victima del conflicto armado, mujer cabeza de hogar, tercera edad</option>
+          <option value="53">Victima del conflicto armado, tercera edad</option>
+          <option value="54">Adolescente trabajador, lgbti, hombre cabeza de hogar</option>
+          <option value="55">Ninguna de las anteriores, tercera edad</option>
+          <option value="56">Adolescente desvinculado de grupos al margen de la ley, ninguno</option>
+          <option value="57">Adolescente trabajador, victima del conflicto armado, mujer cabeza de hogar</option>
+          <option value="58">Reincorporado y excombatiente, ninguno</option>
+          <option value="59">Lgbti, mujer cabeza de hogar</option>
+          <option value="60">Adolescente trabajador, mujer cabeza de hogar</option>
+          </select>
+          </div>
+
+            <!-- Pregunta 13  -->
+      <div class="form-group">
+        <label for="pregunta13" style="width: 800px;">13. ¿ CONDICIÓN DE AFILIADO?:</label>
+        <select id="pregunta13" name="pregunta13" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Beneficiario</option>
+          <option value="1">Cotizante</option>
+          <option value="2">No Aplica</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+          <!-- Pregunta 14  -->
+      <div class="form-group">
+        <label for="pregunta14" style="width: 800px;">14. ¿ ESTÁ USTED AFILIADO AL SISBEN?:</label>
+        <select id="pregunta14" name="pregunta14" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">No</option>
+          <option value="1">Si</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div> 
+
+       <!-- pregunta15 -->
+      <div class="form-group">
+        <label for="pregunta15" style="width: 800px;">15. ¿TOMA O SE INYECTA DE MANERA REGULAR ALGÚN MEDICAMENTO?:</label>
+        <select id="pregunta15" name="pregunta15" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">No</option>
+          <option value="1">Si</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- pregunta16 -->
+      <div class="form-group">
+        <label for="pregunta16" style="width: 800px;">16. ¿SUFRE USTED DE ALGUNA ALERGIA?:</label>
+        <select id="pregunta16" name="pregunta16" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">No</option>
+          <option value="1">Si</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+        <!-- pregunta17 -->
+      <div class="form-group">
+        <label for="pregunta17" style="width: 800px;">17. ¿DEPENDE ECONÓMICAMENTE DE ALGUIEN?:</label>
+        <select id="pregunta17" name="pregunta17" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">No</option>
+          <option value="1">Si</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+        <!-- Pregunta18 -->
+      <div class="form-group">
+        <label for="pregunta18" style="width: 800px;">18. TIPO DE VIVIENDA EN LA QUE VIVE:</label>
+        <select id="pregunta18" name="pregunta18" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Apartamento</option>
+          <option value="1">Casa</option>
+          <option value="2">Habitación</option>
+          <option value="3">Otro</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- pregunta19 -->
+      <div class="form-group">
+        <label for="pregunta19" style="width: 800px;">19. ¿ TIENE HIJOS?:</label>
+        <select id="pregunta19" name="pregunta19" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">No</option>
+          <option value="1">Si</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+            <!-- pregunta20 -->
+      <div class="form-group">
+        <label for="pregunta20" style="width: 800px;">20. NÚMERO DE PERSONAS QUE DEPENDEN DE USTED:</label>
+        <select id="pregunta20" name="pregunta20" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Uno</option>
+          <option value="1">Dos</option>
+          <option value="2">Tres</option>
+          <option value="3">Más de tres</option>
+          <option value="4">Ninguno</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- pregunta21 -->
+      <div class="form-group">
+        <label for="pregunta21" style="width: 800px;">21. ¿QUÉ TIPO DE TRANSPORTE UTILIZA PARA DESPLAZARSE AL CENTRO DE FORMACIÓN?:</label>
+        <select id="pregunta21" name="pregunta21" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="1">AUTO PARTICULAR</option>
+          <option value="2">AUTO PARTICULAR, BUS</option>
+          <option value="3">AUTO PARTICULAR, BUS, CAMINANDO</option>
+          <option value="4">AUTO PARTICULAR, CAMINANDO</option>
+          <option value="5">BICICLETA</option>
+          <option value="6">BICICLETA TRADICIONAL</option>
+          <option value="7">BICICLETA, BUS, CAMINANDO</option>
+          <option value="8">BICICLETA, CAMINANDO</option>
+          <option value="9">BUS</option>
+          <option value="10">BUS, CAMINANDO</option>
+          <option value="11">BUS, CAMINANDO, OTRO</option>
+          <option value="12">BUS, CAMINANDO, PATINETA</option>
+          <option value="13">BUS, OTRO</option>
+          <option value="14">CAMINANDO</option>
+          <option value="15">CAMINANDO, OTRO</option>
+          <option value="16">INTEGRADO</option>
+          <option value="17">INTEGRADO, BICICLETA, BUS, CAMINANDO</option>
+          <option value="18">INTEGRADO, BUS</option>
+          <option value="19">INTEGRADO, BUS, CAMINANDO</option>
+          <option value="20">INTEGRADO, CAMINANDO</option>
+          <option value="21">INTEGRADO, MOTO</option>
+          <option value="22">INTEGRADO, OTRO</option>
+          <option value="23">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA)</option>
+          <option value="24">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), AUTO PARTICULAR</option>
+          <option value="25">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), AUTO PARTICULAR, BUS</option>
+          <option value="26">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA TRADICIONAL</option>
+          <option value="27">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA TRADICIONAL, BUS</option>
+          <option value="28">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA TRADICIONAL, BUS, CAMINANDO</option>
+          <option value="29">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA, BUS</option>
+          <option value="30">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA, BUS, CAMINANDO</option>
+          <option value="31">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA, CAMINANDO</option>
+          <option value="32">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BICICLETA, OTRO</option>
+          <option value="33">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BUS</option>
+          <option value="34">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BUS, CAMINANDO</option>
+          <option value="35">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BUS, CAMINANDO, OTRO</option>
+          <option value="36">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), BUS, OTRO</option>
+          <option value="37">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), CAMINANDO</option>
+          <option value="38">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO</option>
+          <option value="39">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, AUTO PARTICULAR</option>
+          <option value="40">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BICICLETA</option>
+          <option value="41">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BICICLETA TRADICIONAL, BUS, CAMINANDO</option>
+          <option value="42">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BICICLETA TRADICIONAL, CAMINANDO</option>
+          <option value="43">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BICICLETA, BUS</option>
+          <option value="44">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BICICLETA, BUS, CAMINANDO</option>
+          <option value="45">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BUS</option>
+          <option value="46">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, BUS, CAMINANDO</option>
+          <option value="47">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, CAMINANDO</option>
+          <option value="48">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, MOTO</option>
+          <option value="49">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, MOTO, AUTO PARTICULAR, BUS, CAMINANDO</option>
+          <option value="50">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, MOTO, BUS, CAMINANDO</option>
+          <option value="51">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), INTEGRADO, OTRO</option>
+          <option value="52">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO</option>
+          <option value="53">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, AUTO PARTICULAR</option>
+          <option value="54">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, AUTO PARTICULAR, BUS</option>
+          <option value="55">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, BICICLETA</option>
+          <option value="56">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, BICICLETA TRADICIONAL</option>
+          <option value="57">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, BICICLETA, BUS</option>
+          <option value="58">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, BICICLETA, CAMINANDO</option>
+          <option value="59">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, BUS</option>
+          <option value="60">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, BUS, CAMINANDO</option>
+          <option value="61">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), MOTO, CAMINANDO</option>
+          <option value="62">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), OTRO</option>
+          <option value="63">METRO (INCLUYE CABLE, METRO PLUS Y TRANVÍA), PATINETA</option>
+          <option value="64">MOTO</option>
+          <option value="65">MOTO, AUTO PARTICULAR</option>
+          <option value="66">MOTO, AUTO PARTICULAR, CAMINANDO</option>
+          <option value="67">MOTO, BICICLETA</option>
+          <option value="68">MOTO, BICICLETA, BUS, CAMINANDO</option>
+          <option value="69">MOTO, BICICLETA, CAMINANDO</option>
+          <option value="70">MOTO, BUS</option>
+          <option value="71">MOTO, BUS, CAMINANDO</option>
+          <option value="72">MOTO, CAMINANDO</option>
+          <option value="73">MOTO, OTRO</option>
+          <option value="74">OTRO</option>
+          <option value="75">PATINETA</option>
+        </select>
+      </div>
+
+      <!-- pregunta22 -->
+      <div class="form-group">
+        <label for="pregunta22" style="width: 800px;">22. OCUPACIÓN ACTUAL:</label>
+        <select id="pregunta22" name="pregunta22" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Actividades del hogar</option>
+          <option value="1">Buscando Empleo</option>
+          <option value="2">Empleo Formal</option>
+          <option value="3">Empresario o Emprendedor</option>
+          <option value="4">Estudiante</option>
+          <option value="5">Independiente</option>
+          <option value="6">Otras</option>
+          <option value="7">Sin empleo</option>
+          <option value="8">Trabajo Informal</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- pregunta23 -->
+      <div class="form-group">
+        <label for="pregunta23" style="width: 800px;">23. ¿ EL TRABAJO QUE REALIZA ESTÁ RELACIONADO CON SU PROGRAMA DE FORMACIÓN ACTUAL?:</label>
+        <select id="pregunta23" name="pregunta23" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Si</option>
+          <option value="1">No</option>
+          <option value="2">No Aplica</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+      <!-- Línea separadora -->
+      <hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+
+      <style>
+        h2 {
+          font-weight: bold; /* Aplicar negrita al texto */
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aplicar sombreado */
+        }
+      </style>
+
+    <h2>DATOS ACADÉMICOS</h2>
+
+      <!-- pregunta24 -->
+      <div class="form-group">
+        <label for="pregunta24" style="width: 800px;">24. QUE NIVEL DE FORMACIÓN TIENE ACTUALMENTE  (QUE ESTÉ FINALIZADO):</label>
+        <select id="pregunta24" name="pregunta24" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Auxiliar</option>
+          <option value="1">Ninguno</option>
+          <option value="2">Operario</option>
+          <option value="3">Posgrado</option>
+          <option value="4">Profesional Universitario</option>
+          <option value="5">Profesional Universitario, posgrado</option>
+          <option value="6">Técnico</option>
+          <option value="7">Técnico, Auxiliar</option>
+          <option value="8">Técnico, Ninguno</option>
+          <option value="9">Técnico, Operario</option>
+          <option value="10">Técnico, Posgrado</option>
+          <option value="11">Técnico, Profesional Universitario</option>
+          <option value="12">Técnico, Profesional Universitario, Posgrado</option>
+          <option value="13">Técnico, Tecnólogo</option>
+          <option value="14">Tecnólogo</option>
+          <option value="15">Tecnólogo, Ninguno</option>
+          <option value="16">Tecnólogo, Posgrado</option>
+          <option value="17">Tecnólogo, Profesional Universitario</option>
+          <option value="18">Tecnólogo, Profesional Universitario, Posgrado</option>
+        </select>
+      </div>
+
+      <!-- pregunta25 -->
+      <div class="form-group">
+        <label for="pregunta25" style="width: 800px;">25. ¿A LA FECHA USTED RECIBE ALGUNO DE LOS SIGUIENTES APOYOS EN EL SENA?:</label>
+        <select id="pregunta25" name="pregunta25" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Apoyo de Alimentación</option>
+          <option value="1">Apoyo de Medios Tecnologicos</option>
+          <option value="2">Apoyo de Sostenimiento Regular</option>
+          <option value="3">Apoyo de Transporte</option>
+          <option value="4">Contrato de Aprendizaje</option>
+          <option value="5">FIC</option>
+          <option value="6">Monitorías</option>
+          <option value="7">Ninguno</option>
+          <option value="8">Patrocinio</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+        <!-- pregunta26 -->
+      <div class="form-group">
+        <label for="pregunta26" style="width: 800px;">26. TIPO DE POBLACIÓN:</label>
+        <select id="pregunta26" name="pregunta26" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Actos terrorista/atentados/combates/enfrentamientos/hostigamientos</option>
+          <option value="1">Adolescente trabajador</option>
+          <option value="2">Afrocolombiano</option>
+          <option value="3">Afrocolombianos desplazados por la violencia</option>
+          <option value="4">Amenaza</option>
+          <option value="5">Desaparición forzada</option>
+          <option value="6">Desplazados discapacitados</option>
+          <option value="7">Desplazados por fenomenos naturales</option>
+          <option value="8">Desplazados por fenómenos naturales cabeza de familia</option>
+          <option value="9">Desplazados por la violencia</option>
+          <option value="10">Desplazados por la violencia cabeza de familia</option>
+          <option value="11">Discapacidad auditiva</option>
+          <option value="12">Discapacidad física</option>
+          <option value="13">Discapacidad intelectual</option>
+          <option value="14">Emprendedores</option>
+          <option value="15">Homicidio / masacre</option>
+          <option value="16">Indigena</option>
+          <option value="17">Indígenas desplazados por la violencia</option>
+          <option value="18">Inpec</option>
+          <option value="19">Jovenes vulnerables</option>
+          <option value="20">Minas antipersonal, munición sin explotar, y artefacto «explosivo improvisado</option>
+          <option value="21">Mujer cabeza de familia</option>
+          <option value="22">Negro</option>
+          <option value="23">Ninguna</option>
+          <option value="20">Personas en proceso de reintegración</option>
+          <option value="21">Soldados campesinos</option>
+          <option value="22">Tercera edad</option>
+        </select>
+      </div>
+
+      <!-- pregunta27 -->
+      <div class="form-group">
+        <label for="pregunta27" style="width: 800px;">27. TIPO DE OFERTA:</label>
+        <select id="pregunta27" name="pregunta27" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Abierta</option>
+          <option value="1">Cerrada</option>
+          <option value="2">Especial Empresarial Cerrada</option>
+          <option value="3">Especial Social Cerrada</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+     <!-- pregunta28 -->
+     <div class="form-group">
+      <label for="pregunta28" style="width: 800px;">28. MODALIDAD DEL PROGRAMA DE FORMACIÓN:</label>
+      <select id="pregunta28" name="pregunta28" style="width: 300px; height: 20px;">
+        <option value="">Seleccionar...</option>
+        <option value="0">Presencial</option>
+        <option value="1">Virtual</option>
+        <!-- Agrega más opciones según sea necesario -->
+      </select>
+    </div>
+
+      <!-- pregunta29 -->
+     <div class="form-group">
+      <label for="pregunta29" style="width: 800px;">29. NIVEL DEL PROGRAMA DE FORMACIÓN:</label>
+      <select id="pregunta29" name="pregunta29" style="width: 300px; height: 20px;">
+        <option value="">Seleccionar...</option>
+        <option value="0">Técnico</option>
+        <option value="1">Tecnólogo</option>
+        <!-- Agrega más opciones según sea necesario -->
+      </select>
+    </div>
+
+      <!-- pregunta30 -->
+    <div class="form-group">
+      <label for="pregunta30" style="width: 800px;">30 PROGRAMA DE FORMACIÓN:</label>
+      <select id="pregunta30" name="pregunta30" style="width: 300px; height: 20px;">
+        <option value="">Seleccionar...</option>
+        <option value="0">Agua y saneamiento</option>
+        <option value="1">Tecnologo en construccion en edificaciones</option>
+        <option value="2">Asistencia administrativa</option>
+        <option value="3">Asistencia administrativa .</option>
+        <option value="4">Asistencia en la funcion publica</option>
+        <option value="5">Catastro</option>
+        <option value="6">Construcción</option>
+        <option value="7">Construcción de edificaciones</option>
+        <option value="8">Construccion de infraestructura vial</option>
+        <option value="9">Construccion de redes de acueducto y alcantarillado</option>
+        <option value="10">Construcción de vias</option>
+        <option value="11">Construcción de vias .</option>
+        <option value="12">Construccion en edificaciones.</option>
+        <option value="13">Construcciones livianas</option>
+        <option value="14">Construcciones livianas industrializadas en seco</option>
+        <option value="15">Control ambiental</option>
+        <option value="16">Coordinacion de procesos logisticos</option>
+        <option value="17">Desarrollo de operaciones logística en la cadena de abastecimiento</option>
+        <option value="18">Desarrollo grafico de proyectos de arquitectura e ingenieria</option>
+        <option value="19">Dibujo arquitectónico</option>
+        <option value="20">Dibujo y modelado arquitectonico y de ingenieria</option>
+        <option value="21">Electrogasodomesticos.</option>
+        <option value="22">Gestión de la propiedad horizontal</option>
+        <option value="23">Gestion de la seguridad y salud en el trabajo</option>
+        <option value="24">Gestión de mercados</option>
+        <option value="25">Gestion de proyectos de desarrollo economico y social</option>
+        <option value="26">Gestión del talento humano</option>
+        <option value="27">Gestión en sistemas de manejo ambiental</option>
+        <option value="28">Gestión logística</option>
+        <option value="29">Gestión para el suministro gases combustibles y no combustibles</option>
+        <option value="30">Gestion para suministro de gas combustible</option>
+        <option value="31">Gobierno local</option>
+        <option value="32">Instalación de redes residenciales comerciales e industriales para suministro de gases combustibles y no combustibles</option>
+        <option value="33">Instalaciones electricas residenciales</option>
+        <option value="34">Instalaciones hidraulicas y sanitarias en edificaciones residenciales y comerciales.</option>
+        <option value="35">Instalaciones para suministro de gas combustible en edificaciones residenciales y comerciales</option>
+        <option value="36">Instalaciones para suministro de gas combustible en edificaciones residenciales y comerciales.</option>
+        <option value="37">Integracion de operaciones logisticas</option>
+        <option value="38">Laboratorio de suelos.</option>
+        <option value="39">Levantamientos topograficos y georreferenciacion</option>
+        <option value="40">Manejo ambientala</option>
+        <option value="41">Manejo de gestión ambiental</option>
+        <option value="42">Mantenimiento y reparacion de edificaciones</option>
+        <option value="43">Mantenimiento y reparacion de edificaciones.</option>
+        <option value="44">Monitoreo ambiental</option>
+        <option value="45">Obras civiles</option>
+        <option value="46">Oficial de construcción</option>
+        <option value="47">Operacion de maquinaria pesada para excavacion.</option>
+        <option value="48">Pintura arquitectonica y acabados especiales</option>
+        <option value="49">Prevencion y control ambiental</option>
+        <option value="50">Revestimiento en pintura arquitectónica</option>
+        <option value="51">Revestimiento en pintura arquitectonica.</option>
+        <option value="52">Salud ocupacional</option>
+        <option value="53">Seguridad industrial para la construcción, montajes e infraestructura</option>
+        <option value="54">Seguridad ocupacional</option>
+        <option value="55">Servicios y operaciones microfinancieras</option>
+        <option value="56">Sistemas de gestion ambiental</option>
+        <option value="57">Supervision en sistemas de agua y saneamiento</option>
+        <option value="58">Técnicas de desarrollo gráfico de proyectos de construcción</option>
+        <option value="59">Topografía</option>
+        <option value="60">Tratamiento de agua</option>
+        </select>
+    </div>
+
+      <!-- Pregunta31 -->
+      <div class="form-group">
+        <label for="pregunta31" style="width: 800px;">31. JORNADA:</label>
+        <select id="pregunta31" name="pregunta31" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Diurna</option>
+          <option value="1">Mixta</option>
+          <option value="2">Nocturna</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+            <!-- Pregunta31 -->
+      <div class="form-group">
+        <label for="pregunta32" style="width: 800px;">32. MUNICIPIO DEL PROGRAMA:</label>
+        <select id="pregunta32" name="pregunta32" style="width: 300px; height: 20px;">
+          <option value="">Seleccionar...</option>
+          <option value="0">Amagá</option>
+          <option value="1">Andes</option>
+          <option value="2">Barbosa</option>
+          <option value="3">Bello</option>
+          <option value="4">Caldas</option>
+          <option value="5">Copacabana</option>
+          <option value="6">Girardota</option>
+          <option value="7">Itagui</option>
+          <option value="8">Ituango</option>
+          <option value="9">La Estrella</option>
+          <option value="10">Medellín</option>
+          <option value="11">Pueblorrico</option>
+          <option value="12">Sabaneta</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+      </div>
+
+
+<!-- Línea separadora -->
+<hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+
+<form action="/resultado" method="POST">
+  <!-- Agrega tus preguntas y campos de formulario aquí -->
+
+<button type="submit" style="font-size: 20px; padding: 10px 20px; background-color: green; color: white;">Enviar</button>
+
+    <!-- Botones -->
+    <div class="button-container">
+      <!-- Botón para ir a la Arquitectura Curricular -->
+      <a href="/estructura" class="button">Ir a la Arquitectura Curricular</a>
+      <div class="arrow"></div>
+</div>
+
+</div>    
+<link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+  <!-- Botón en la parte inferior -->
+  <div class="button-container">
+      <a href="/" class="button">Ir a Presentación</a>
+  </div>
+</html>
+
+</form>
+</body>
+</html>
+

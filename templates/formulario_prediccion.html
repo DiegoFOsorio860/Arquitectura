@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Objetivos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .logo-container {
+      text-align: center;
+    }
+
+    .logo-container img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .title {
+      background-color: rgb(0, 201, 87);
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #formulario {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: inline-block;
+      width: 200px;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+      width: 300px;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    hr {
+      border-width: 2px;
+      border-color: rgb(3, 29, 7);
+      border-style: solid;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: rgb(0, 201, 87);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(0, 161, 67);
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='logo_sena.png') }}" alt="Logo SENA">
+  </div>
+
+  <div class="title">
+    <h1>CENTRO PARA EL DESARROLLO DEL HÁBITAT Y LA CONSTRUCCIÓN</h1>
+  </div>
+
+  <h1>Implementación de un modelo de inteligencia artificial mediante el uso de redes neuronales multicapas (MLP) como alerta temprana de posible deserción de aprendices en condición de vulnerabilidad económica</h1>
+
+  <form action="/submit_form" method="POST">
+    <div id="formulario">
+      <h2>DATOS PERSONALES</h2>
+
+      <div class="form-group">
+        <label for="nombre">NOMBRE COMPLETO:</label>
+        <input type="text" id="nombre" name="nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="tipoIdentificacion">TIPO DE IDENTIFICACIÓN:</label>
+        <select id="tipoIdentificacion" name="tipoIdentificacion">
+          <option value="CC">CC</option>
+          <option value="TI">TI</option>
+          <option value="Cédula de Extran
+        
