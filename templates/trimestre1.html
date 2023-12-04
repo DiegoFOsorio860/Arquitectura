@@ -56,17 +56,14 @@
     <div class="title-container" style="margin-bottom: 1px;">
         <h2 style="font-size: 100%; margin-bottom: 0; line-height: 0.5;"><b>PROCEDIMIENTO DE DESARROLLO CURRICULAR | ARQUITECTURA CURRICULAR - PROYECTO DE FORMACIÓN</b></h2>
         <h2 style="font-size: 100%; color: blue; margin-bottom: 0; line-height: 0.5;"><b>SUPERVISIÓN EN SISTEMAS DE AGUA Y SANEAMIENTO | 921200</b></h2>
+        <h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5;"><b>PROYECTO DE FORMACIÓN | FASE 1 | TRIMESTRE 1</b></h2>
         <!-- Agregué un párrafo vacío como separador -->
-        <p style="margin-bottom: 0;"></p>
-        <div>
-            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> PROYECTO DE FORMACIÓN | FASE 1 | TRIMESTRE 1 </b></h1>
-        </div>    
+        <p style="margin-bottom: 40px;"></p>
         
             <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
             <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
         </div>
 </body>
-
 
 <html>
 <head>
@@ -74,8 +71,50 @@
     <title>Formación Fases</title>
     <link rel="stylesheet" href="static/flowchart.css">
 </head>
-
-
+<body>
+    <div class="phase-buttons_T1_Aguas">
+        <div class="phase-button_T1_Aguas" id="fase1">
+            <a class="button_text"><b> Supervisión del funcionamiento de sistemas de agua [280201239]</b></a>
+            <span class="button-description"><br></span>
+            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+        </div>
+        <div class="phase-button_T1_Aguas" id="fase1">
+            <a class="button_text"><b> Supervisión de la recolección de muestras de aguas [280201214]</b></a>
+            <span class="button-description"><br></span>
+            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+        </div>
+    </div>
+    <div class="phase-buttons_T1_Ingles">
+        <div class="phase-button_T1_Ingles" id="fase1">
+            <a class="button_text"><b> Inglés [240202501]</b></a>
+            <span class="button-description"><br></span>
+            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+        </div>
+    </div>
+    <div class="phase-buttons_T1_Transversales">
+        <div class="phase-button_T1_Transversales" id="fase1">
+            <a class="button_text"><b> Matemáticas/Química [240201528]</b></a>
+            <span class="button-description"><br></span>
+            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+        </div>
+        <div class="phase-button_T1_Transversales" id="fase1">
+            <a class="button_text"><b> Matemáticas/Química [240201528]</b></a>
+            <span class="button-description"><br></span>
+            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+        </div>
+        <div class="phase-button_T1_Transversales" id="fase1">
+            <a class="button_text"><b> Matemáticas/Química [240201528]</b></a>
+            <span class="button-description"><br></span>
+            <span><b> Formación Directa:</b> {{ valor1 }} Horas [{{ valor2 }}%]</span>
+            <span><b>Formación Autónoma:</b> {{ valor3 }} Horas [{{ valor4 }}%]</span>
+        </div>
+    </div>
+</body>
 
 
 </html>

@@ -154,3 +154,103 @@
 .button_trimestre:hover {
     background-color: grey; /* Color de fondo al pasar el ratón */
 }
+
+
+/* ################################################################# */
+/* #####################TRIMESTRE 1 ############################## */
+/* ################################################################# */
+
+.phase-buttons_T1_Aguas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 1fr); /* Cuatro filas */
+    gap: 5px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_T1_Aguas {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #6ba7ce; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
+
+
+.phase-buttons_T1_Ingles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 1fr); /* Cuatro filas */
+    gap: 5px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_T1_Ingles {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ec6606; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}
+
+
+.phase-buttons_T1_Transversales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(1, 1fr); /* Cuatro filas */
+    gap: 5px; /* Espacio entre los botones */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    align-items: center; /* Alinear los elementos en la parte superior del contenedor */
+}
+
+.phase-button_T1_Transversales {
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #bcb8b6; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 15px;
+    font-weight: none;
+    text-transform: capitalize; /* Convertir el texto a mayúsculas */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
+    
+}

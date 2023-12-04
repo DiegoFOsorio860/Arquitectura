@@ -1,0 +1,22 @@
+Copy code
+/* Estilos para el diagrama de flujo */
+.flowchart {
+  position: relative;
+}
+
+.block {
+  width: 100px;
+  height: 50px;
+  background-color: lightblue;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
