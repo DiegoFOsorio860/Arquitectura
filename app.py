@@ -11,8 +11,11 @@ from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
-# Cargar datos desde el archivo Excel
-datos = pd.read_excel('02122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
+# Cargar datos_TIME desde el archivo Excel
+datos_TIME = pd.read_excel('02122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
+# Cargar datos_TIME desde el archivo Excel
+datos_ARQUITECTURA = pd.read_excel('02122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='ARQUITECTURA')
+
 
 @app.route('/')
 def header():
@@ -31,31 +34,31 @@ def mostrar_estructura():
     with open('templates/estructura.html', 'r') as estructura_file:
         estructura_html = estructura_file.read()
 
-    # Suponiendo que 'datos' es un DataFrame que contiene la información necesaria
-    valor1 = datos.iloc[245,2]  # Reemplaza con los índices correspondientes
-    valor2 = datos.iloc[245,3]  # Reemplaza con los índices correspondientes
-    valor2 = round(valor2, 2)*100  # Redondear a 2 decimales
-    valor3 = datos.iloc[245,4]  # Reemplaza con los índices correspondientes
-    valor4 = datos.iloc[245,5]  # Reemplaza con los índices correspondientes
-    valor4 = round(valor4, 2)*100  # Redondear a 2 decimales
-    valor5 = datos.iloc[245,6]  # Reemplaza con los índices correspondientes
-    valor6 = datos.iloc[194,2]  # Reemplaza con los índices correspondientes
-    valor7 = datos.iloc[194,3]  # Reemplaza con los índices correspondientes
-    valor7 = round(valor7,2)*100
-    valor8 = datos.iloc[194,4]  # Reemplaza con los índices correspondientes
-    valor9 = datos.iloc[194,5]  # Reemplaza con los índices correspondientes
-    valor9 = round(valor9,2)*100
-    valor10 = datos.iloc[223,2]  # Reemplaza con los índices correspondientes
-    valor11 = datos.iloc[223,3]  # Reemplaza con los índices correspondientes
-    valor11 = round(valor11,2)*100
-    valor12 = datos.iloc[223,4]  # Reemplaza con los índices correspondientes
-    valor13 = datos.iloc[223,5]  # Reemplaza con los índices correspondientes
-    valor13 = round(valor13,2)*100
-    # Renderizar la plantilla con los valores extraídos y el contenido de la estructuraaa
-    return render_template('estructura.html', valor1=valor1, valor2=valor2, valor3=valor3, 
-                           valor4=valor4,valor5=valor5, valor6=valor6, 
-                           valor7 = valor7, valor8 = valor8, valor9 = valor9, 
-                           valor10 = valor10, valor11 = valor11, valor12=valor12, valor13=valor13, estructura=estructura_html)
+    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_1 = datos_TIME.iloc[245,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_2 = datos_TIME.iloc[245,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_2 = round(valor_TIME_T1_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_3 = datos_TIME.iloc[245,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_4 = datos_TIME.iloc[245,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_4 = round(valor_TIME_T1_4, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_5 = datos_TIME.iloc[245,6]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_6 = datos_TIME.iloc[194,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_7 = datos_TIME.iloc[194,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_7 = round(valor_TIME_T1_7,2)*100
+    valor_TIME_T1_8 = datos_TIME.iloc[194,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_9 = datos_TIME.iloc[194,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_9 = round(valor_TIME_T1_9,2)*100
+    valor_TIME_T1_10 = datos_TIME.iloc[223,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_11 = datos_TIME.iloc[223,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_11 = round(valor_TIME_T1_11,2)*100
+    valor_TIME_T1_12 = datos_TIME.iloc[223,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_13 = datos_TIME.iloc[223,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_13 = round(valor_TIME_T1_13,2)*100
+    # Renderizar la plantilla con los valor_TIME_T1_es extraídos y el contenido de la estructuraaa
+    return render_template('estructura.html', valor_TIME_T1_1=valor_TIME_T1_1, valor_TIME_T1_2=valor_TIME_T1_2, valor_TIME_T1_3=valor_TIME_T1_3, 
+                           valor_TIME_T1_4=valor_TIME_T1_4,valor_TIME_T1_5=valor_TIME_T1_5, valor_TIME_T1_6=valor_TIME_T1_6, 
+                           valor_TIME_T1_7 = valor_TIME_T1_7, valor_TIME_T1_8 = valor_TIME_T1_8, valor_TIME_T1_9 = valor_TIME_T1_9, 
+                           valor_TIME_T1_10 = valor_TIME_T1_10, valor_TIME_T1_11 = valor_TIME_T1_11, valor_TIME_T1_12=valor_TIME_T1_12, valor_TIME_T1_13=valor_TIME_T1_13, estructura=estructura_html)
 
 @app.route('/fase1')
 def fase1():
@@ -99,21 +102,77 @@ def trimestre1():
     with open('templates/trimestre1.html', 'r') as trimestre1_file:
         trimestre1_html = trimestre1_file.read()
 
-    return render_template('trimestre1.html', trimestre1=trimestre1_html)
+         # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_HIDRAULICA_1 = datos_TIME.iloc[187,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_HIDRAULICA_2 = datos_TIME.iloc[187,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_HIDRAULICA_2 = round(valor_TIME_T1_HIDRAULICA_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_HIDRAULICA_3 = datos_TIME.iloc[187,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_HIDRAULICA_4 = datos_TIME.iloc[187,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_HIDRAULICA_4 = round(valor_TIME_T1_HIDRAULICA_4, 2)*100  # Redondear a 2 decimales
 
-@app.route('/recoleccion_muestras_T1')
+    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_REC_MUESTRAS_1 = datos_TIME.iloc[188,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_REC_MUESTRAS_2 = datos_TIME.iloc[188,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_REC_MUESTRAS_2 = round(valor_TIME_T1_REC_MUESTRAS_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_REC_MUESTRAS_3 = datos_TIME.iloc[188,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_REC_MUESTRAS_4 = datos_TIME.iloc[188,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_REC_MUESTRAS_4 = round(valor_TIME_T1_REC_MUESTRAS_4, 2)*100  # Redondear a 2 decimales
+
+        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_TIME_T1_INGLES_1 = datos_TIME.iloc[189,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_INGLES_2 = datos_TIME.iloc[189,3]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_INGLES_2 = round(valor_TIME_T1_INGLES_2, 2)*100  # Redondear a 2 decimales
+    valor_TIME_T1_INGLES_3 = datos_TIME.iloc[189,4]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_INGLES_4 = datos_TIME.iloc[189,5]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_INGLES_4 = round(valor_TIME_T1_INGLES_4, 2)*100  # Redondear a 2 decimales
+
+
+    return render_template('trimestre1.html', 
+                            valor_TIME_T1_HIDRAULICA_1=valor_TIME_T1_HIDRAULICA_1, 
+                           valor_TIME_T1_HIDRAULICA_2= valor_TIME_T1_HIDRAULICA_2, 
+                           valor_TIME_T1_HIDRAULICA_3= valor_TIME_T1_HIDRAULICA_3, 
+                           valor_TIME_T1_HIDRAULICA_4= valor_TIME_T1_HIDRAULICA_4,
+
+                           valor_TIME_T1_REC_MUESTRAS_1=valor_TIME_T1_REC_MUESTRAS_1, 
+                           valor_TIME_T1_REC_MUESTRAS_2= valor_TIME_T1_REC_MUESTRAS_2, 
+                           valor_TIME_T1_REC_MUESTRAS_3= valor_TIME_T1_REC_MUESTRAS_3, 
+                           valor_TIME_T1_REC_MUESTRAS_4= valor_TIME_T1_REC_MUESTRAS_4,
+
+                           valor_TIME_T1_INGLES_1= valor_TIME_T1_INGLES_1, 
+                           valor_TIME_T1_INGLES_2= valor_TIME_T1_INGLES_2, 
+                           valor_TIME_T1_INGLES_3= valor_TIME_T1_INGLES_3, 
+                           valor_TIME_T1_INGLES_4= valor_TIME_T1_INGLES_4,
+                           trimestre1=trimestre1_html)
+
+@app.route('/T1_RecoleccionMuestras')
 def recoleccion_muestras_T1():
     """
     Muestra la información correspondiente a la fase 3.
-    Lee el contenido de recoleccion_muestras_T1.html y lo renderiza en la plantilla 'recoleccion_muestras_T1.html'.
+    Lee el contenido de T1_RecoleccionMuestras.html y lo renderiza en la plantilla 'T1_RecoleccionMuestras.html'.
     """
-    with open('templates/recoleccion_muestras_T1.html', 'r') as recoleccion_muestras_T1_file:
-        recoleccion_muestras_T1_html = recoleccion_muestras_T1_file.read()
+    with open('templates/T1_RecoleccionMuestras.html', 'r') as T1_RecoleccionMuestras_file:
+        T1_RecoleccionMuestras_html = T1_RecoleccionMuestras_file.read()
 
-    return render_template('recoleccion_muestras_T1.html', recoleccion_muestras_T1=recoleccion_muestras_T1_html)
+    return render_template('T1_RecoleccionMuestras.html', T1_RecoleccionMuestras=T1_RecoleccionMuestras_html)
 
-############################
-############################
+@app.route('/T1_Hidraulica')
+def T1_Hidraulica():
+    """
+    Muestra la información correspondiente a la fase 3.
+    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
+    """
+    with open('templates/T1_Hidraulica.html', 'r') as T1_Hidraulica_file:
+        T1_Hidraulica_html = T1_Hidraulica_file.read()
+
+    return render_template('T1_Hidraulica.html', T1_Hidraulica=T1_Hidraulica_html)
+
+###############################################################################################
+###############################################################################################
+############################ MODELO DE INTELIGENCIA ARTIFICIAL ################################
+###############################################################################################
+###############################################################################################
+
+
 
 @app.route('/objetivos')
 def mostrar_objetivos():
@@ -175,7 +234,7 @@ def formulario():
 
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
-    # Obtener los datos del formulario
+    # Obtener los datos_TIME del formulario
     nombre = request.form['nombre']
     tipo_identificacion = request.form['tipoIdentificacion']
     numero = request.form['numero']
