@@ -196,7 +196,6 @@
     font-weight: none;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
 }
 
 .phase-buttons_FASE2 {
@@ -227,7 +226,7 @@
     font-weight: none;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
+
 }
 
 .phase-buttons_FASE3 {
@@ -258,7 +257,7 @@
     font-weight: none;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
+
 }
 
 /* ################################################################# */
@@ -290,10 +289,11 @@
     background-color: #6ba7ce; /* Color de fondo */
     color: #fff; /* Color del texto */
     font-size: 15px;
-    font-weight: none;
+    font-weight: 20px;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
+    width: 330px;
+    height: 150px;
 }
 
 
@@ -325,7 +325,8 @@
     font-weight: none;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
+    width: 330px;
+    height: 150px;
 }
 
 
@@ -357,7 +358,8 @@
     font-weight: none;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
+    width: 330px;
+    height: 150px;
 }
 
 .phase-buttons_T1_Complementaria {
@@ -388,5 +390,6 @@
     font-weight: none;
     text-transform: capitalize; /* Convertir el texto a mayúsculas */
     transition: background-color 0.3s ease; /* Transición suave del color de fondo al pasar el ratón */
-    
+    width: 330px;
+    height: 150px;
 }
