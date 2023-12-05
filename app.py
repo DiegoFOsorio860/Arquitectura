@@ -222,7 +222,69 @@ def recoleccion_muestras_T1():
     with open('templates/T1_RecoleccionMuestras.html', 'r') as T1_RecoleccionMuestras_file:
         T1_RecoleccionMuestras_html = T1_RecoleccionMuestras_file.read()
 
-    return render_template('T1_RecoleccionMuestras.html', T1_RecoleccionMuestras=T1_RecoleccionMuestras_html)
+    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_ARQ_T1_REC_MUESTRAS_1_1 = datos_ARQUITECTURA.iloc[36,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_1_2 = datos_ARQUITECTURA.iloc[36,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_1_3 = datos_ARQUITECTURA.iloc[36,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_2_1 = datos_ARQUITECTURA.iloc[37,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_2_2 = datos_ARQUITECTURA.iloc[37,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_2_3 = datos_ARQUITECTURA.iloc[37,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_3_1 = datos_ARQUITECTURA.iloc[38,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_3_2 = datos_ARQUITECTURA.iloc[38,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_3_3 = datos_ARQUITECTURA.iloc[38,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_4_1 = datos_ARQUITECTURA.iloc[39,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_4_2 = datos_ARQUITECTURA.iloc[39,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_4_3 = datos_ARQUITECTURA.iloc[39,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_5_1 = datos_ARQUITECTURA.iloc[40,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_5_2 = datos_ARQUITECTURA.iloc[40,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_5_3 = datos_ARQUITECTURA.iloc[40,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_6_1 = datos_ARQUITECTURA.iloc[41,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_6_2 = datos_ARQUITECTURA.iloc[41,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_6_3 = datos_ARQUITECTURA.iloc[41,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_7_1 = datos_ARQUITECTURA.iloc[42,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_7_2 = datos_ARQUITECTURA.iloc[42,5]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_REC_MUESTRAS_8_1 = datos_ARQUITECTURA.iloc[43,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_REC_MUESTRAS_8_2 = datos_ARQUITECTURA.iloc[43,5]  # Reemplaza con los índices correspondientes
+
+    return render_template('T1_RecoleccionMuestras.html', 
+                           valor_ARQ_T1_REC_MUESTRAS_1_1 = valor_ARQ_T1_REC_MUESTRAS_1_1,
+                           valor_ARQ_T1_REC_MUESTRAS_1_2 = valor_ARQ_T1_REC_MUESTRAS_1_2,
+                           valor_ARQ_T1_REC_MUESTRAS_1_3 = valor_ARQ_T1_REC_MUESTRAS_1_3,
+                          
+                           valor_ARQ_T1_REC_MUESTRAS_2_1 = valor_ARQ_T1_REC_MUESTRAS_2_1,
+                           valor_ARQ_T1_REC_MUESTRAS_2_2 = valor_ARQ_T1_REC_MUESTRAS_2_2,
+                           valor_ARQ_T1_REC_MUESTRAS_2_3 = valor_ARQ_T1_REC_MUESTRAS_2_3,
+
+                           valor_ARQ_T1_REC_MUESTRAS_3_1 = valor_ARQ_T1_REC_MUESTRAS_3_1,
+                           valor_ARQ_T1_REC_MUESTRAS_3_2 = valor_ARQ_T1_REC_MUESTRAS_3_2,
+                           valor_ARQ_T1_REC_MUESTRAS_3_3 = valor_ARQ_T1_REC_MUESTRAS_3_3,
+
+                           valor_ARQ_T1_REC_MUESTRAS_4_1 = valor_ARQ_T1_REC_MUESTRAS_4_1,
+                           valor_ARQ_T1_REC_MUESTRAS_4_2 = valor_ARQ_T1_REC_MUESTRAS_4_2,
+                           valor_ARQ_T1_REC_MUESTRAS_4_3 = valor_ARQ_T1_REC_MUESTRAS_4_3,
+
+                           valor_ARQ_T1_REC_MUESTRAS_5_1 = valor_ARQ_T1_REC_MUESTRAS_5_1,
+                           valor_ARQ_T1_REC_MUESTRAS_5_2 = valor_ARQ_T1_REC_MUESTRAS_5_2,
+                           valor_ARQ_T1_REC_MUESTRAS_5_3 = valor_ARQ_T1_REC_MUESTRAS_5_3,
+
+                           valor_ARQ_T1_REC_MUESTRAS_6_1 = valor_ARQ_T1_REC_MUESTRAS_6_1,
+                           valor_ARQ_T1_REC_MUESTRAS_6_2 = valor_ARQ_T1_REC_MUESTRAS_6_2,
+                           valor_ARQ_T1_REC_MUESTRAS_6_3 = valor_ARQ_T1_REC_MUESTRAS_6_3,
+
+                           valor_ARQ_T1_REC_MUESTRAS_7_1 = valor_ARQ_T1_REC_MUESTRAS_7_1,
+                           valor_ARQ_T1_REC_MUESTRAS_7_2 = valor_ARQ_T1_REC_MUESTRAS_7_2,
+
+                           valor_ARQ_T1_REC_MUESTRAS_8_1 = valor_ARQ_T1_REC_MUESTRAS_8_1,
+                           valor_ARQ_T1_REC_MUESTRAS_8_2 = valor_ARQ_T1_REC_MUESTRAS_8_2,
+
+                           T1_RecoleccionMuestras=T1_RecoleccionMuestras_html)
 
 @app.route('/T1_Hidraulica')
 def T1_Hidraulica():
@@ -233,7 +295,68 @@ def T1_Hidraulica():
     with open('templates/T1_Hidraulica.html', 'r') as T1_Hidraulica_file:
         T1_Hidraulica_html = T1_Hidraulica_file.read()
 
-    return render_template('T1_Hidraulica.html', T1_Hidraulica=T1_Hidraulica_html)
+        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+    valor_ARQ_T1_HIDRAULICA_1_1 = datos_ARQUITECTURA.iloc[8,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_1_2 = datos_ARQUITECTURA.iloc[8,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_1_3 = datos_ARQUITECTURA.iloc[8,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_2_1 = datos_ARQUITECTURA.iloc[9,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_2_2 = datos_ARQUITECTURA.iloc[9,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_2_3 = datos_ARQUITECTURA.iloc[9,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_3_1 = datos_ARQUITECTURA.iloc[10,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_3_2 = datos_ARQUITECTURA.iloc[10,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_3_3 = datos_ARQUITECTURA.iloc[10,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_4_1 = datos_ARQUITECTURA.iloc[11,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_4_2 = datos_ARQUITECTURA.iloc[11,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_4_3 = datos_ARQUITECTURA.iloc[11,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_5_1 = datos_ARQUITECTURA.iloc[12,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_5_2 = datos_ARQUITECTURA.iloc[12,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_5_3 = datos_ARQUITECTURA.iloc[12,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_6_1 = datos_ARQUITECTURA.iloc[13,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_6_2 = datos_ARQUITECTURA.iloc[13,5]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_6_3 = datos_ARQUITECTURA.iloc[13,6]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_7_1 = datos_ARQUITECTURA.iloc[14,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_7_2 = datos_ARQUITECTURA.iloc[14,5]  # Reemplaza con los índices correspondientes
+
+    valor_ARQ_T1_HIDRAULICA_8_1 = datos_ARQUITECTURA.iloc[15,4]  # Reemplaza con los índices correspondientes
+    valor_ARQ_T1_HIDRAULICA_8_2 = datos_ARQUITECTURA.iloc[15,5]  # Reemplaza con los índices correspondientes
+
+    return render_template('T1_Hidraulica.html', 
+                           valor_ARQ_T1_HIDRAULICA_1_1 = valor_ARQ_T1_HIDRAULICA_1_1,
+                           valor_ARQ_T1_HIDRAULICA_1_2 = valor_ARQ_T1_HIDRAULICA_1_2,
+                           valor_ARQ_T1_HIDRAULICA_1_3 = valor_ARQ_T1_HIDRAULICA_1_3,
+                          
+                           valor_ARQ_T1_HIDRAULICA_2_1 = valor_ARQ_T1_HIDRAULICA_2_1,
+                           valor_ARQ_T1_HIDRAULICA_2_2 = valor_ARQ_T1_HIDRAULICA_2_2,
+                           valor_ARQ_T1_HIDRAULICA_2_3 = valor_ARQ_T1_HIDRAULICA_2_3,
+
+                           valor_ARQ_T1_HIDRAULICA_3_1 = valor_ARQ_T1_HIDRAULICA_3_1,
+                           valor_ARQ_T1_HIDRAULICA_3_2 = valor_ARQ_T1_HIDRAULICA_3_2,
+                           valor_ARQ_T1_HIDRAULICA_3_3 = valor_ARQ_T1_HIDRAULICA_3_3,
+
+                           valor_ARQ_T1_HIDRAULICA_4_1 = valor_ARQ_T1_HIDRAULICA_4_1,
+                           valor_ARQ_T1_HIDRAULICA_4_2 = valor_ARQ_T1_HIDRAULICA_4_2,
+                           valor_ARQ_T1_HIDRAULICA_4_3 = valor_ARQ_T1_HIDRAULICA_4_3,
+
+                           valor_ARQ_T1_HIDRAULICA_5_1 = valor_ARQ_T1_HIDRAULICA_5_1,
+                           valor_ARQ_T1_HIDRAULICA_5_2 = valor_ARQ_T1_HIDRAULICA_5_2,
+                           valor_ARQ_T1_HIDRAULICA_5_3 = valor_ARQ_T1_HIDRAULICA_5_3,
+
+                           valor_ARQ_T1_HIDRAULICA_6_1 = valor_ARQ_T1_HIDRAULICA_6_1,
+                           valor_ARQ_T1_HIDRAULICA_6_2 = valor_ARQ_T1_HIDRAULICA_6_2,
+                           valor_ARQ_T1_HIDRAULICA_6_3 = valor_ARQ_T1_HIDRAULICA_6_3,
+                           valor_ARQ_T1_HIDRAULICA_7_1 = valor_ARQ_T1_HIDRAULICA_7_1,
+                           valor_ARQ_T1_HIDRAULICA_7_2 = valor_ARQ_T1_HIDRAULICA_7_2,
+
+                           valor_ARQ_T1_HIDRAULICA_8_1 = valor_ARQ_T1_HIDRAULICA_8_1,
+                           valor_ARQ_T1_HIDRAULICA_8_2 = valor_ARQ_T1_HIDRAULICA_8_2,
+
+                           T1_Hidraulica=T1_Hidraulica_html)
 
 ###############################################################################################
 ###############################################################################################

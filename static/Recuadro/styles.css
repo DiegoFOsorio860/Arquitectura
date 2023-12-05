@@ -1,0 +1,14 @@
+/* Estilos para las tarjetas de pregunta */
+.question-card {
+    background-color: #cce5ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos al pasar el mouse sobre las tarjetas */
+.question-card:hover {
+    background-color: #99c2ff;
+}
