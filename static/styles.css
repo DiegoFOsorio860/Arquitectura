@@ -100,3 +100,19 @@ form {
 .additional-info strong {
   color: #3498db; /* Texto azul */
 }
+
+
+body {
+  margin: 30px; /* Espacio entre el borde de la página y el contenido */
+  font-family: Arial, sans-serif;
+}
+
+.texto {
+  margin-bottom: 40px; /* Espacio entre el texto y los cuadros */
+}
+
+.cuadro {
+  border: 1px solid #000;
+  padding: 10px; /* Espacio dentro del cuadro */
+  margin-bottom: 30px; /* Espacio entre los cuadros */
+}

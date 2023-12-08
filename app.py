@@ -9,6 +9,9 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+##########
+from T1_RecoleccionMuestras import F_T1_REC_MUESTRAS
+
 app = Flask(__name__)
 
 # Cargar datos_TIME desde el archivo Excel
@@ -213,79 +216,34 @@ def trimestre1():
 
                            trimestre1=trimestre1_html)
 
+# Definición de la ruta para '/T1_RecoleccionMuestras'
 @app.route('/T1_RecoleccionMuestras')
-def recoleccion_muestras_T1():
+def ARQ_T1_REC_MUESTRAS():
     """
     Muestra la información correspondiente a la fase 3.
-    Lee el contenido de T1_RecoleccionMuestras.html y lo renderiza en la plantilla 'T1_RecoleccionMuestras.html'.
+    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
     """
-    with open('templates/T1_RecoleccionMuestras.html', 'r') as T1_RecoleccionMuestras_file:
-        T1_RecoleccionMuestras_html = T1_RecoleccionMuestras_file.read()
+    # Suponiendo que datos_ARQUITECTURA está disponible aquí
+    # Llamada a la función importada para obtener datos
+    datos = F_T1_REC_MUESTRAS(datos_ARQUITECTURA)
 
-    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_ARQ_T1_REC_MUESTRAS_1_1 = datos_ARQUITECTURA.iloc[36,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_1_2 = datos_ARQUITECTURA.iloc[36,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_1_3 = datos_ARQUITECTURA.iloc[36,6]  # Reemplaza con los índices correspondientes
+    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
+    return render_template('T1_RecoleccionMuestras.html', **datos)
+'''
+@app.route('/T1_Hidraulica')
+def ARQ_T1_HIDRAULICA():
+    """
+    Muestra la información correspondiente a la fase 3.
+    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
+    """
+    # Suponiendo que datos_ARQUITECTURA está disponible aquí
+    # Llamada a la función importada para obtener datos
+    datos = F_T1_REC_MUESTRAS(datos_ARQUITECTURA)
 
-    valor_ARQ_T1_REC_MUESTRAS_2_1 = datos_ARQUITECTURA.iloc[37,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_2_2 = datos_ARQUITECTURA.iloc[37,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_2_3 = datos_ARQUITECTURA.iloc[37,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_REC_MUESTRAS_3_1 = datos_ARQUITECTURA.iloc[38,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_3_2 = datos_ARQUITECTURA.iloc[38,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_3_3 = datos_ARQUITECTURA.iloc[38,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_REC_MUESTRAS_4_1 = datos_ARQUITECTURA.iloc[39,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_4_2 = datos_ARQUITECTURA.iloc[39,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_4_3 = datos_ARQUITECTURA.iloc[39,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_REC_MUESTRAS_5_1 = datos_ARQUITECTURA.iloc[40,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_5_2 = datos_ARQUITECTURA.iloc[40,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_5_3 = datos_ARQUITECTURA.iloc[40,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_REC_MUESTRAS_6_1 = datos_ARQUITECTURA.iloc[41,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_6_2 = datos_ARQUITECTURA.iloc[41,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_6_3 = datos_ARQUITECTURA.iloc[41,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_REC_MUESTRAS_7_1 = datos_ARQUITECTURA.iloc[42,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_7_2 = datos_ARQUITECTURA.iloc[42,5]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_REC_MUESTRAS_8_1 = datos_ARQUITECTURA.iloc[43,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_REC_MUESTRAS_8_2 = datos_ARQUITECTURA.iloc[43,5]  # Reemplaza con los índices correspondientes
-
-    return render_template('T1_RecoleccionMuestras.html', 
-                           valor_ARQ_T1_REC_MUESTRAS_1_1 = valor_ARQ_T1_REC_MUESTRAS_1_1,
-                           valor_ARQ_T1_REC_MUESTRAS_1_2 = valor_ARQ_T1_REC_MUESTRAS_1_2,
-                           valor_ARQ_T1_REC_MUESTRAS_1_3 = valor_ARQ_T1_REC_MUESTRAS_1_3,
-                          
-                           valor_ARQ_T1_REC_MUESTRAS_2_1 = valor_ARQ_T1_REC_MUESTRAS_2_1,
-                           valor_ARQ_T1_REC_MUESTRAS_2_2 = valor_ARQ_T1_REC_MUESTRAS_2_2,
-                           valor_ARQ_T1_REC_MUESTRAS_2_3 = valor_ARQ_T1_REC_MUESTRAS_2_3,
-
-                           valor_ARQ_T1_REC_MUESTRAS_3_1 = valor_ARQ_T1_REC_MUESTRAS_3_1,
-                           valor_ARQ_T1_REC_MUESTRAS_3_2 = valor_ARQ_T1_REC_MUESTRAS_3_2,
-                           valor_ARQ_T1_REC_MUESTRAS_3_3 = valor_ARQ_T1_REC_MUESTRAS_3_3,
-
-                           valor_ARQ_T1_REC_MUESTRAS_4_1 = valor_ARQ_T1_REC_MUESTRAS_4_1,
-                           valor_ARQ_T1_REC_MUESTRAS_4_2 = valor_ARQ_T1_REC_MUESTRAS_4_2,
-                           valor_ARQ_T1_REC_MUESTRAS_4_3 = valor_ARQ_T1_REC_MUESTRAS_4_3,
-
-                           valor_ARQ_T1_REC_MUESTRAS_5_1 = valor_ARQ_T1_REC_MUESTRAS_5_1,
-                           valor_ARQ_T1_REC_MUESTRAS_5_2 = valor_ARQ_T1_REC_MUESTRAS_5_2,
-                           valor_ARQ_T1_REC_MUESTRAS_5_3 = valor_ARQ_T1_REC_MUESTRAS_5_3,
-
-                           valor_ARQ_T1_REC_MUESTRAS_6_1 = valor_ARQ_T1_REC_MUESTRAS_6_1,
-                           valor_ARQ_T1_REC_MUESTRAS_6_2 = valor_ARQ_T1_REC_MUESTRAS_6_2,
-                           valor_ARQ_T1_REC_MUESTRAS_6_3 = valor_ARQ_T1_REC_MUESTRAS_6_3,
-
-                           valor_ARQ_T1_REC_MUESTRAS_7_1 = valor_ARQ_T1_REC_MUESTRAS_7_1,
-                           valor_ARQ_T1_REC_MUESTRAS_7_2 = valor_ARQ_T1_REC_MUESTRAS_7_2,
-
-                           valor_ARQ_T1_REC_MUESTRAS_8_1 = valor_ARQ_T1_REC_MUESTRAS_8_1,
-                           valor_ARQ_T1_REC_MUESTRAS_8_2 = valor_ARQ_T1_REC_MUESTRAS_8_2,
-
-                           T1_RecoleccionMuestras=T1_RecoleccionMuestras_html)
-
+    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
+    return render_template('T1_RecoleccionMuestras.html', **datos)
+'''
+                      
 @app.route('/T1_Hidraulica')
 def T1_Hidraulica():
     """
@@ -405,6 +363,7 @@ def selu(x, alpha=1.67326, scale=1.0507):
 
 # Hacer algo con los pesos y sesgos cargados
 # Por ejemplo, imprimirlos en la consola
+'''
 print("Pesos W1:")
 print(W1)
 print("Sesgos b1:")
@@ -417,6 +376,7 @@ print("Pesos W3:")
 print(W3)
 print("Sesgos b3:")
 print(b3)
+'''
 
 
 
