@@ -13,7 +13,7 @@ from email.mime.text import MIMEText
 ######################################## FUNCIONES  #########################################
 ###############################################################################################
 from FASES import FUNCTION_FASES
-from T1 import FUNCION_T1
+from T1 import FUNCTION_T1
 from T1_RecoleccionMuestras import FUNCTION_T1_REC_MUESTRAS
 from T1_Hidraulica import FUNCTION_T1_HIDRAULICA
 
@@ -37,13 +37,17 @@ def header():
 
     return render_template('header.html', header=header_html, intro=intro_html)
 
+###############################################################################################
+######################################## FASES  #########################################
+###############################################################################################
+
 @app.route('/FASES')
 def mostrar_FASES():
     """
     Muestra la información correspondiente a la fase 1.
     Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
     """
-    datos =  FUNCION_T1(datos_TIME)
+    datos =  FUNCTION_FASES(datos_TIME)
 
     return render_template('FASES.html', **datos)
 
@@ -98,7 +102,7 @@ def Trimestre_1():
     """
     # Suponiendo que datos_TIME está disponible aquí
     # Llamada a la función importada para obtener datos
-    datos =  FUNCION_T1(datos_TIME)
+    datos =  FUNCTION_T1(datos_TIME)
 
     # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
     return render_template('Trimestre1.html', **datos)

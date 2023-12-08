@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-def FUNCION_T1(datos_TIME):
+def FUNCTION_T1(datos_TIME):
          # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
     valor_TIME_T1_HIDRAULICA_1 = datos_TIME.iloc[187,2]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_HIDRAULICA_2 = datos_TIME.iloc[187,3]  # Reemplaza con los índices correspondientes
