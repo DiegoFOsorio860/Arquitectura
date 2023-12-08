@@ -13,7 +13,7 @@ from email.mime.text import MIMEText
 ######################################## FUNCIONES  #########################################
 ###############################################################################################
 from FASES import FUNCTION_FASES
-from T1 import FUNCTION_T1
+from T1_Trimestre import FUNCTION_T1
 from T1_RecoleccionMuestras import FUNCTION_T1_REC_MUESTRAS
 from T1_Hidraulica import FUNCTION_T1_HIDRAULICA
 
@@ -56,7 +56,7 @@ def mostrar_FASES():
 ###############################################################################################
 
 @app.route('/FASE1')
-def fase1():
+def mostrar_fase1():
     """
     Muestra la información correspondiente a la fase 1.
     Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
@@ -66,10 +66,10 @@ def fase1():
     datos = FUNCTION_FASES(datos_TIME)
 
     # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
-    return render_template('FASES.html', **datos)
+    return render_template('FASE1.html', **datos)
 
 @app.route('/FASE2')
-def fase2():
+def mostrar_fase2():
     """
     Muestra la información correspondiente a la fase 2.
     Lee el contenido de fase2.html y lo renderiza en la plantilla 'fase2.html'.
@@ -80,7 +80,7 @@ def fase2():
     return render_template('FASE2.html', FASE2=fase2_html)
 
 @app.route('/FASE3')
-def fase3():
+def mostrar_fase3():
     """
     Muestra la información correspondiente a la fase 3.
     Lee el contenido de fase3.html y lo renderiza en la plantilla 'fase3.html'.
@@ -94,8 +94,8 @@ def fase3():
 ######################################## FASE 1 - T1  #########################################
 ###############################################################################################
 
-@app.route('/Trimestre1')
-def Trimestre_1():
+@app.route('/T1_Trimestre')
+def ARQ_T1():
     """
     Muestra la información correspondiente a la fase 3.
     Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
@@ -105,7 +105,7 @@ def Trimestre_1():
     datos =  FUNCTION_T1(datos_TIME)
 
     # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
-    return render_template('Trimestre1.html', **datos)
+    return render_template('T1_Trimestre.html', **datos)
 
 ###############################################################################################
 ################################## FASE 1 - T1 - HIDRAULICA ##################################
