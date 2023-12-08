@@ -9,8 +9,14 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-##########
-from T1_RecoleccionMuestras import F_T1_REC_MUESTRAS
+###############################################################################################
+######################################## FUNCIONES  #########################################
+###############################################################################################
+from FASES import FUNCTION_FASES
+from T1 import FUNCION_T1
+from T1_RecoleccionMuestras import FUNCTION_T1_REC_MUESTRAS
+from T1_Hidraulica import FUNCTION_T1_HIDRAULICA
+
 
 app = Flask(__name__)
 
@@ -31,77 +37,45 @@ def header():
 
     return render_template('header.html', header=header_html, intro=intro_html)
 
-@app.route('/estructura')
-def mostrar_estructura():
-    # Leer el contenido de estructura.html
-    with open('templates/estructura.html', 'r') as estructura_file:
-        estructura_html = estructura_file.read()
+@app.route('/FASES')
+def mostrar_FASES():
+    """
+    Muestra la información correspondiente a la fase 1.
+    Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
+    """
+    datos =  FUNCION_T1(datos_TIME)
 
-    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_1 = datos_TIME.iloc[194,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_2 = datos_TIME.iloc[194,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_2 = round(valor_TIME_T1_2,2)*100
-    valor_TIME_T1_3 = datos_TIME.iloc[194,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_4 = datos_TIME.iloc[194,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_4 = round(valor_TIME_T1_4,2)*100
+    return render_template('FASES.html', **datos)
 
-    valor_TIME_T2_1 = datos_TIME.iloc[223,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T2_2 = datos_TIME.iloc[223,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T2_2 = round(valor_TIME_T2_2,2)*100
-    valor_TIME_T2_3 = datos_TIME.iloc[223,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T2_4 = datos_TIME.iloc[223,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T2_4 = round(valor_TIME_T2_4,2)*100
+###############################################################################################
+######################################## FASE 1 - T1  #########################################
+###############################################################################################
 
-    valor_TIME_F1_1 = datos_TIME.iloc[245,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_F1_2 = datos_TIME.iloc[245,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_F1_2 = round(valor_TIME_F1_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_F1_3 = datos_TIME.iloc[245,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_F1_4 = datos_TIME.iloc[245,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_F1_4 = round(valor_TIME_F1_4, 2)*100  # Redondear a 2 decimales
-    
-
-    # Renderizar la plantilla con los valor_TIME_T1_es extraídos y el contenido de la estructuraaa
-    return render_template('estructura.html', 
-                           valor_TIME_T1_1=valor_TIME_T1_1, 
-                           valor_TIME_T1_2=valor_TIME_T1_2, 
-                           valor_TIME_T1_3=valor_TIME_T1_3, 
-                           valor_TIME_T1_4=valor_TIME_T1_4,
-                            
-                           valor_TIME_T2_1=valor_TIME_T2_1, 
-                           valor_TIME_T2_2=valor_TIME_T2_2, 
-                           valor_TIME_T2_3=valor_TIME_T2_3, 
-                           valor_TIME_T2_4=valor_TIME_T2_4,
-
-                           valor_TIME_F1_1=valor_TIME_F1_1, 
-                           valor_TIME_F1_2=valor_TIME_F1_2, 
-                           valor_TIME_F1_3=valor_TIME_F1_3, 
-                           valor_TIME_F1_4=valor_TIME_F1_4,
-  
-                           estructura=estructura_html)
-
-@app.route('/fase1')
+@app.route('/FASE1')
 def fase1():
     """
     Muestra la información correspondiente a la fase 1.
     Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
     """
-    with open('templates/fase1.html', 'r') as fase1_file:
-        fase1_html = fase1_file.read()
+    # Suponiendo que datos_ARQUITECTURA está disponible aquí
+    # Llamada a la función importada para obtener datos
+    datos = FUNCTION_FASES(datos_TIME)
 
-    return render_template('fase1.html', fase1=fase1_html)
+    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
+    return render_template('FASES.html', **datos)
 
-@app.route('/fase2')
+@app.route('/FASE2')
 def fase2():
     """
     Muestra la información correspondiente a la fase 2.
     Lee el contenido de fase2.html y lo renderiza en la plantilla 'fase2.html'.
     """
-    with open('templates/fase2.html', 'r') as fase2_file:
+    with open('templates/FAS2.html', 'r') as fase2_file:
         fase2_html = fase2_file.read()
 
-    return render_template('fase2.html', fase2=fase2_html)
+    return render_template('FASE2.html', FASE2=fase2_html)
 
-@app.route('/fase3')
+@app.route('/FASE3')
 def fase3():
     """
     Muestra la información correspondiente a la fase 3.
@@ -110,111 +84,45 @@ def fase3():
     with open('templates/fase3.html', 'r') as fase3_file:
         fase3_html = fase3_file.read()
 
-    return render_template('fase3.html', fase3=fase3_html)
+    return render_template('FASE3.html', FASE3=fase3_html)
 
-@app.route('/trimestre1')
-def trimestre1():
+###############################################################################################
+######################################## FASE 1 - T1  #########################################
+###############################################################################################
+
+@app.route('/Trimestre1')
+def Trimestre_1():
     """
-    Muestra la información correspondiente al trimestre 1.
-    Lee el contenido de trimestre1.html y lo renderiza en la plantilla 'trimestre1.html'.
+    Muestra la información correspondiente a la fase 3.
+    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
     """
-    with open('templates/trimestre1.html', 'r') as trimestre1_file:
-        trimestre1_html = trimestre1_file.read()
+    # Suponiendo que datos_TIME está disponible aquí
+    # Llamada a la función importada para obtener datos
+    datos =  FUNCION_T1(datos_TIME)
 
-         # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_HIDRAULICA_1 = datos_TIME.iloc[187,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_HIDRAULICA_2 = datos_TIME.iloc[187,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_HIDRAULICA_2 = round(valor_TIME_T1_HIDRAULICA_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_HIDRAULICA_3 = datos_TIME.iloc[187,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_HIDRAULICA_4 = datos_TIME.iloc[187,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_HIDRAULICA_4 = round(valor_TIME_T1_HIDRAULICA_4, 2)*100  # Redondear a 2 decimales
+    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
+    return render_template('Trimestre1.html', **datos)
 
-    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_REC_MUESTRAS_1 = datos_TIME.iloc[188,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_REC_MUESTRAS_2 = datos_TIME.iloc[188,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_REC_MUESTRAS_2 = round(valor_TIME_T1_REC_MUESTRAS_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_REC_MUESTRAS_3 = datos_TIME.iloc[188,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_REC_MUESTRAS_4 = datos_TIME.iloc[188,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_REC_MUESTRAS_4 = round(valor_TIME_T1_REC_MUESTRAS_4, 2)*100  # Redondear a 2 decimales
+###############################################################################################
+################################## FASE 1 - T1 - HIDRAULICA ##################################
+###############################################################################################
 
-        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_INGLES_1 = datos_TIME.iloc[189,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_INGLES_2 = datos_TIME.iloc[189,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_INGLES_2 = round(valor_TIME_T1_INGLES_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_INGLES_3 = datos_TIME.iloc[189,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_INGLES_4 = datos_TIME.iloc[189,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_INGLES_4 = round(valor_TIME_T1_INGLES_4, 2)*100  # Redondear a 2 decimales
+@app.route('/T1_Hidraulica')
+def ARQ_T1_HIDRAULICA():
+    """
+    Muestra la información correspondiente a la fase 3.
+    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
+    """
+    # Suponiendo que datos_ARQUITECTURA está disponible aquí
+    # Llamada a la función importada para obtener datos
+    datos = FUNCTION_T1_HIDRAULICA(datos_ARQUITECTURA)
 
-            # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_MATEMATICAS_1 = datos_TIME.iloc[190,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_MATEMATICAS_2 = datos_TIME.iloc[190,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_MATEMATICAS_2 = round(valor_TIME_T1_MATEMATICAS_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_MATEMATICAS_3 = datos_TIME.iloc[190,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_MATEMATICAS_4 = datos_TIME.iloc[190,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_MATEMATICAS_4 = round(valor_TIME_T1_MATEMATICAS_4, 2)*100  # Redondear a 2 decimales
+    # Renderiza la plantilla 'T1_Hidraulica.html' con los datos obtenidos
+    return render_template('T1_Hidraulica.html', **datos)
 
-                # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_BIOLOGIA_1 = datos_TIME.iloc[191,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_BIOLOGIA_2 = (datos_TIME.iloc[191,3])*100  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_BIOLOGIA_2 = "{:.3}".format(valor_TIME_T1_BIOLOGIA_2)  # Redondear a 2 decimales
-    valor_TIME_T1_BIOLOGIA_3 = datos_TIME.iloc[191,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_BIOLOGIA_4 = datos_TIME.iloc[191,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_BIOLOGIA_4 = round(valor_TIME_T1_BIOLOGIA_4, 2)*100  # Redondear a 2 decimales
-
-                    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_COMUNICACION_1 = datos_TIME.iloc[192,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_COMUNICACION_2 = datos_TIME.iloc[192,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_COMUNICACION_2 = round(valor_TIME_T1_COMUNICACION_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_COMUNICACION_3 = datos_TIME.iloc[192,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_COMUNICACION_4 = datos_TIME.iloc[192,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_COMUNICACION_4 = round(valor_TIME_T1_COMUNICACION_4, 2)*100  # Redondear a 2 decimales
-
-                        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_TIME_T1_LOGISTICA_1 = datos_TIME.iloc[193,2]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_LOGISTICA_2 = datos_TIME.iloc[193,3]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_LOGISTICA_2 = round(valor_TIME_T1_LOGISTICA_2, 2)*100  # Redondear a 2 decimales
-    valor_TIME_T1_LOGISTICA_3 = datos_TIME.iloc[193,4]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_LOGISTICA_4 = datos_TIME.iloc[193,5]  # Reemplaza con los índices correspondientes
-    valor_TIME_T1_LOGISTICA_4 = round(valor_TIME_T1_LOGISTICA_4, 2)*100  # Redondear a 2 decimales
-
-    return render_template('trimestre1.html', 
-                            valor_TIME_T1_HIDRAULICA_1=valor_TIME_T1_HIDRAULICA_1, 
-                           valor_TIME_T1_HIDRAULICA_2= valor_TIME_T1_HIDRAULICA_2, 
-                           valor_TIME_T1_HIDRAULICA_3= valor_TIME_T1_HIDRAULICA_3, 
-                           valor_TIME_T1_HIDRAULICA_4= valor_TIME_T1_HIDRAULICA_4,
-
-                           valor_TIME_T1_REC_MUESTRAS_1=valor_TIME_T1_REC_MUESTRAS_1, 
-                           valor_TIME_T1_REC_MUESTRAS_2= valor_TIME_T1_REC_MUESTRAS_2, 
-                           valor_TIME_T1_REC_MUESTRAS_3= valor_TIME_T1_REC_MUESTRAS_3, 
-                           valor_TIME_T1_REC_MUESTRAS_4= valor_TIME_T1_REC_MUESTRAS_4,
-
-                           valor_TIME_T1_INGLES_1= valor_TIME_T1_INGLES_1, 
-                           valor_TIME_T1_INGLES_2= valor_TIME_T1_INGLES_2, 
-                           valor_TIME_T1_INGLES_3= valor_TIME_T1_INGLES_3, 
-                           valor_TIME_T1_INGLES_4= valor_TIME_T1_INGLES_4,
-
-                           valor_TIME_T1_MATEMATICAS_1= valor_TIME_T1_MATEMATICAS_1, 
-                           valor_TIME_T1_MATEMATICAS_2= valor_TIME_T1_MATEMATICAS_2, 
-                           valor_TIME_T1_MATEMATICAS_3= valor_TIME_T1_MATEMATICAS_3, 
-                           valor_TIME_T1_MATEMATICAS_4= valor_TIME_T1_MATEMATICAS_4,
-
-                           valor_TIME_T1_BIOLOGIA_1= valor_TIME_T1_BIOLOGIA_1, 
-                           valor_TIME_T1_BIOLOGIA_2= valor_TIME_T1_BIOLOGIA_2, 
-                           valor_TIME_T1_BIOLOGIA_3= valor_TIME_T1_BIOLOGIA_3, 
-                           valor_TIME_T1_BIOLOGIA_4= valor_TIME_T1_BIOLOGIA_4,
-
-                           valor_TIME_T1_COMUNICACION_1= valor_TIME_T1_COMUNICACION_1, 
-                           valor_TIME_T1_COMUNICACION_2= valor_TIME_T1_COMUNICACION_2, 
-                           valor_TIME_T1_COMUNICACION_3= valor_TIME_T1_COMUNICACION_3, 
-                           valor_TIME_T1_COMUNICACION_4= valor_TIME_T1_COMUNICACION_4,
-
-                           valor_TIME_T1_LOGISTICA_1= valor_TIME_T1_LOGISTICA_1, 
-                           valor_TIME_T1_LOGISTICA_2= valor_TIME_T1_LOGISTICA_2, 
-                           valor_TIME_T1_LOGISTICA_3= valor_TIME_T1_LOGISTICA_3, 
-                           valor_TIME_T1_LOGISTICA_4= valor_TIME_T1_LOGISTICA_4,
-
-
-                           trimestre1=trimestre1_html)
+###############################################################################################
+############################# FASE 1 - T1 - REC DE MUESTRAS ##################################
+###############################################################################################
 
 # Definición de la ruta para '/T1_RecoleccionMuestras'
 @app.route('/T1_RecoleccionMuestras')
@@ -225,96 +133,11 @@ def ARQ_T1_REC_MUESTRAS():
     """
     # Suponiendo que datos_ARQUITECTURA está disponible aquí
     # Llamada a la función importada para obtener datos
-    datos = F_T1_REC_MUESTRAS(datos_ARQUITECTURA)
+    datos = FUNCTION_T1_REC_MUESTRAS(datos_ARQUITECTURA)
 
     # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
     return render_template('T1_RecoleccionMuestras.html', **datos)
-'''
-@app.route('/T1_Hidraulica')
-def ARQ_T1_HIDRAULICA():
-    """
-    Muestra la información correspondiente a la fase 3.
-    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
-    """
-    # Suponiendo que datos_ARQUITECTURA está disponible aquí
-    # Llamada a la función importada para obtener datos
-    datos = F_T1_REC_MUESTRAS(datos_ARQUITECTURA)
 
-    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
-    return render_template('T1_RecoleccionMuestras.html', **datos)
-'''
-                      
-@app.route('/T1_Hidraulica')
-def T1_Hidraulica():
-    """
-    Muestra la información correspondiente a la fase 3.
-    Lee el contenido de T1_Hidraulica.html y lo renderiza en la plantilla 'T1_Hidraulica.html'.
-    """
-    with open('templates/T1_Hidraulica.html', 'r') as T1_Hidraulica_file:
-        T1_Hidraulica_html = T1_Hidraulica_file.read()
-
-        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
-    valor_ARQ_T1_HIDRAULICA_1_1 = datos_ARQUITECTURA.iloc[8,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_1_2 = datos_ARQUITECTURA.iloc[8,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_1_3 = datos_ARQUITECTURA.iloc[8,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_2_1 = datos_ARQUITECTURA.iloc[9,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_2_2 = datos_ARQUITECTURA.iloc[9,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_2_3 = datos_ARQUITECTURA.iloc[9,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_3_1 = datos_ARQUITECTURA.iloc[10,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_3_2 = datos_ARQUITECTURA.iloc[10,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_3_3 = datos_ARQUITECTURA.iloc[10,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_4_1 = datos_ARQUITECTURA.iloc[11,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_4_2 = datos_ARQUITECTURA.iloc[11,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_4_3 = datos_ARQUITECTURA.iloc[11,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_5_1 = datos_ARQUITECTURA.iloc[12,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_5_2 = datos_ARQUITECTURA.iloc[12,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_5_3 = datos_ARQUITECTURA.iloc[12,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_6_1 = datos_ARQUITECTURA.iloc[13,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_6_2 = datos_ARQUITECTURA.iloc[13,5]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_6_3 = datos_ARQUITECTURA.iloc[13,6]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_7_1 = datos_ARQUITECTURA.iloc[14,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_7_2 = datos_ARQUITECTURA.iloc[14,5]  # Reemplaza con los índices correspondientes
-
-    valor_ARQ_T1_HIDRAULICA_8_1 = datos_ARQUITECTURA.iloc[15,4]  # Reemplaza con los índices correspondientes
-    valor_ARQ_T1_HIDRAULICA_8_2 = datos_ARQUITECTURA.iloc[15,5]  # Reemplaza con los índices correspondientes
-
-    return render_template('T1_Hidraulica.html', 
-                           valor_ARQ_T1_HIDRAULICA_1_1 = valor_ARQ_T1_HIDRAULICA_1_1,
-                           valor_ARQ_T1_HIDRAULICA_1_2 = valor_ARQ_T1_HIDRAULICA_1_2,
-                           valor_ARQ_T1_HIDRAULICA_1_3 = valor_ARQ_T1_HIDRAULICA_1_3,
-                          
-                           valor_ARQ_T1_HIDRAULICA_2_1 = valor_ARQ_T1_HIDRAULICA_2_1,
-                           valor_ARQ_T1_HIDRAULICA_2_2 = valor_ARQ_T1_HIDRAULICA_2_2,
-                           valor_ARQ_T1_HIDRAULICA_2_3 = valor_ARQ_T1_HIDRAULICA_2_3,
-
-                           valor_ARQ_T1_HIDRAULICA_3_1 = valor_ARQ_T1_HIDRAULICA_3_1,
-                           valor_ARQ_T1_HIDRAULICA_3_2 = valor_ARQ_T1_HIDRAULICA_3_2,
-                           valor_ARQ_T1_HIDRAULICA_3_3 = valor_ARQ_T1_HIDRAULICA_3_3,
-
-                           valor_ARQ_T1_HIDRAULICA_4_1 = valor_ARQ_T1_HIDRAULICA_4_1,
-                           valor_ARQ_T1_HIDRAULICA_4_2 = valor_ARQ_T1_HIDRAULICA_4_2,
-                           valor_ARQ_T1_HIDRAULICA_4_3 = valor_ARQ_T1_HIDRAULICA_4_3,
-
-                           valor_ARQ_T1_HIDRAULICA_5_1 = valor_ARQ_T1_HIDRAULICA_5_1,
-                           valor_ARQ_T1_HIDRAULICA_5_2 = valor_ARQ_T1_HIDRAULICA_5_2,
-                           valor_ARQ_T1_HIDRAULICA_5_3 = valor_ARQ_T1_HIDRAULICA_5_3,
-
-                           valor_ARQ_T1_HIDRAULICA_6_1 = valor_ARQ_T1_HIDRAULICA_6_1,
-                           valor_ARQ_T1_HIDRAULICA_6_2 = valor_ARQ_T1_HIDRAULICA_6_2,
-                           valor_ARQ_T1_HIDRAULICA_6_3 = valor_ARQ_T1_HIDRAULICA_6_3,
-                           valor_ARQ_T1_HIDRAULICA_7_1 = valor_ARQ_T1_HIDRAULICA_7_1,
-                           valor_ARQ_T1_HIDRAULICA_7_2 = valor_ARQ_T1_HIDRAULICA_7_2,
-
-                           valor_ARQ_T1_HIDRAULICA_8_1 = valor_ARQ_T1_HIDRAULICA_8_1,
-                           valor_ARQ_T1_HIDRAULICA_8_2 = valor_ARQ_T1_HIDRAULICA_8_2,
-
-                           T1_Hidraulica=T1_Hidraulica_html)
 
 ###############################################################################################
 ###############################################################################################

@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-def F_T1_REC_MUESTRAS(datos_ARQUITECTURA):
+def FUNCTION_T1_REC_MUESTRAS(datos_ARQUITECTURA):
     """
     Esta función procesa los datos de ARQUITECTURA y extrae valores específicos 
     basados en índices predefinidos.
