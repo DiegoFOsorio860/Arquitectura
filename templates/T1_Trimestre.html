@@ -102,7 +102,7 @@
     </div>
     <div class="phase-buttons_T1_Transversales">
         <div class="phase-button_T1_Transversales" id="fase1">
-            <a href="/T1_Matematicas" class="button"><b> Matemáticas [240201528]</b></a>
+            <a href="/T1_Matematicas" class="button"><b> Matemáticas/Química [240201528]</b></a>
             <span class="button-description"><br></span>
             <span class="button-description">COMPETENCIA CLAVE</span>
             <span class="button-description"><br></span>
@@ -162,8 +162,17 @@
 
         .chart {
             width: 100%; /* Ancho completo del contenedor */
-            height: 200px; /* Altura fija para los gráficos */
+            height: 300px; /* Altura fija para los gráficos */
         }
+        /* Estilos para rotar el texto verticalmente */
+        .vertical-text {
+            writing-mode: vertical-rl; /* Texto vertical */
+            transform: rotate(180deg); /* Rotación a 90 grados */
+            transform-origin: bottom left; /* Cambio del origen de la rotación */
+            font-size: 10px; /* Tamaño del texto */
+        }
+
+
     </style>
 </head>
 <body>
@@ -188,7 +197,7 @@
     <script>
         // Datos para el primer gráfico de barras
 const dataBar1 = {
-    labels: ['A', 'B', 'C', 'D'],
+    labels: ['Hidráulica', 'Recolección de Muestras', 'Ingles', 'Matemáticas/Quimica', 'Biología', 'Comunicación', 'Logistica, Costos, Inventarios'],
     datasets: [{
         label: 'Ejemplo de Datos para Barras 1',
         data: [12, 19, 3, 5],
@@ -196,12 +205,19 @@ const dataBar1 = {
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 0.2)'
         ],
         borderColor: [
             'rgba(255, 99, 132, 1)',
             'rgba(54, 162, 235, 1)',
             'rgba(255, 206, 86, 1)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
             'rgba(75, 192, 192, 1)'
         ],
         borderWidth: 1

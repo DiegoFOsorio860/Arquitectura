@@ -122,3 +122,23 @@ body {
     height: 20px;
     background-color: DodgerBlue;
 }
+
+.blue-line {
+  border: none;
+  background-color: DodgerBlue;
+  color: DodgerBlue;
+  height: 3px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.chart {
+  width: 100%;
+  height: 200px;
+}
