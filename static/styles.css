@@ -1,55 +1,52 @@
-/* styles.css */
-
 /* Estilos para el formulario de contacto */
 form {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Otros estilos y ajustes según tus necesidades */
-  
-  /* Estilos para las tarjetas de pregunta */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para las tarjetas de pregunta */
 .question-card {
-    background-color: #f0f0f0; /* Cambia el color de fondo */
-    border-radius: 8px; /* Añade bordes redondeados */
-    padding: 5px; /* Agrega espaciado interno */
-    margin-bottom: 5px; /* Añade espacio entre las tarjetas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+  background-color: #00C957; /* Cambia el color de fondo */
+  border-radius: 8px; /* Añade bordes redondeados */
+  padding: 5px; /* Agrega espaciado interno */
+  margin-bottom: 5px; /* Añade espacio entre las tarjetas */
+  box-shadow: 0 2px 4px rgba(44, 156, 225, 0.1);
+  transition: background-color 0.3s ease;
+  color: white; /* Texto en color blanco */
 }
 
 /* Estilos al pasar el mouse sobre las tarjetas */
@@ -57,18 +54,12 @@ form {
   background-color: #99c2ff;
 }
 
-
-
-/* styles.css */
-
-/* Estilo para las preguntas */
-/* Estilo para las preguntas */
+/* Estilos para las preguntas */
 .questions {
   border: 2px solid #3498db; /* Borde azul */
   padding: 10px;
   margin-bottom: 20px;
-  width: 70%; /* Reducir el ancho del recuadro */
-
+  width: 65%; /* Reducir el ancho del recuadro */
 }
 
 /* Estilo para el título de las secciones */
@@ -101,44 +92,217 @@ form {
   color: #3498db; /* Texto azul */
 }
 
+/*
+@keyframes blink {
+    /* Animación de parpadeo */
+    @keyframes blink {
+      0% {
+          opacity: 1;
+      }
+      50% {
+          opacity: 0.5;
+      }
+      100% {
+          opacity: 1;
+      }
+  }  
+
+  .blinking-link {
+      /* Estilos para el enlace que parpadea */
+      animation: blink 1s infinite;
+  }
+
+  /* Estilo para la lista numerada */
+  .custom-list {
+    list-style-type: decimal; /* Cambia el tipo de numeración */
+    padding-left: 20px; /* Ajusta el espaciado a la izquierda */
+}
+
+/* Estilo para los números */
+.custom-list li {
+    font-weight: bold; /* Hace que los números sean negritas */
+    color: #3498db; /* Cambia el color de los números */
+}
+
+/* Estilo para los textos de la lista */
+.custom-list p {
+    margin: 5px 0; /* Ajusta el margen entre los textos */
+}
+
+    /* Estilo para la lista numerada */
+    .custom-list {
+      list-style: none; /* Quita los estilos por defecto de la lista */
+      counter-reset: custom-counter; /* Reinicia el contador */
+      padding-left: 20px; /* Ajusta el espaciado a la izquierda */
+  }
+
+/* Estilos para la lista numerada */
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Animación */
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Estilo de la animación */
+.animated {
+  animation: slideIn 0.5s ease-in-out;
+  margin-bottom: 10px;
+}
+
+
+.separator {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.1); /* Color con opacidad */
+  margin: 20px 0; /* Espacio entre secciones */
+}
+
+.containertitle {
+  background-color: #686767; /* Fondo azul claro */
+  padding: 5px; /* Espacio alrededor del contenido */
+  color: white; /* Texto en color blanco */
+}
+z
+.separatortitle {
+  height: 1px; /* Altura de la línea */
+  margin: 5px 0; /* Espacio entre separadores */
+}
+
+
+.containersubtitle {
+  background-color: #D3D3D3; /* Fondo azul claro */
+  padding: 0.5px; /* Espacio alrededor del contenido */
+}
+z
+.separatorsubtitle {
+  height: 1px; /* Altura de la línea */
+  margin: 1px 0; /* Espacio entre separadores */
+}
+
+
+.chapter-info {
+  /* Estilos generales del contenedor del capítulo */
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #D3D3D3;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  color: #333; /* Color del texto */
+  width: 800px; /* Ancho deseado */
+  height: 120px; /* Alto deseado */
+}
+
+.section {
+  /* Estilos para cada sección */
+  margin-top: 10px;
+}
+
+.section-title {
+  /* Estilos para los títulos de sección */
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.info {
+  /* Estilos para la información común */
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+
+/* Estilos para la disposición en dos columnas usando CSS Grid */
+.question-card_5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Cinco columnas de ancho flexible */
+  gap: 10px; /* Espacio entre las tarjetas */
+  background-color: #DFF3FC; /* Cambia el color de fondo */
+  border-radius: 8px; /* Añade bordes redondeados */
+  padding: 5px; /* Agrega espaciado interno */
+  margin-bottom: 5px; /* Añade espacio entre las tarjetas */
+  box-shadow: 0 2px 4px rgba(44, 156, 225, 0.1);
+  transition: background-color 0.3s ease;
+  color: rgb(3, 19, 246); /* Texto en color blanco */
+}
+
+.question-card_5 {
+  width: calc(100% - 10px); /* Ajusta el ancho para dos columnas */
+  border: 1px solid #ccc;
+  padding: 10px;
+  grid-column: span 1; /* Ocupar una columna */
+  grid-row: span 1; /* Ocupar una fila */
+}
+
+.question_5 {
+  /* Estilos para el bloque de pregunta */
+  border-bottom: 1px solid #ccc; /* Línea separadora entre preguntas */
+  padding-bottom: 10px; /* Espacio entre preguntas */
+  margin-bottom: 10px; /* Espacio entre bloques de preguntas */
+}
+
+.question-text_5 {
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Texto en negrita */
+  color: #4CAF50; /* Color de texto */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  text-align: center;
+}
+
+/* Estilos para la disposición en dos columnas usando CSS Grid */
+.question-card_4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cinco columnas de ancho flexible */
+  gap: 10px; /* Espacio entre las tarjetas */
+  background-color: #DFF3FC; /* Cambia el color de fondo */
+  border-radius: 8px; /* Añade bordes redondeados */
+  padding: 5px; /* Agrega espaciado interno */
+  margin-bottom: 5px; /* Añade espacio entre las tarjetas */
+  box-shadow: 0 2px 4px rgba(44, 156, 225, 0.1);
+  transition: background-color 0.3s ease;
+  color: rgb(3, 19, 246); /* Texto en color blanco */
+}
+
+/* Estilos para la tabla */
+.custom-table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Estilos para las celdas de encabezado */
+.header-cell {
+  background-color: rgb(150, 149, 149);
+  text-align: left;
+  font-size: 90%;
+  font-weight: bold;
+  padding: 8px;
+  color : white
+}
+
+/* Estilos para las celdas de contenido */
+.custom-table td {
+  padding: 8px;
+  border: 1px solid #b3b3b37b;
+  font-size: 90%;
+}
+
+/* Estilos para la sección de información adicional */
+.additional-info {
+  margin-top: 20px;
+}
 
 body {
-  margin: 20px; /* Espacio entre el borde de la página y el contenido */
-  font-family: Arial, sans-serif;
-}
-
-.texto {
-  margin-bottom: 5px; /* Espacio entre el texto y los cuadros */
-}
-
-.cuadro {
-  border: 1px solid #000;
-  padding: 5px; /* Espacio dentro del cuadro */
-  margin-bottom: 5px; /* Espacio entre los cuadros */
-}
-
-.blue-line {
-    border: none;
-    height: 20px;
-    background-color: DodgerBlue;
-}
-
-.blue-line {
-  border: none;
-  background-color: DodgerBlue;
-  color: DodgerBlue;
-  height: 3px;
-  width: 100%;
-  margin: 20px 0;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.chart {
-  width: 100%;
-  height: 200px;
+  margin: 30px; /* Agrega un margen alrededor de todo el contenido */
 }

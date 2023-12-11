@@ -70,8 +70,8 @@
 <p style="margin-bottom: 10px;"></p>
 <table border='3px' width='100%' style='margin-bottom: 20px;'>
     <tr>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CÓDIGO</b> </td>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>ELEMENTO</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>VALOR</b> </td>
         <td colspan="2" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 60%;' ><b>DESCRIPCIÓN</b> </td>
     </tr> 
     <tr>
@@ -116,15 +116,15 @@
         <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_REC_MUESTRAS_8_2 }} </td>
     </tr>
     <tr>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CÓDIGO</b> </td>
-        <td colspan="3" style='background-color: lightgrey; height: 5x; text-align: left; font-size: 80%; width: 80%;' ><b>CLASIFICACION COMPETENCIA</b></td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
+        <td colspan="3" style='background-color: lightgrey; height: 5x; text-align: left; font-size: 80%; width: 80%;' ><b>VALOR</b></td>
     </tr> 
     <tr>
         <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_9_1 }} </b> </th>
         <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_REC_MUESTRAS_9_2 }} </td>
     </tr>
     <tr>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CÓDIGO</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 40%;' ><b>CONOCIMIENTOS</b></td>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN DIRECTA</b></td>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN AUTÓNOMA</b></td>
@@ -191,7 +191,7 @@
         <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_19_4 }} </td>
     </tr>
     <tr>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CÓDIGO</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 40%;' ><b>EVIDENCIA DE PROYECTO</b></td>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN DIRECTA</b></td>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN AUTÓNOMA</b></td>
@@ -238,7 +238,6 @@
 
 <!-- ================================================================= -->
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -246,24 +245,37 @@
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <div class="texto">
-        <h1 style="font-size: 100%; text-align: left;">3.1. ACTIVIDADES DE REFLEXIÓN INICIAL </h1>
-        <p><strong>3.1.1 Reconocer la Importancia de calidad del agua y muestreo de agua con base a conocimientos previos</strong></p>
-        <!-- Imagen a la derecha -->
+    <body>
+        <div class="containertitle">
+            <div class="separatortitle"></div>
+        <p><strong>3.1. ACTIVIDADES DE REFLEXIÓN INICIAL</strong></p>
+        </div>
+    </body>
+    <body>
+        <div class="containersubtitle">
+            <div class="separatorsubtitle"></div>
+        <p><strong>3.1.1 Reconocer la Importancia de calidad del agua y muestreo de agua con base a conocimientos previos.</strong></p>
+        </div>
+    </body>
         <div style="width: 30%; text-align: center; float: right;">
             <div class="image-container" style="margin-top: 5px; margin-bottom:40;">
                 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG9wMmVtcmRwNHZld2NxdXFvbHJsdHEwOXJqOWVmM2toeGlhcGlwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/52Ywm818WNeuI/giphy.gif" alt="Imagen relacionada" style="width: 350px; height: 240px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
             </div>
         </div>
-
-        <div>
-            <p><strong>Tiempo de ejecución de la actividad:</strong> 4 Horas</p>
-            <p><strong>Técnica didáctica:</strong> dinámica de grupo – Socialización</p>
+        <div class="chapter-info">
+            <p class="info"><strong>Duración:</strong> 4 Horas</p>
+            <p class="info"><strong>Técnica didáctica:</strong> dinámica de grupo – Socialización</p>
+            <p class="info"><strong>Instrumento de evaluación:</strong> Cuestionario</p>
         </div>
-
         <p class="texto" style="text-align: justify;">
-            El muestreo de agua es una actividad dirigida a la recolección de una pequeña porción de esta, que represente exactamente la calidad de la masa de agua en el lugar y en el momento de obtención de la muestra. La recolección de muestras de aguas es el primer paso de todo estudio de caracterización y de un medio y reviste gran importancia en la confiabilidad de los resultados de una investigación ya que, si las muestras son tomadas de una forma inadecuada y en un lugar no indicado, los resultados no serán confiables. De esta forma, los temas a tratar incluyen los conceptos fundamentales de muestreo, codificación, rotulación, cadena de custodia, procedimiento y protocolos de laboratorio al momento de tomar una muestra de agua.
+            El muestreo de agua es una actividad dirigida a la recolección de una pequeña porción de esta, que represente exactamente la calidad de la masa de agua en el lugar y en el momento de obtención de la muestra. La recolección de muestras de aguas es el primer paso de todo estudio de caracterización y de un medio y reviste gran importancia en la confiabilidad de los resultados de una investigación ya que, si las muestras son tomadas de una forma inadecuada y en un lugar no indicado, los resultados no serán confiables. 
+            <br>
+            De esta forma, los temas a tratar incluyen los conceptos fundamentales de muestreo, codificación, rotulación, cadena de custodia, procedimiento y protocolos de laboratorio al momento de tomar una muestra de agua.
+            <br>
+            <br>
+            Lo invito a ver el siguiente video de muestreo y medición.
         </p>
+        {% include 'video4.html' %}
         <p style="text-align: justify;">
             Responda inicialmente las siguientes preguntas de forma individual, después reúnanse en grupos de trabajo de 4 personas, consoliden la información y finalmente una persona del equipo sustentará ante el grupo de formación con moderación del instructor.
         </p>
@@ -294,29 +306,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tu página</title>
-    <link rel="stylesheet" href="static/styles.css"> <!-- Asegúrate de que esta ruta sea la correcta -->
+    <title>Recuadro con Fondo Azul Claro</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div>
-    <h1 style="font-size: 100%; margin-top: 20px; text-align: left;;">3.2. ACTIVIDADES DE CONTEXTUALIZACIÓN E IDENTIFICACIÓN DE CONOCIMIENTOS NECESARIOS PARA EL APRENDIZAJE. </h1>
-    <p><strong>3.2.1 Comprender el concepto de muestreo de agua según parámetros técnicos. </strong></p>
-    <div>
-        <p><strong>Duración:</strong> 2 Horas</p>
-        <p><strong>Técnica didáctica:</strong> Dinámica de grupo – Socialización</p>
-        <p><strong>Instrumento de evaluación:</strong> Cuestionario</p>
-    <!-- Imagen a la derecha -->
+    <div class="containertitle">
+        <div class="separatortitle"></div>
+    <p><strong>3.2. ACTIVIDADES DE CONTEXTUALIZACIÓN E IDENTIFICACIÓN DE CONOCIMIENTOS NECESARIOS PARA EL APRENDIZAJE</strong></p>
+    </div>
+</body>
+<body>
+    <div class="containersubtitle">
+        <div class="separatorsubtitle"></div>
+    <p><strong>3.2.1 Comprender el concepto de muestreo de agua según parámetros técnicos.</strong></p>
+    </div>
+</body>
+    <div class="chapter-info">
+        <p class="info"><strong>Duración:</strong> 2 Horas</p>
+        <p class="info"><strong>Técnica didáctica:</strong> Dinámica de grupo – Socialización</p>
+        <p class="info"><strong>Instrumento de evaluación:</strong> Cuestionario</p>
     </div>
     <p style="text-align: justify; margin-top: 20px; clear: both;">
         Como principal condición, toda muestra debe ser representativa del material analizado (sus características deben ser iguales a las del promedio del material) y además debe ser homogénea (cuando sus características son las mismas en todas sus partes), para poder recolectar las muestras debo tener en cuenta el tipo de muestra que se requiere para el procedimiento según la necesidad. 
     </p>
-    <div class="text-container">
-        <p style="text-align: justify;">
-            Apoyado de la lectura <span style="background-color: #3498db; padding: 3px;">
-                <a href="https://sena4-my.sharepoint.com/:w:/r/personal/dfosorio_sena_edu_co/_layouts/15/Doc.aspx?sourcedoc=%7BE26D3EF8-7E38-4A11-B63F-5694E98052C7%7D&file=280201214-RA1-C02-Anexo1.docx&action=default&mobileredirect=true" style="color: white; text-decoration: none;">Tipos de muestras y Tipos de Recipiente</a>
-            </span>, disponible en la plataforma territorio en la fase 1, carpeta "<span style="color: #3498db;">Recolección de muestras de aguas</span>", subcarpeta "<span style="color: #3498db;">Material de apoyo</span>", organicen una mesa directiva con aquellos aprendices que consideren tener conocimientos previos en relación con la toma de muestras de agua. Esta mesa directiva debe estar conformada por un máximo de cinco (5) aprendices. Los demás aprendices de la ficha serán el auditorio, y un aprendiz actuará como moderador de la asamblea. La mesa directiva responderá las preguntas que se formularán a continuación.
-        </p>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Enlace Parpadeante</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="text-container">
+            <p style="text-align: justify;">
+                Apoyado de la lectura <span style="background-color: #3498db; padding: 3px;">
+                    <a href="https://sena4-my.sharepoint.com/:w:/r/personal/dfosorio_sena_edu_co/_layouts/15/Doc.aspx?sourcedoc=%7BE26D3EF8-7E38-4A11-B63F-5694E98052C7%7D&file=280201214-RA1-C02-Anexo1.docx&action=default&mobileredirect=true" target="_blank" class="blinking-link" style="color: white; text-decoration: none;">Tipos de muestras y Tipos de Recipiente</a>
+                </span>, disponible en la plataforma territorio en la fase 1, carpeta "<span style="color: #3498db;">Recolección de muestras de aguas</span>", subcarpeta "<span style="color: #3498db;">Material de apoyo</span>", organicen una mesa directiva con aquellos aprendices que consideren tener conocimientos previos en relación con la toma de muestras de agua. Esta mesa directiva debe estar conformada por un máximo de cinco (5) aprendices. Los demás aprendices de la ficha serán el auditorio, y un aprendiz actuará como moderador de la asamblea. La mesa directiva responderá las preguntas que se formularán a continuación.
+            </p>
+        </div>
+    </body>
+    </html>
     
         <p style="text-align: justify;">
             El resto de los aprendices de la ficha pueden formular contra preguntas relacionadas con la temática. Finalmente, establezcan conclusiones relacionadas con los temas tratados con la asesoría de su Instructor (a). El cuestionario de preguntas estará también en la plataforma territorio en la fase 1. Carpeta recolección de muestras de aguas, subcarpeta evidencias
@@ -324,7 +351,7 @@
     </div>
     <div style="width: 30%; text-align: center; float: right;">
         <div class="image-container" style="margin-top: px;">
-            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHhlZWNzam8xOGJtcmtoZTNoYnJsMWpzcHRieDd4ZXI4YWhnOTgwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J1Dm8eptVVwSPgV2v7/giphy.gif" alt="Imagen relacionada" style="width: 450px; height: 364px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHhlZWNzam8xOGJtcmtoZTNoYnJsMWpzcHRieDd4ZXI4YWhnOTgwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J1Dm8eptVVwSPgV2v7/giphy.gif" alt="Imagen relacionada" style="width: 400px; height: 364px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
         </div>
     </div>
     </div>
@@ -353,12 +380,306 @@
         <p><strong>Materiales:</strong> Computadores, servicio de Internet.</p>
     </div>
 </div>
+</body>
+
+<!-- ================================================================= -->
+<!-- ================================================================= -->
+<!-- ================================================================= -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuadro con Fondo Azul Claro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="containertitle">
+        <div class="separatortitle"></div>
+    <p><strong>3.3. ACTIVIDADES DE APROPIACIÓN DEL CONOCIMIENTO (CONCEPTUALIZACIÓN Y TEORIZACIÓN) </strong></p>
+    </div>
+</body>
+<body>
+    <div class="containersubtitle">
+        <div class="separatorsubtitle"></div>
+    <p><strong>3.3.1 Reconocer fuentes contaminantes de agua, con base en la normativa aplicable de muestreo. </strong></p>
+    </div>
+</body>
+    <div class="chapter-info">
+        <p class="info"><strong>Duración:</strong> 4 Horas</p>
+        <p class="info"><strong>Técnica didáctica:</strong> Dinámica de grupo – Socialización</p>
+        <p class="info"><strong>Instrumento de evaluación:</strong> Plenaria</p>
+    </div>
+    <p style="text-align: justify;">
+        La Organización Mundial de la Salud (OMS) define el agua contaminada como aquella cuya <b>"composición haya sido modificada de modo que no reúna las condiciones para el uso que se le hubiera destinado en su estado natural".</b> 
+        <br>
+        <br>
+        En equipos de trabajo y según orientaciones del instructor, prepare una exposición de uno de los siguientes contenidos: fuentes de contaminación antropogénica, fuentes de contaminación natural, compuestos orgánicos persistentes, compuestos emergentes, contaminación de acuíferos, contaminación de agua superficial. 
+        <br>
+        Para esta presentación los aprendices deben usar únicamente fotografías, las cuales pueden tomar en algún lugar de su localidad o bajar de internet, el requisito es que las imágenes le permitan por sí mismas explicar como mínimo:<br>
+        <!-- Estructura HTML con estilos aplicados -->
+<!-- Estructura HTML con estilos aplicados -->
+        <html lang="en">
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <div class="question-cards">
+            <div class="question-card">
+                <div class="question">
+                    <p>En qué consiste ese tipo de contaminación: definición; características y clasificación</p>
+                </div>
+            </div>
+            <div class="question-card">
+                <p>Fuentes emisoras y receptoras de dicha contaminación</p>
+            </div>
+            <div class="question-card">
+                <p>Consecuencias en la salud de las personas, animales, infraestructura</p>
+            </div>
+        </div>
+    </html>
+    <div" style="margin-top: 20px;">
+        <p><strong>Ambiente Requerido:</strong> Ambiente de aprendizaje con capacidad para 35 personas con tablero acrílico y computadores.</p>
+        <p><strong>Materiales:</strong> Computadores, servicio de Internet.</p>
+    </div>
+</div>
+
+<body>
+    <div class="containersubtitle">
+        <div class="separatorsubtitle"></div>
+    <p><strong>3.3.2   Identificar las características físicas, químicas y microbiológicas del agua según parámetros técnicos. </strong></p>
+    </div>
+</body>
+<body>
+<div class="chapter-info">
+    <p class="info"><strong>Tiempo de ejecución de la actividad:</strong> 8 Horas</p>
+    <p class="info"><strong>Técnica didáctica:</strong> Dinámica de grupo – Socialización</p>
+    <p class="info"><strong>Instrumento de evaluación:</strong> Conversatorio </p>
+</div>
+    <p style="text-align: justify;">
+      El agua es un recurso natural imprescindible para el desarrollo de la vida. Está en el epicentro del desarrollo sostenible y es fundamental para el desarrollo socioeconómico, la energía y la producción de alimentos, los ecosistemas saludables y para la supervivencia misma de los seres humanos, antes de identificar las características del agua es indispensable conocer los tipos de aguas.
+    </p>
+    <div class="question-cards_5">
+        <div class="question-card_5">
+            <p class="question-text_5"><b>Agua potable</b></p>
+            <p class="question-text_5"><b>Agua dulce</b></p>
+            <p class="question-text_5"><b>Agua salada</b></p>
+            <p class="question-text_5"><b>Agua salobre</b></p>
+            <p class="question-text_5"><b>Agua dura</b></p>
+            </div>
+        </div>
+        <div class="question-card_5">
+            <p class="question-text_5"><b>Agua blanda</b></p>
+            <p class="question-text_5"><b>Agua residual</b></p>
+            <p class="question-text_5"><b>Agua tratada</b></p>
+            <p class="question-text_5"><b>Agua grises</b></p>
+            <p class="question-text_5"><b>Agua bruta</b></p>
+        </div>
+    </div>
+</div>      <!-- Agrega más preguntas aquí si es necesario -->
+</body>
+
+<div>
+    <div style="width: 30%; text-align: center; float: right;">
+        <div class="image-container" style="margin-top: 5px; margin-bottom:40;">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-L1OjsPNEizo%2FXhOJNsDCiNI%2FAAAAAAAAY_I%2FMGQdx1EYJPA7IUF5XTi-4Tk8o6YCkBvxQCLcBGAsYHQ%2Fs1600%2Fquimicos.jpg&f=1&nofb=1&ipt=b99d1d98e811f32c08851aafc27738e4c8046966e05fe48f18194809ecdb573e&ipo=images"  alt="Imagen relacionada" style="width: 400px; height: 300px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
+        </div>
+    </div>
+    <p style="text-align: justify;">
+        Organícense en grupos de trabajo de máximo cuatro (4) aprendices. Se pueden apoyar en el siguiente link:
+        <p><a href="https://www.editdiazdesantos.com/wwwdat/pdf/9788490522103.pdf"> 280201214-RA1-C05-Anexo1 | Fisicoquímica y microbiología de los medios acuáticos</a></p>
+        Luego, diseñen y lleven a cabo en el ambiente de aprendizaje un juego o concurso para aplicar a sus demás compañeros de ficha (por ejemplo, juego del “ahorcado”, sopa de letras, completar palabras, “¿quién quiere ser millonario?”, o el que cada grupo considere necesario diseñar). Para tal fin, antes de iniciar el juego o concurso, hagan una presentación con ayuda de las TIC, en la cual se expliquen los temas relacionados a continuación:
+    </p>
+    <p style="text-align: justify;"> 
+        También pueden consultar bibliografía de la biblioteca de su centro de formación y las bases de datos de la página web de la misma.
+    </p> 
+    <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html"> Biblioteca SENA | Bases de datos </a></p>
+    <p>
+        Consulten los parámetros físicos, químicos y microbiológicos que su Instructor (a) asignará a cada grupo de trabajo. Puede apoyarse en la siguiente normatividad:
+    </p>
+    <p><a href="https://sena4-my.sharepoint.com/:b:/r/personal/dfosorio_sena_edu_co/Documents/SENA%20CDHC%20RIC/SENA%20CDHC%20RIC%20SSAS/FASE%201/TRIMESTRE%201/280201214%20Recolecci%C3%B3n%20de%20muestras/Codificaci%C3%B3n%20Apropiaci%C3%B3n/280201214-RA1-C04-Anexo1.pdf?csf=1&web=1&e=DcdVag"> 280201214-RA1-C04-Anexo1 | Resolución 2115 de 2007 </a></p>
+    <p><a href="https://sena4-my.sharepoint.com/:b:/r/personal/dfosorio_sena_edu_co/Documents/SENA%20CDHC%20RIC/SENA%20CDHC%20RIC%20SSAS/FASE%201/TRIMESTRE%201/280201214%20Recolecci%C3%B3n%20de%20muestras/Codificaci%C3%B3n%20Apropiaci%C3%B3n/280201214-RA1-C04-Anexo2.pdf?csf=1&web=1&e=NUCyQZ"> 280201214-RA1-C04-Anexo2 | Resolución 0631 de 2015 </a></p>
+</div>
+</div>
+</div>
+  <div class="text-container">
+    <p style="text-align: justify;">
+        Luego, diseñen y lleven a cabo en el ambiente de aprendizaje un juego o concurso para aplicar a sus demás compañeros de ficha (por ejemplo, juego del “ahorcado”, sopa de letras, completar palabras, “¿quién quiere ser millonario?”, o el que cada grupo considere necesario diseñar). Para tal fin, antes de iniciar el juego o concurso, hagan una presentación con ayuda de las TIC, en la cual se expliquen los temas relacionados a continuación:
+    </p>
+    <html lang="en">
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <div class="question-cards">
+            <div class="question-card">
+                <div class="question">
+                    <p>1. Definición de los parámetros asignados</p>
+                </div>
+            </div>
+            <div class="question-card">
+                <p>2. ¿Cómo afectan la salud humana?</p>
+            </div>
+            <div class="question-card">
+                <p>3. ¿Cuáles son los procedimientos de muestreo?</p>
+            </div>
+        </div>
+        <br>
+        Lo invito a ver el siguiente video sobre las propiedades del agua.
+    {% include 'video5.html' %}
+      <p style="text-align: justify;">
+          Luego, desarrollen el juego o concurso diseñado a sus demás compañeros de ficha. Cada grupo de trabajo tendrá los siguientes parámetros asignados por su Instructor (a):
+      </p>
+    </div>
+</div>
+
+<table class="custom-table">
+    <!-- Contenido de la tabla -->
+    <tr>
+        <td class="header-cell"><b>Grupo</b></td>
+        <td class="header-cell"><b>Características</b></td>
+    </tr>
+    <tr>
+        <td><strong>GRUPO 1</strong></td>
+        <td>Características Organolépticas: sabor, olor, sustancias flotantes.</td>
+    </tr>
+    <tr>
+        <td><strong>GRUPO 2</strong></td>
+        <td>Características Físicas: caudal, temperatura, color, turbiedad, sólidos suspendidos, conductividad eléctrica, etc.</td>
+    </tr>
+    <tr>
+        <td><strong>GRUPO 3</strong></td>
+        <td>Características Químicas: pH, alcalinidad, dureza, hierro, aluminio, cloruros, sulfatos, nitritos, nitratos, cloro residual libre, DBO DQO, etc.</td>
+    </tr>
+    <tr>
+        <td><strong>GRUPO 4</strong></td>
+        <td>Características Microbiológicas: E. Coli, coliformes totales, mesófilos, giardia, criptosporydium</td>
+    </tr>
+</table>
+
+<div" style="margin-top: 20px;">
+<p><strong>Ambiente Requerido:</strong> Ambiente de aprendizaje con capacidad para 35 personas con tablero acrílico y computadores.</p>
+<p><strong>Materiales:</strong> Computadores, servicio de Internet.</p>
+</div>
+
+<body>
+    <div class="containersubtitle">
+        <div class="separatorsubtitle"></div>
+    <p><strong>3.3.3.  Identificar normas empleadas para la toma de muestras de acuerdo con procedimientos técnicos. </strong></p>
+    </div>
+</body>
+    <div class="chapter-info">
+        <p class="info"><strong>Duración:</strong> 4 Horas</p>
+        <p class="info"><strong>Técnica didáctica:</strong> Dinámica de grupo – Socialización</p>
+        <p class="info"><strong>Instrumento de evaluación:</strong> Mapa conceptual</p>
+    </div>
+    <p style="text-align: justify;">
+        Con el fin de identificar protocolos técnicos en la toma de muestras de agua, se deben comprender los requerimientos de normas técnicas aplicadas a diferentes muestreos de agua.</b> 
+        <br>
+        Lo invito a ver el siguiente video sobre el Muestreo de Agua Potable.
+        {% include 'video6.html' %}
+        <br>
+        Para llevar a cabo lo anterior, organícense en grupos de cuatro (4) aprendices con el fin de leer y elaborar un mapa conceptual de la NTC-ISO 5667, la cual se encuentra disponible en la base de datos ICONTEC de la página web del Sistema de Bibliotecas SENA Base de datos Icontec. Consulten principalmente los siguientes temas:
+        <br>
+        <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html"> Biblioteca SENA | Bases de datos </a></p>
+        <br>
+        <div class="question-cards_5">
+            <div class="question-card_4">
+                <p class="question-text_5"><b>Técnicas de muestreo</b></p>
+                <p class="question-text_5"><b>Muestreos en agua potable</b></p>
+                <p class="question-text_5"><b>Muestreo en lagos</b></p>
+                <p class="question-text_5"><b>Muestreo en ríos y corrientes</b></p>
+                </div>
+            </div>
+            <div class="question-card_4">
+                <p class="question-text_5"><b>Muestreo de aguas residuales </b></p>
+                <p class="question-text_5"><b>Muestreo de aguas subterraneas </b></p>
+                <p class="question-text_5"><b>Muestreo de aguas marinas </b></p>
+                <p class="question-text_5"><b>Muestreo en agua y vapor en instalaciones de caldera </b></p>
+            </div>
+        </div>
+    <p style="text-align: justify;">
+        Posteriormente socialicen en plenaria los requerimientos de la Norma para cada muestreo con la intervención de su Instructor (a).
+    </p>
+    <div>
+        <p><strong>Ambiente Requerido:</strong> Ambiente de aprendizaje con capacidad para 35 personas con tablero acrílico y computadoras.</p>
+        <p><strong>Materiales:</strong> Computadoras, servicio de Internet.</p>
+    </div>
+</div>
+</div>
+<!-- Estructura HTML con estilos aplicados -->
 
 
-</html>
-    <!-- Botón en la parte inferior -->
+<body>
+    <div class="containersubtitle">
+        <div class="separatorsubtitle"></div>
+    <p><strong>3.3.4. Identificar recipientes, reactivos e insumos para la toma de muestra de acuerdo con parámetros técnicos. </strong></p>
+    </div>
+</body>
+    <div class="chapter-info">
+        <p class="info"><strong>Duración:</strong> 8 Horas</p>
+        <p class="info"><strong>Técnica didáctica:</strong> Observación directa</p>
+        <p class="info"><strong>Instrumento de evaluación:</strong> Cuadro comparativo</p>
+    </div>
+    <p style="text-align: justify;">
+        Los recipientes a utilizar para la recolección y almacenamiento de las muestras deberán evitar cualquier alteración de la misma, ya sea por adición o por mermas como la adsorción a las paredes del recipiente o la volatilización. Los recipientes más apropiados para los muestreos son de polietileno, polipropileno, policarbonato y vidrios de diversos tipos, siendo adecuado uno u otro material en función del análisis a realizar. 
+        Son características necesarias de los recipientes:
+    </p>
+    <html lang="en">
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <div class="question-cards">
+            <div class="question-card">
+                <div class="question">
+                    <p>No desprender sustancias que puedan contaminar la muestra.</p>
+                </div>
+            </div>
+            <div class="question-card">
+                <p>No adsorber los componentes que se desean analizar.</p>
+            </div>
+            <div class="question-card">
+                <p>Estar construidos en materiales inertes (no reactivos).</p>
+            </div>
+            <div class="question-card">
+                <p>Ser de cierre hermético, de material resistente y de tamaño adecuado.</p>
+            </div>
+        </div>
+    <p style="text-align: justify;">
+        Luego de que su Instructor (a) exponga en el ambiente de aprendizaje los diferentes recipientes, reactivos e insumos empleados en toma de muestras de agua, diríjase al laboratorio de aguas, en el cual su Instructor (a) y el personal encargado del mismo llevarán a cabo la presentación de dichos elementos. Empleando la técnica de la observación directa, elabore un cuadro comparativo de los recipientes, reactivos e insumos utilizados para la toma de muestras para agua potable y agua residual.
+    </p>
+    <p style="text-align: justify;">
+        En cada caso especifiquen las características técnicas de los recipientes e insumos, para lo cual deben consultar bibliografía de la biblioteca de su centro de formación y las bases de datos del SENA.
+    </p>
+    <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html">Biblioteca SENA | Bases de datos</a></p>
+    <p style="text-align: justify;">
+        Apóyense en el video disponible en la plataforma territorio en la fase 1. Carpeta recolección de muestras de aguas, subcarpeta material de apoyo.
+    </p>
+    {% include 'video7.html' %}
+    <p><a href="https://www.youtube.com/watch?v=fBV5XJryVKg">280201214-RA1-C03-Anexo1 | Video Reconocimiento de Materiales de Laboratorio</a></p>
+    <p style="text-align: justify;">
+        Al final, con la asesoría de su Instructor (a), establezcan conclusiones de la actividad.
+    </p>
+    <div>
+        <p><strong>Ambiente Requerido:</strong> Ambiente de aprendizaje con capacidad para 35 personas con tablero acrílico y computadores.</p>
+        <p><strong>Materiales:</strong> Computadores, servicio de Internet.</p>
+    </div>
+</div>
+</div>
+
+<body>
+    <div class="containersubtitle">
+        <div class="separatorsubtitle"></div>
+    <p><strong>3.3.5. Medir caudales por diferentes metodologías según la fuente de recolección de muestra de agua. </strong></p>
+    </div>
+</body>
+    <div class="chapter-info">
+        <p class="info"><strong>Duración:</strong> 8 Horas</p>
+        <p class="info"><strong>Técnica didáctica:</strong> Observación directa</p>
+        <p class="info"><strong>Instrumento de evaluación:</strong> Taller </p>
+    </div>
+    <p style="text-align: justify;">
+        <p>Caudal es la cantidad de fluido (volumen) que pasa por un conducto en una unidad de tiempo. Se designa con Q y en el ámbito de la inspección de vertidos y saneamiento se suelen utilizar litros/segundo, litros/min o m3/h para valores instantáneos y m3 /día o m3 /año para volúmenes medios o acumulados.</p>
+        <p>Algunas metodologías para aforar son las siguientes:</p>
+
     <div class="button-container">
-        <a href="/T1_Trimestre" class="button">Ir a Trimestre 1 </a>
+        <a href="/T1_Trimestre" class="button">Ir a Trimestre 1</a>
     </div>
 </body>
 </html>
