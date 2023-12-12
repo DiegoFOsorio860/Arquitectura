@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 5px;
+            margin: 30px;
         }
 
         h1 {
@@ -59,18 +59,49 @@
         <!-- Agregué un párrafo vacío como separador -->
         <p style="margin-bottom: 0;"></p>
         <div>
-            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> PROYECTO DE FORMACIÓN | FASE 1 - DIAGNÓSTICO </b></h1>
+            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> FASE 1 </b></h1>
         </div>    
-        
-            <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
-            <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+        <hr>
+        <div class="button-container">
+            <a href="/" class="button"> PRESENTACIÓN </a>
+            <a href="/FASES" class="button"> FASES </a>
         </div>
-</body>
-
-</html>
-    <!-- Botón en la parte inferior -->
-    <div class="button-container">
-        <a href="/FASES" class="button">Ir a Fases </a>
+        <hr>
     </div>
-</body>
-</html>
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>Pregunta sobre Agua Potable</title>
+      <link rel="stylesheet" href="static/styles_button_game.css">
+    </head>
+    <body>
+      <div class="question">
+        <h2>¿Cuál es la principal fuente de agua potable para la mayoría de las personas en el mundo?</h2>
+        <form id="quizForm">
+          <label>
+            <input type="radio" name="respuesta" value="Ríos">
+            Ríos
+          </label><br>
+          <label>
+            <input type="radio" name="respuesta" value="Lagos">
+            Lagos
+          </label><br>
+          <label>
+            <input type="radio" name="respuesta" value="Aguas subterráneas">
+            Aguas subterráneas
+          </label><br>
+          <input type="button" value="Responder" onclick="checkAnswer()">
+        </form>
+        <p id="resultado"></p>
+      </div>
+      <script src="js/script.js"></script>
+    </body>
+    </html>
+    
+    
+    
+    

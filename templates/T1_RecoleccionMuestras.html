@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 5px;
+            margin: 30px;
         }
 
         h1 {
@@ -56,13 +56,25 @@
     <div class="title-container" style="margin-bottom: 1px;">
         <h2 style="font-size: 100%; margin-bottom: 0; line-height: 0.5;"><b>PROCEDIMIENTO DE DESARROLLO CURRICULAR | ARQUITECTURA CURRICULAR - PROYECTO DE FORMACIÓN</b></h2>
         <h2 style="font-size: 100%; color: blue; margin-bottom: 0; line-height: 0.5;"><b>SUPERVISIÓN EN SISTEMAS DE AGUA Y SANEAMIENTO | 921200</b></h2>
+        <!-- Agregué un párrafo vacío como separador -->
+        <p style="margin-bottom: 0;"></p>
+        <div>
         <h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5;"><b> FASE 1 | TRIMESTRE 1 | GUIA DE APRENDIZAJE | SUPERVISIÓN EN LA RECOLECCIÓN DE MUESTRAS [280201214]</b></h2>
         <!-- Agregué un párrafo vacío como separador -->
-        <p style="margin-bottom: 40px;"></p>
-        
-            <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
-            <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
-        </div>
+    </div>    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+    <p style="margin-bottom: 0;"></p>
+    <div>
+    <hr>
+    <!-- Botón para ir a la Arquitectura Curricular -->
+            <div class="button-container">
+                <a href="/FASES" class="button"> FASES </a>
+                <a href="/T1_Trimestre" class="button"> TRIMESTRE 1 </a>
+            </div>
+    <hr>
+    </div>
+</div>
 </body>
 
 <!-- Tabla 1 - HIDRAULICA -->
@@ -586,7 +598,7 @@
         <br>
         Para llevar a cabo lo anterior, organícense en grupos de cuatro (4) aprendices con el fin de leer y elaborar un mapa conceptual de la NTC-ISO 5667, la cual se encuentra disponible en la base de datos ICONTEC de la página web del Sistema de Bibliotecas SENA Base de datos Icontec. Consulten principalmente los siguientes temas:
         <br>
-        <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html"> Biblioteca SENA | Bases de datos </a></p>
+        <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html" target="_blank" > Biblioteca SENA | Bases de datos </a></p>
         <br>
         <div class="question-cards_5">
             <div class="question-card_4">
@@ -656,12 +668,12 @@
     <p style="text-align: justify;">
         En cada caso especifiquen las características técnicas de los recipientes e insumos, para lo cual deben consultar bibliografía de la biblioteca de su centro de formación y las bases de datos del SENA.
     </p>
-    <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html">Biblioteca SENA | Bases de datos</a></p>
+    <p><a href="http://biblioteca.sena.edu.co/paginas/bases.html" target="_blank" >Biblioteca SENA | Bases de datos</a></p>
     <p style="text-align: justify;">
         Apóyense en el video disponible en la plataforma territorio en la fase 1. Carpeta recolección de muestras de aguas, subcarpeta material de apoyo.
     </p>
     {% include 'video7.html' %}
-    <p><a href="https://www.youtube.com/watch?v=fBV5XJryVKg">280201214-RA1-C03-Anexo1 | Video Reconocimiento de Materiales de Laboratorio</a></p>
+    <p><a href="https://www.youtube.com/watch?v=fBV5XJryVKg" target="_blank" >280201214-RA1-C03-Anexo1 | Video Reconocimiento de Materiales de Laboratorio</a></p>
     <p style="text-align: justify;">
         Al final, con la asesoría de su Instructor (a), establezcan conclusiones de la actividad.
     </p>

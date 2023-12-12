@@ -1,5 +1,5 @@
 /* Estilos para el formulario de contacto */
-form {
+.form {
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -10,22 +10,20 @@ form {
   margin-bottom: 15px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
+.label {
+  input[type="text"],
+  input[type="email"],
+  textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-button[type="submit"] {
+
+}
+
+.button[type="submit"] {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -34,7 +32,7 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+.button[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -303,6 +301,56 @@ z
   margin-top: 20px;
 }
 
-body {
+.body {
   margin: 30px; /* Agrega un margen alrededor de todo el contenido */
+}
+
+/* Estilos para el contenedor del cuadro */
+.box-container {
+  margin: 20px auto; /* Ajusta los márgenes según tu preferencia */
+  width: 80%; /* Define el ancho del cuadro */
+  border: 2px solid #ccc; /* Establece el borde */
+  padding: 20px; /* Añade espacio interno */
+}
+
+/* Estilos para el contenedor de los botones */
+.button-container {
+  text-align: center;
+  position: center; /* Necesario para que la línea esté posicionada correctamente */
+}
+
+/* Estilos para los botones */
+.button {
+  margin: 0 px;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block; /* Hace que los botones se muestren en línea */
+  background-color: #00ff00; /* Cambia el color a verde */
+  text-align: center;
+  position: center; /* Necesario para que la línea esté posicionada correctamente */
+}
+
+/* Estilos específicos para los botones */
+.button:nth-child(1) {
+  background-color: #0066cc;
+  text-align: center;
+  position: center; /* Necesario para que la línea esté posicionada correctamente */
+}
+
+.button:nth-child(2) {
+  background-color: #0066cc;
+  text-align: center;
+  position: center; /* Necesario para que la línea esté posicionada correctamente */
+}
+
+
+/* Estilos para la línea */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc; /* Color gris */
+  margin: 10px 0; /* Espacio alrededor de la línea */
 }
