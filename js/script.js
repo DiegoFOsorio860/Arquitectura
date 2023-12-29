@@ -3,7 +3,7 @@ function checkAnswer() {
   const result = document.getElementById('resultado');
 
   if (answer) {
-    if (answer.value === 'Aguas subterráneas') {
+    if (answer.value === 'Aguas subterraneas') {
       result.textContent = '¡Respuesta correcta! Las aguas subterráneas son la principal fuente de agua potable para la mayoría de las personas en el mundo.';
     } else {
       result.textContent = 'Respuesta incorrecta. Las aguas subterráneas son la principal fuente de agua potable para la mayoría de las personas en el mundo.';

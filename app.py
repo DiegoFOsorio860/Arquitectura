@@ -16,15 +16,17 @@ from FASES import FUNCTION_FASES
 from T1_Trimestre import FUNCTION_T1
 from T1_RecoleccionMuestras import FUNCTION_T1_REC_MUESTRAS
 from T1_Hidraulica import FUNCTION_T1_HIDRAULICA
+from PROYECTO import FUNCTION_PROYECTO
 
 
 app = Flask(__name__)
 
 # Cargar datos_TIME desde el archivo Excel
-datos_TIME = pd.read_excel('02122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
+datos_TIME = pd.read_excel('29122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
 # Cargar datos_TIME desde el archivo Excel
-datos_ARQUITECTURA = pd.read_excel('02122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='ARQUITECTURA')
+datos_ARQUITECTURA = pd.read_excel('29122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='ARQUITECTURA')
 
+datos_PROYECTO = pd.read_excel('29122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='PROYECTO_FORMACION')
 
 @app.route('/')
 def header():
@@ -36,6 +38,21 @@ def header():
         intro_html = intro_file.read()
 
     return render_template('header.html', header=header_html, intro=intro_html)
+
+
+###############################################################################################
+######################################## PROYECTO  #########################################
+###############################################################################################
+
+@app.route('/PROYECTO')
+def mostrar_PROYECTO():
+    """
+    Muestra la información correspondiente a la fase 1.
+    Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
+    """
+    datos = FUNCTION_PROYECTO(datos_PROYECTO)
+
+    return render_template('PROYECTO.html', **datos)
 
 ###############################################################################################
 ######################################## FASES  #########################################
@@ -56,7 +73,7 @@ def mostrar_FASES():
 ###############################################################################################
 
 @app.route('/FASE1')
-def mostrar_fase1():
+def mostrar_FASE1():
     """
     Muestra la información correspondiente a la fase 1.
     Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
@@ -69,18 +86,18 @@ def mostrar_fase1():
     return render_template('FASE1.html', **datos)
 
 @app.route('/FASE2')
-def mostrar_fase2():
+def mostrar_FASE2():
     """
     Muestra la información correspondiente a la fase 2.
     Lee el contenido de fase2.html y lo renderiza en la plantilla 'fase2.html'.
     """
-    with open('templates/FAS2.html', 'r') as fase2_file:
+    with open('templates/FASE2.html', 'r') as fase2_file:
         fase2_html = fase2_file.read()
 
     return render_template('FASE2.html', FASE2=fase2_html)
 
 @app.route('/FASE3')
-def mostrar_fase3():
+def mostrar_FASE3():
     """
     Muestra la información correspondiente a la fase 3.
     Lee el contenido de fase3.html y lo renderiza en la plantilla 'fase3.html'.

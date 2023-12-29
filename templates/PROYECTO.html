@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PRESENTACIÓN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+
+        .logo-container {
+            text-align: center;
+        }
+
+        .title {
+            background-color: rgb(0, 201, 87);
+            color: white;
+            padding: 0.1px;
+            text-align: center;
+        }
+
+        .title-container {
+            text-align: center;
+        }
+
+        /* Agregué un estilo para las celdas de la tabla */
+        th, td {
+            background-color: lightgrey;
+            height: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://certificadossena.net/wp-content/uploads/2022/10/logo-sena-verde-complementario-svg-2022.svg" alt="Logo SENA" style="width: 90px; height: 90px;">
+    </div>
+
+    <div class="title" style="margin-bottom: 1px;">
+        <h3 id="moving-title">REGIONAL ANTIOQUIA | CENTRO PARA EL DESARROLLO DEL HÁBITAT Y LA CONSTRUCCIÓN | CDHC</h3>
+    </div>
+    
+    <div class="title-container" style="margin-bottom: 1px;">
+        <h2 style="font-size: 100%; margin-bottom: 0; line-height: 0.5;"><b>PROCEDIMIENTO DE DESARROLLO CURRICULAR | ARQUITECTURA CURRICULAR - PROYECTO DE FORMACIÓN</b></h2>
+        <h2 style="font-size: 100%; color: blue; margin-bottom: 0; line-height: 0.5;"><b>SUPERVISIÓN EN SISTEMAS DE AGUA Y SANEAMIENTO | 921200</b></h2>
+        <!-- Agregué un párrafo vacío como separador -->
+        <p style="margin-bottom: 0;"></p>
+        <div>
+            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> PROYECTO DE FORMACIÓN </b></h1>
+        </div>    
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+        <hr>
+        <div class="button-container">
+            <a href="/" class="button"> PRESENTACIÓN </a>
+            <a href="/FASES" class="button"> FASES </a>
+        </div>
+        <hr>
+    </div>
+
+    <!-- Tabla 1 - HIDRAULICA -->
+<h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5; text-align: left;"><b> 1. IDENTIFICACIÓN BÁSICA DEL PROYECTO </b></h2>
+<p style="margin-bottom: 10px;"></p>
+<table border='3px' width='100%' style='margin-bottom: 20px;'>
+    <tr>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_1_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_1_2 }} </td>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: center; width: 10%;'> <b> {{ valor_PROYECTO_1_3 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_1_4 }} </td>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: center; width: 10%;'> <b> {{ valor_PROYECTO_1_5 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_1_6 }} </td>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: center; width: 10%;'> <b> {{ valor_PROYECTO_1_7 }} </b> </th>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_1_8 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_2_1 }} </b> </th>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; text-align: center; width: 10%;' > {{ valor_PROYECTO_2_2 }} </td>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: center; width: 10%;'> <b> {{ valor_PROYECTO_2_3 }} </b> </th>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; text-align: center; width: 10%;' > {{ valor_PROYECTO_2_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_3_1 }} </b> </th>
+        <td colspan="7" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; text-align: left; width: 10%;' > {{ valor_PROYECTO_3_2 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_4_1 }} </b> </th>
+        <td colspan="7" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; text-align: left; width: 10%;' > {{ valor_PROYECTO_4_2 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_5_1 }} </b> </th>
+        <td colspan="7" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; text-align: left; width: 10%;' > {{ valor_PROYECTO_5_2 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_6_1 }} </b> </th>
+        <td colspan="7" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; text-align: left; width: 10%;' > {{ valor_PROYECTO_6_2 }} </td>
+    </tr>
+    <tr>
+        <th rowspan="3" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_7_1 }} </b> </th>
+        <td rowspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_7_2 }} </td>
+        <td rowspan="3" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_7_3 }} </b> </td>
+        <td colspan="3" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_7_4 }} </b> </td>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_7_5 }} </td>
+    </tr>
+    <tr>
+        <td colspan="3" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_7_6 }} </b> </td>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_7_7 }} </td>
+    </tr>
+    <tr>
+        <td colspan="3" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_7_8 }} </b> </td>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_7_9 }} </td>
+    </tr>
+</table>
+
+   <!-- Tabla 1 - HIDRAULICA -->
+   <h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5; text-align: left;"><b> 2. ESTRUCTURA DEL PROYECTO </b></h2>
+   <p style="margin-bottom: 10px;"></p>
+   <!-- 2.1 Planteamiento del problema o necesidad que se pretende solucionar -->
+   <table border='3px' width='100%' style='margin-bottom: 20px;'>
+       <tr>
+           <th colspan="8" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_8_1 }} </b> </th>
+       </tr>
+        <tr>
+            <td colspan="8" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_9_1 }} </td>
+        </tr>
+   </table>
+
+    <!-- 2.2 Justificación del proyecto -->
+    <table border='3px' width='100%' style='margin-bottom: 20px;'>
+        <tr>
+            <th colspan="8" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_10_1 }} </b> </th>
+        </tr>
+         <tr>
+            <td colspan="8" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_11_1 }} </td>
+         </tr>
+    </table>
+
+    <!-- 2.3 Objetivo -->
+    <table border='3px' width='100%' style='margin-bottom: 20px;'>
+        <tr>
+            <th colspan="8" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_12_1 }} </b> </th>
+        </tr>
+        <tr>
+            <td colspan="8" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_13_1 }} </td>
+        </tr>
+    </table>
+
+        <!-- 2.4 Objetivo Especificos -->
+    <table border='3px' width='100%' style='margin-bottom: 20px;'>
+        <tr>
+            <th colspan="8" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_14_1 }} </b> </th>
+        </tr>
+        <tr>
+            <td colspan="8" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_15_1 }} </td>
+        </tr>
+        <tr>
+            <td colspan="8" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_16_1 }} </td>
+        </tr>
+        <tr>
+            <td colspan="8" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_17_1 }} </td>
+        </tr>
+    </table>
+
+
+    <!-- 2.3 Objetivo -->
+    <table border='3px' width='100%' style='margin-bottom: 20px;'>
+        <tr>
+            <th colspan="8" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 100%;'> <b> {{ valor_PROYECTO_18_1 }} </b> </th>
+        </tr>
+        <tr>
+            <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 10%;' > {{ valor_PROYECTO_19_1 }} </td>
+            <td colspan="7" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 90%;' > {{ valor_PROYECTO_19_2 }} </td>
+        </tr>
+        <tr>
+            <th rowspan="3" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_20_1 }} </b> </th>
+            <th colspan="1" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_20_2 }} </b> </th>
+            <td colspan="6" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 60%;' > {{ valor_PROYECTO_20_3 }} </td>
+        </tr>
+        <tr>
+            <th colspan="1" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_20_4 }} </b> </th>
+            <td colspan="6" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 60%;' > {{ valor_PROYECTO_20_3 }} </td>
+        </tr>
+        <tr>
+            <th colspan="1" style='background-color: rgba(99, 101, 103, 0.517); height: 3x; border: 1px solid rgb(131, 131, 136); font-size: 80%; text-align: left; width: 10%;'> <b> {{ valor_PROYECTO_20_2 }} </b> </th>
+            <td colspan="6" style='background-color: rgb(255, 255, 255); height: 5x; text-align: justify; font-size: 80%; width: 60%;' > {{ valor_PROYECTO_20_3 }} </td> 
+        </tr>
+    </table>
+    
+    
