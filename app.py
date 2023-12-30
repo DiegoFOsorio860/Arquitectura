@@ -22,11 +22,11 @@ from PROYECTO import FUNCTION_PROYECTO
 app = Flask(__name__)
 
 # Cargar datos_TIME desde el archivo Excel
-datos_TIME = pd.read_excel('29122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
+datos_TIME = pd.read_excel('30122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='TIME')
 # Cargar datos_TIME desde el archivo Excel
-datos_ARQUITECTURA = pd.read_excel('29122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='ARQUITECTURA')
+datos_ARQUITECTURA = pd.read_excel('30122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='ARQUITECTURA')
 
-datos_PROYECTO = pd.read_excel('29122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='PROYECTO_FORMACION')
+datos_PROYECTO = pd.read_excel('30122023 Arquitectura Curricular - Proyecto de Formación.xlsx', sheet_name='PROYECTO_FORMACION')
 
 @app.route('/')
 def header():
