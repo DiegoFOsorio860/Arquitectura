@@ -125,6 +125,47 @@ def FUNCTION_PROYECTO(datos_PROYECTO):
     valor_PROYECTO_21_22 = datos_PROYECTO.iloc[48,2]  # Reemplaza con los índices correspondientes
     valor_PROYECTO_21_23 = datos_PROYECTO.iloc[48,3]  # Reemplaza con los índices correspondientes
 
+    # 22 Fila
+    valor_PROYECTO_22_1 = datos_PROYECTO.iloc[49,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_2 = datos_PROYECTO.iloc[50,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_3 = datos_PROYECTO.iloc[51,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_4 = datos_PROYECTO.iloc[52,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_5 = datos_PROYECTO.iloc[53,1]  # Reemplaza con los índices correspondientes
+
+    # 23 Fila - <!-- 2.6 Innovación/Gestión Tecnológica: -->
+    valor_PROYECTO_23_1 = datos_PROYECTO.iloc[54,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_2 = datos_PROYECTO.iloc[55,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_3 = datos_PROYECTO.iloc[56,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_4 = datos_PROYECTO.iloc[57,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_5 = datos_PROYECTO.iloc[58,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_6 = datos_PROYECTO.iloc[59,1]  # Reemplaza con los índices correspondientes
+
+    # 24 Fila -- 2.7 Valoración Productiva
+    valor_PROYECTO_23_1 = datos_PROYECTO.iloc[60,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_2 = datos_PROYECTO.iloc[61,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_3 = datos_PROYECTO.iloc[61,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_4 = datos_PROYECTO.iloc[61,5]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_5 = datos_PROYECTO.iloc[62,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_6 = datos_PROYECTO.iloc[62,5]  # Reemplaza con los índices correspondientes
+
+    valor_PROYECTO_23_7 = datos_PROYECTO.iloc[63,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_8 = datos_PROYECTO.iloc[63,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_9 = datos_PROYECTO.iloc[63,5]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_10 = datos_PROYECTO.iloc[64,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_11 = datos_PROYECTO.iloc[64,5]  # Reemplaza con los índices correspondientes
+
+    valor_PROYECTO_23_12 = datos_PROYECTO.iloc[65,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_13 = datos_PROYECTO.iloc[65,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_14 = datos_PROYECTO.iloc[65,5]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_15 = datos_PROYECTO.iloc[66,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_16 = datos_PROYECTO.iloc[66,5]  # Reemplaza con los índices correspondientes
+
+    valor_PROYECTO_23_17 = datos_PROYECTO.iloc[67,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_18 = datos_PROYECTO.iloc[67,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_19 = datos_PROYECTO.iloc[67,5]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_20 = datos_PROYECTO.iloc[68,2]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_23_21 = datos_PROYECTO.iloc[68,5]  # Reemplaza con los índices correspondientes
+
     # Renderizar la plantilla con los valor_TIME_T1_es extraídos y el contenido de la estructuraaa
     return {   
                 # Primera Fila
@@ -222,7 +263,7 @@ def FUNCTION_PROYECTO(datos_PROYECTO):
                 'valor_PROYECTO_20_8':valor_PROYECTO_20_8,
                 'valor_PROYECTO_20_9':valor_PROYECTO_20_9,
 
-                                # 17 Fila
+                # 21 Fila
                 'valor_PROYECTO_21_1':valor_PROYECTO_21_1, 
                 'valor_PROYECTO_21_2':valor_PROYECTO_21_2, 
                 'valor_PROYECTO_21_3':valor_PROYECTO_21_3,
@@ -245,5 +286,35 @@ def FUNCTION_PROYECTO(datos_PROYECTO):
                 'valor_PROYECTO_21_20':valor_PROYECTO_21_20,  
                 'valor_PROYECTO_21_21':valor_PROYECTO_21_21,
                 'valor_PROYECTO_21_22':valor_PROYECTO_21_22,  
-                'valor_PROYECTO_21_23':valor_PROYECTO_21_23,  
+                'valor_PROYECTO_21_23':valor_PROYECTO_21_23, 
+
+                # 22 Fila
+                'valor_PROYECTO_22_1':valor_PROYECTO_22_1, 
+                'valor_PROYECTO_22_2':valor_PROYECTO_22_2, 
+                'valor_PROYECTO_22_3':valor_PROYECTO_22_3,
+                'valor_PROYECTO_22_4':valor_PROYECTO_22_4, 
+                'valor_PROYECTO_22_5':valor_PROYECTO_22_5, 
+
+                # 23 Fila
+                'valor_PROYECTO_23_1':valor_PROYECTO_23_1, 
+                'valor_PROYECTO_23_2':valor_PROYECTO_23_2, 
+                'valor_PROYECTO_23_3':valor_PROYECTO_23_3,
+                'valor_PROYECTO_23_4':valor_PROYECTO_23_4, 
+                'valor_PROYECTO_23_5':valor_PROYECTO_23_5,
+                'valor_PROYECTO_23_6':valor_PROYECTO_23_6,
+                'valor_PROYECTO_23_7':valor_PROYECTO_23_7, 
+                'valor_PROYECTO_23_8':valor_PROYECTO_23_8, 
+                'valor_PROYECTO_23_9':valor_PROYECTO_23_9,
+                'valor_PROYECTO_23_10':valor_PROYECTO_23_10, 
+                'valor_PROYECTO_23_11':valor_PROYECTO_23_11,
+                'valor_PROYECTO_23_12':valor_PROYECTO_23_12,
+                'valor_PROYECTO_23_13':valor_PROYECTO_23_13, 
+                'valor_PROYECTO_23_14':valor_PROYECTO_23_14,
+                'valor_PROYECTO_23_15':valor_PROYECTO_23_15,
+                'valor_PROYECTO_23_16':valor_PROYECTO_23_16, 
+                'valor_PROYECTO_23_17':valor_PROYECTO_23_17,
+                'valor_PROYECTO_23_18':valor_PROYECTO_23_18,
+                'valor_PROYECTO_23_19':valor_PROYECTO_23_19, 
+                'valor_PROYECTO_23_20':valor_PROYECTO_23_20,
+                'valor_PROYECTO_23_21':valor_PROYECTO_23_21,        
     }
