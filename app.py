@@ -75,15 +75,13 @@ def mostrar_FASES():
 @app.route('/FASE1')
 def mostrar_FASE1():
     """
-    Muestra la información correspondiente a la fase 1.
-    Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
+    Muestra la información correspondiente a la fase 2.
+    Lee el contenido de fase2.html y lo renderiza en la plantilla 'fase2.html'.
     """
-    # Suponiendo que datos_ARQUITECTURA está disponible aquí
-    # Llamada a la función importada para obtener datos
-    datos = FUNCTION_FASES(datos_TIME)
+    with open('templates/FASE1.html', 'r') as fase1_file:
+        fase1_html = fase1_file.read()
 
-    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
-    return render_template('FASE1.html', **datos)
+    return render_template('FASE1.html', FASE2=fase1_html)
 
 @app.route('/FASE2')
 def mostrar_FASE2():
