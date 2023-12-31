@@ -133,12 +133,12 @@ def FUNCTION_PROYECTO(datos_PROYECTO):
     valor_PROYECTO_22_5 = datos_PROYECTO.iloc[53,1]  # Reemplaza con los índices correspondientes
 
     # 23 Fila - <!-- 2.6 Innovación/Gestión Tecnológica: -->
-    valor_PROYECTO_23_1 = datos_PROYECTO.iloc[54,1]  # Reemplaza con los índices correspondientes
-    valor_PROYECTO_23_2 = datos_PROYECTO.iloc[55,1]  # Reemplaza con los índices correspondientes
-    valor_PROYECTO_23_3 = datos_PROYECTO.iloc[56,1]  # Reemplaza con los índices correspondientes
-    valor_PROYECTO_23_4 = datos_PROYECTO.iloc[57,1]  # Reemplaza con los índices correspondientes
-    valor_PROYECTO_23_5 = datos_PROYECTO.iloc[58,1]  # Reemplaza con los índices correspondientes
-    valor_PROYECTO_23_6 = datos_PROYECTO.iloc[59,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_6 = datos_PROYECTO.iloc[54,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_7 = datos_PROYECTO.iloc[55,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_8 = datos_PROYECTO.iloc[56,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_9 = datos_PROYECTO.iloc[57,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_10 = datos_PROYECTO.iloc[58,1]  # Reemplaza con los índices correspondientes
+    valor_PROYECTO_22_11 = datos_PROYECTO.iloc[59,1]  # Reemplaza con los índices correspondientes
 
     # 24 Fila -- 2.7 Valoración Productiva
     valor_PROYECTO_23_1 = datos_PROYECTO.iloc[60,1]  # Reemplaza con los índices correspondientes
@@ -293,7 +293,13 @@ def FUNCTION_PROYECTO(datos_PROYECTO):
                 'valor_PROYECTO_22_2':valor_PROYECTO_22_2, 
                 'valor_PROYECTO_22_3':valor_PROYECTO_22_3,
                 'valor_PROYECTO_22_4':valor_PROYECTO_22_4, 
-                'valor_PROYECTO_22_5':valor_PROYECTO_22_5, 
+                'valor_PROYECTO_22_5':valor_PROYECTO_22_5,
+                'valor_PROYECTO_22_6':valor_PROYECTO_22_6, 
+                'valor_PROYECTO_22_7':valor_PROYECTO_22_7, 
+                'valor_PROYECTO_22_8':valor_PROYECTO_22_8,
+                'valor_PROYECTO_22_9':valor_PROYECTO_22_9, 
+                'valor_PROYECTO_22_10':valor_PROYECTO_22_10,
+                'valor_PROYECTO_22_11':valor_PROYECTO_22_11,   
 
                 # 23 Fila
                 'valor_PROYECTO_23_1':valor_PROYECTO_23_1, 
