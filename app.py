@@ -81,7 +81,7 @@ def mostrar_FASE1():
     with open('templates/FASE1.html', 'r') as fase1_file:
         fase1_html = fase1_file.read()
 
-    return render_template('FASE1.html', FASE2=fase1_html)
+    return render_template('FASE1.html', FASE1=fase1_html)
 
 @app.route('/FASE2')
 def mostrar_FASE2():
