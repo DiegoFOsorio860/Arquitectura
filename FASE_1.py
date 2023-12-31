@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-def FUNCTION_FASE1(datos_TIME):
+def FUNCTION_FASE_1(datos_TIME):
     # Leer el contenido de FASES.html
 
     # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria

@@ -17,7 +17,7 @@ from T1_Trimestre import FUNCTION_T1
 from T1_RecoleccionMuestras import FUNCTION_T1_REC_MUESTRAS
 from T1_Hidraulica import FUNCTION_T1_HIDRAULICA
 from PROYECTO import FUNCTION_PROYECTO
-from FASE1 import FUNCTION_FASE1
+from FASE_1 import FUNCTION_FASE_1
 
 
 app = Flask(__name__)
@@ -73,15 +73,15 @@ def mostrar_FASES():
 ######################################## FASE 1 - T1  #########################################
 ###############################################################################################
 
-@app.route('/FASE1')
-def mostrar_FASE1():
+@app.route('/FASE_1')
+def mostrar_FASE_1():
     """
     Muestra la información correspondiente a la fase 1.
     Lee el contenido de fase1.html y lo renderiza en la plantilla 'fase1.html'.
     """
-    datos =  FUNCTION_FASE1(datos_TIME)
+    datos =  FUNCTION_FASE_1(datos_TIME)
 
-    return render_template('FASE1.html', **datos)
+    return render_template('FASE_1.html', **datos)
     
 
 @app.route('/FASE2')
