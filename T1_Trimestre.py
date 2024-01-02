@@ -59,6 +59,10 @@ def FUNCTION_T1(datos_TIME):
     valor_TIME_T1_LOGISTICA_4 = datos_TIME.iloc[193,5]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_LOGISTICA_4 = round(valor_TIME_T1_LOGISTICA_4, 2)*100  # Redondear a 2 decimales
 
+    valor_TIME_T1_COMP_ESP = datos_TIME.iloc[250,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_COMP_CLV = datos_TIME.iloc[251,2]  # Reemplaza con los índices correspondientes
+    valor_TIME_T1_COMP_COMP = datos_TIME.iloc[251,2]  # Reemplaza con los índices correspondientes
+
     return{ 
             'valor_TIME_T1_HIDRAULICA_1':valor_TIME_T1_HIDRAULICA_1, 
             'valor_TIME_T1_HIDRAULICA_2': valor_TIME_T1_HIDRAULICA_2, 
