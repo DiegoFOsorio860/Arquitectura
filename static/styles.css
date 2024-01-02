@@ -354,3 +354,32 @@ hr {
   background: #ccc; /* Color gris */
   margin: 10px 0; /* Espacio alrededor de la línea */
 }
+
+/* Grafico de Barras */
+.blue-line {
+  border: none;
+  background-color: DodgerBlue;
+  color: DodgerBlue;
+  height: 3px;
+  width: 100%;
+  margin: 20px 0; /* Espacio antes y después de la línea */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.chart {
+  width: 100%; /* Ancho completo del contenedor */
+  height: 300px; /* Altura fija para los gráficos */
+}
+
+/* Estilos para rotar el texto verticalmente */
+.vertical-text {
+  writing-mode: vertical-rl; /* Texto vertical */
+  transform: rotate(180deg); /* Rotación a 90 grados */
+  transform-origin: bottom left; /* Cambio del origen de la rotación */
+  font-size: 10px; /* Tamaño del texto */
+}

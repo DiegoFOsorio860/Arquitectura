@@ -149,41 +149,250 @@
 </body>
 </html>
 
-</head>
-<style>
-    .containertitle p {
-        text-align: center;
-    }
-</style>
-<body>
-    <br>
-    <div class="containertitle">
-        <div class="separatortitle"></div>
-        <hr class="blue-line"> <!-- Línea horizontal de color azul -->
-        <p><strong>MÉTRICAS | COMPETENCIAS</strong></p>
-        <hr class="blue-line"> <!-- Línea horizontal de color azul -->
-    </div>
-</body>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tu página</title>
+    <meta charset="UTF-8">
+    <title>Gráficos con Chart.js</title>
     <style>
-        .grafico {
-            display: flex;
-            justify-content: center;
+        .blue-line {
+            border: none;
+            background-color: DodgerBlue;
+            color: DodgerBlue;
+            height: 3px;
+            width: 100%;
+            margin: 20px 0; /* Espacio antes y después de la línea */
         }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 20px; /* Espacio entre los elementos */
+        }
+
+        .chart {
+            width: 100%; /* Ancho completo del contenedor */
+            height: 300px; /* Altura fija para los gráficos */
+        }
+        /* Estilos para rotar el texto verticalmente */
+        .vertical-text {
+            writing-mode: vertical-rl; /* Texto vertical */
+            transform: rotate(180deg); /* Rotación a 90 grados */
+            transform-origin: bottom left; /* Cambio del origen de la rotación */
+            font-size: 10px; /* Tamaño del texto */
+        }
+
+
     </style>
 </head>
 <body>
-    <div class="grafico">
-        <!-- Aquí es donde se insertará el gráfico -->
-        {{ diagrama_barras | safe }}
+    <hr class="blue-line"> <!-- Línea horizontal de color azul -->
+
+    <div class="container">
+        <div class="chart">
+            <canvas id="barras1"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="barras2"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="pastel1"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="pastel2"></canvas>
+        </div>
     </div>
-    <div class="grafico">
-        <!-- Aquí es donde se insertará el gráfico -->
-        {{ diagrama_pie | safe }}
-    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+        // Datos para el primer gráfico de barras
+const dataBar1 = {
+    labels: ['Hidráulica', 'Recolección de Muestras', 'Ingles', 'Matemáticas/Quimica', 'Biología', 'Comunicación', 'Logistica, Costos, Inventarios'],
+    datasets: [{
+        label: 'Ejemplo de Datos para Barras 1',
+        data: [3, 5, 30, 5],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Configuración para el primer gráfico de barras
+const configBar1 = {
+    type: 'bar',
+        data: dataBar1,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Formación Directa' // Título del gráfico de barras 1
+                }
+            }
+        }
+    };
+
+// Dibujar el primer gráfico de barras
+const ctxBar1 = document.getElementById('barras1').getContext('2d');
+new Chart(ctxBar1, configBar1);
+
+// Datos para el segundo gráfico de barras
+const dataBar2 = {
+    labels: ['E', 'F', 'G', 'H'],
+    datasets: [{
+        label: 'Ejemplo de Datos para Barras 2',
+        data: [8, 12, 7, 9],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Configuración para el segundo gráfico de barras
+const configBar2 = {
+    type: 'bar',
+        data: dataBar1,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Formación Autónoma' // Título del gráfico de barras 1
+                }
+            }
+        }
+    };
+
+// Dibujar el segundo gráfico de barras
+const ctxBar2 = document.getElementById('barras2').getContext('2d');
+new Chart(ctxBar2, configBar2);
+
+// Datos para el primer gráfico de pastel
+const dataPie1 = {
+    labels: ['Red', 'Blue', 'Yellow', 'Green'],
+    datasets: [{
+        label: 'Ejemplo de Datos para Pastel 1',
+        data: [12, 19, 3, 5],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Configuración para el primer gráfico de pastel
+const configPie1 = {
+    type: 'pie',
+        data: dataPie1,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Gráfico de Barras 1' // Título del gráfico de barras 1
+                }
+            }
+        }
+    };
+
+// Dibujar el primer gráfico de pastel
+const ctxPie1 = document.getElementById('pastel1').getContext('2d');
+new Chart(ctxPie1, configPie1);
+
+// Datos para el segundo gráfico de pastel
+const dataPie2 = {
+    labels: ['Black', 'White', 'Purple', 'Orange'],
+    datasets: [{
+        label: 'Ejemplo de Datos para Pastel 2',
+        data: [8, 15, 4, 7],
+        backgroundColor: [
+            'rgba(0, 0, 0, 0.2)',
+            'rgba(255, 255, 255, 0.2)',
+            'rgba(128, 0, 128, 0.2)',
+            'rgba(255, 165, 0, 0.2)'
+        ],
+        borderColor: [
+            'rgba(0, 0, 0, 1)',
+            'rgba(255, 255, 255, 1)',
+            'rgba(128, 0, 128, 1)',
+            'rgba(255, 165, 0, 1)'
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Configuración para el segundo gráfico de pastel
+const configPie2 = {
+    type: 'pie',
+        data: dataPie2,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Gráfico de Barras 1' // Título del gráfico de barras 1
+                }
+            }
+        }
+    };
+
+// Dibujar el segundo gráfico de pastel
+const ctxPie2 = document.getElementById('pastel2').getContext('2d');
+new Chart(ctxPie2, configPie2);
+
+    </script>
 </body>
 </html>

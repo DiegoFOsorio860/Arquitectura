@@ -35,7 +35,7 @@ def FUNCTION_T1(datos_TIME):
     valor_TIME_T1_MATEMATICAS_4 = datos_TIME.iloc[190,5]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_MATEMATICAS_4 = round(valor_TIME_T1_MATEMATICAS_4, 2)*100  # Redondear a 2 decimales
 
-                # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
     valor_TIME_T1_BIOLOGIA_1 = datos_TIME.iloc[191,2]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_BIOLOGIA_2 = (datos_TIME.iloc[191,3])*100  # Reemplaza con los índices correspondientes
     valor_TIME_T1_BIOLOGIA_2 = "{:.3}".format(valor_TIME_T1_BIOLOGIA_2)  # Redondear a 2 decimales
@@ -43,7 +43,7 @@ def FUNCTION_T1(datos_TIME):
     valor_TIME_T1_BIOLOGIA_4 = datos_TIME.iloc[191,5]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_BIOLOGIA_4 = round(valor_TIME_T1_BIOLOGIA_4, 2)*100  # Redondear a 2 decimales
 
-                    # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
     valor_TIME_T1_COMUNICACION_1 = datos_TIME.iloc[192,2]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_COMUNICACION_2 = datos_TIME.iloc[192,3]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_COMUNICACION_2 = round(valor_TIME_T1_COMUNICACION_2, 2)*100  # Redondear a 2 decimales
@@ -51,7 +51,7 @@ def FUNCTION_T1(datos_TIME):
     valor_TIME_T1_COMUNICACION_4 = datos_TIME.iloc[192,5]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_COMUNICACION_4 = round(valor_TIME_T1_COMUNICACION_4, 2)*100  # Redondear a 2 decimales
 
-                        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
+        # Suponiendo que 'datos_TIME' es un DataFrame que contiene la información necesaria
     valor_TIME_T1_LOGISTICA_1 = datos_TIME.iloc[193,2]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_LOGISTICA_2 = datos_TIME.iloc[193,3]  # Reemplaza con los índices correspondientes
     valor_TIME_T1_LOGISTICA_2 = round(valor_TIME_T1_LOGISTICA_2, 2)*100  # Redondear a 2 decimales

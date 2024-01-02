@@ -6,6 +6,7 @@ import csv
 import numpy as np
 import pickle
 import smtplib
+import json
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -20,6 +21,8 @@ from PROYECTO import FUNCTION_PROYECTO
 from FASE_1 import FUNCTION_FASE_1
 from FASE_2 import FUNCTION_FASE_2
 from FASE_3 import FUNCTION_FASE_3
+from T1_Trimestre_graficos import FUNCTION_GRAPH_1
+from T1_Trimestre_graficos import FUNCTION_GRAPH_2
 
 
 app = Flask(__name__)
@@ -125,9 +128,15 @@ def ARQ_T1():
     """
     # Suponiendo que datos_TIME está disponible aquí
     # Llamada a la función importada para obtener datos
-    datos =  FUNCTION_T1(datos_TIME)
 
-    # Renderiza la plantilla 'T1_RecoleccionMuestras.html' con los datos obtenidos
+    datos = FUNCTION_T1(datos_TIME)
+
+    # Renderiza la plantilla 'T1_Trimestre.html' con los datos obtenidos
+    # Agregamos la función FUNCTION_GRAPH_1() a la plantilla
+
+    datos['diagrama_barras'] = FUNCTION_GRAPH_1(datos_TIME)
+    datos['diagrama_pie'] = FUNCTION_GRAPH_2(datos_TIME)
+    
     return render_template('T1_Trimestre.html', **datos)
 
 ###############################################################################################
