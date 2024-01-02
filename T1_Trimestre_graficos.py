@@ -89,7 +89,7 @@ def create_bar_chart(df1, df3):
             t=50,
             pad=4
         ),
-        paper_bgcolor="LightSteelBlue",
+        paper_bgcolor="rgba(0,0,0,0)",
     )
 
 
@@ -192,7 +192,7 @@ def create_pie_chart(df2, df4):
             t=50,
             pad=4
         ),
-        paper_bgcolor="LightSteelBlue",
+        paper_bgcolor="rgba(0,0,0,0)",
     )
 
     return pio.to_html(fig_2, full_html=False)
