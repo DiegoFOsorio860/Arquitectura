@@ -1,4 +1,6 @@
-#!/Users/user/Documents/11042022_DiegoOsorio/ArquitecturaCurricular_03122023/venv/bin/python3
+#!/bin/sh
+'''exec' "/Users/user/Documents/11042022_DiegoOsorio/14122023 WEB/ArquitecturaCurricular_03122023/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -42,9 +42,21 @@
             background-color: lightgrey;
             height: 4px;
         }
+
+        /* Estilo para centrar el iframe */
+        .iframe-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Establecer el tamaño del iframe en relación con la página */
+        iframe {
+            width: 80%;
+            height: 70vh; /* 70% de la altura de la ventana del navegador */
+        }
     </style>
 </head>
 <body>
+
     <div class="logo-container">
         <img src="https://certificadossena.net/wp-content/uploads/2022/10/logo-sena-verde-complementario-svg-2022.svg" alt="Logo SENA" style="width: 90px; height: 90px;">
     </div>
@@ -73,4 +85,9 @@
         <hr>
     </div>
 
-    <iframe title="Report Section" width="800" height="836" src="https://app.powerbi.com/view?r=eyJrIjoiODI0MzdjZDUtMzYzNy00NjQwLWFiNWUtNDExNjRlNTI4ODZjIiwidCI6ImNiYzJjMzgxLTJmMmUtNGQ5My05MWQxLTUwNmM5MzE2YWNlNyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+    <!-- Agregué una clase iframe-container para centrar el iframe -->
+    <div class="iframe-container">
+        <iframe title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiOTRmMjYxNzQtMDBlYy00MzE3LWIwYWEtYjc1NjRhNGZjOWUzIiwidCI6ImNiYzJjMzgxLTJmMmUtNGQ5My05MWQxLTUwNmM5MzE2YWNlNyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+</body>
+</html>
