@@ -8,3 +8,28 @@
     <p>Segundo valor: {{ valor2 }}</p>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tu página</title>
+    <style>
+        .grafico {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grafico">
+        <!-- Aquí es donde se insertará el gráfico -->
+        {{ diagrama_barras | safe }}
+    </div>
+    <div class="grafico">
+        <!-- Aquí es donde se insertará el gráfico -->
+        {{ diagrama_pie | safe }}
+    </div>
+</body>
+</html>
