@@ -42,17 +42,6 @@
             background-color: lightgrey;
             height: 4px;
         }
-
-        /* Estilo para centrar el iframe */
-        .iframe-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        /* Establecer el tamaño del iframe en relación con la página */
-        iframe {
-            width: 100%;
-            height: 90vh; /* 90% de la altura de la ventana del navegador */
-        }
     </style>
 </head>
 <body>
@@ -70,22 +59,33 @@
         <!-- Agregué un párrafo vacío como separador -->
         <p style="margin-bottom: 0;"></p>
         <div>
-            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> TFASE 1 | TRIMESTRE 1 | GUIA DE APRENDIZAJE - SUPERVISIÓN EN LA RECOLECCIÓN DE MUESTRAS [280201214] </b></h1>
+            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> FASE 1 | TRIMESTRE 1 | GUIA DE APRENDIZAJE - SUPERVISIÓN EN LA RECOLECCIÓN DE MUESTRAS [280201214] </b></h1>
         </div>    
         <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
         <hr>
         <!-- Botón para ir a la Arquitectura Curricular -->
         <div class="button-container">
+            <a href="/" class="button"> PRESENTACIÓN </a>
+            <a href="/PROYECTO" class="button"> PROYECTO </a>
             <a href="/FASES" class="button"> FASES </a>
-            <a href="/T1_Trimestre" class="button"> TRIMESTRE 1 </a>
         </div>
         <hr>
     </div>
+</body>
+</html>
 
+<html>
 <!-- Tabla 1 - HIDRAULICA -->
-<h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5; text-align: left;"><b> 1. IDENTIFICACIÓN DE LA GUÍA DE APRENDIZAJE </b></h2>
-<p style="margin-bottom: 10px;"></p>
+
+<body>
+    <div class="containertitle">
+        <div class="separatortitle"></div>
+    <p><strong>1. IDENTIFICACIÓN DE LA GUÍA DE APRENDIZAJE  </strong></p>
+    </div>
+    <br>
+</body>
+<body>
 <table border='3px' width='100%' style='margin-bottom: 20px;'>
     <tr>
         <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
@@ -252,6 +252,7 @@
         <script src="js/calcularPorcentaje.js"></script>
     </tr>
 </table>
+</html>
 
 
 <!-- ================================================================= -->
@@ -275,6 +276,7 @@
         <p><strong>3.1.1 Reconocer la Importancia de calidad del agua y muestreo de agua con base a conocimientos previos.</strong></p>
         </div>
     </body>
+    <body>
         <div style="width: 30%; text-align: center; float: right;">
             <div class="image-container" style="margin-top: 5px; margin-bottom:40;">
                 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG9wMmVtcmRwNHZld2NxdXFvbHJsdHEwOXJqOWVmM2toeGlhcGlwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/52Ywm818WNeuI/giphy.gif" alt="Imagen relacionada" style="width: 350px; height: 240px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
@@ -293,7 +295,10 @@
             <br>
             Lo invito a ver el siguiente video de muestreo y medición.
         </p>
+    </body>
+    <body>  
         {% include 'video4.html' %}
+    </body>
         <p style="text-align: justify;">
             Responda inicialmente las siguientes preguntas de forma individual, después reúnanse en grupos de trabajo de 4 personas, consoliden la información y finalmente una persona del equipo sustentará ante el grupo de formación con moderación del instructor.
         </p>
@@ -705,8 +710,3 @@
         <p>Caudal es la cantidad de fluido (volumen) que pasa por un conducto en una unidad de tiempo. Se designa con Q y en el ámbito de la inspección de vertidos y saneamiento se suelen utilizar litros/segundo, litros/min o m3/h para valores instantáneos y m3 /día o m3 /año para volúmenes medios o acumulados.</p>
         <p>Algunas metodologías para aforar son las siguientes:</p>
 
-    <div class="button-container">
-        <a href="/T1_Trimestre" class="button">Ir a Trimestre 1</a>
-    </div>
-</body>
-</html>

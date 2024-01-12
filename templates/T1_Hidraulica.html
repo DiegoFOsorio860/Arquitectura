@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 5px;
+            margin: 30px;
         }
 
         h1 {
@@ -56,158 +56,271 @@
     <div class="title-container" style="margin-bottom: 1px;">
         <h2 style="font-size: 100%; margin-bottom: 0; line-height: 0.5;"><b>PROCEDIMIENTO DE DESARROLLO CURRICULAR | ARQUITECTURA CURRICULAR - PROYECTO DE FORMACIÓN</b></h2>
         <h2 style="font-size: 100%; color: blue; margin-bottom: 0; line-height: 0.5;"><b>SUPERVISIÓN EN SISTEMAS DE AGUA Y SANEAMIENTO | 921200</b></h2>
-        <h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5;"><b> FASE 1 | TRIMESTRE 1 | GUIA DE APRENDIZAJE | HIDRÁULICA [280201239]</b></h2>
         <!-- Agregué un párrafo vacío como separador -->
-        <p style="margin-bottom: 40px;"></p>
-        
-            <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
-            <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+        <p style="margin-bottom: 0;"></p>
+        <div>
+            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> FASE 1 | TRIMESTRE 1 | GUIA DE APRENDIZAJE - SUPERVISIÓN DEL FUNCIONAMIENTO DEL SISTEMA DE AGUA [280201239] </b></h1>
+        </div>    
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+        <hr>
+        <!-- Botón para ir a la Arquitectura Curricular -->
+        <div class="button-container">
+            <a href="/" class="button"> PRESENTACIÓN </a>
+            <a href="/PROYECTO" class="button"> PROYECTO </a>
+            <a href="/FASES" class="button"> FASES </a>
         </div>
+        <hr>
+    </div>
 </body>
+</html>
 
+<html>
 <!-- Tabla 1 - HIDRAULICA -->
-<h2 style="font-size: 100%; color: rgb(0, 0, 16); margin-bottom: 0; line-height: 0.5;"><b> 1. IDENTIFICACIÓN DE LA GUÍA DE APRENDIZAJE </b></h2>
-<p style="margin-bottom: 10px;"></p>
-<table border='3px' width='100%' style='margin-bottom: 20px;'>
-    <tr>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CÓDIGO</b> </td>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>ELEMENTO</b> </td>
-        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 60%;' ><b>DESCRIPCIÓN</b> </td>
-    </tr> 
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_1_1 }} </b> </th>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_HIDRAULICA_1_2 }} </td>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_HIDRAULICA_1_3 }} </td>
-    </tr>
-    <tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_2_1 }} </b> </th>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_HIDRAULICA_2_2 }} </td>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 60%;' >  </td>
-    </tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_3_1 }} </b> </th>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_HIDRAULICA_3_2 }} </td>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_HIDRAULICA_3_3 }} </td>
-    </tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_4_1 }} </b> </th>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_HIDRAULICA_4_2 }} </td>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_HIDRAULICA_4_3 }} </td>
-    </tr>
-    </tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_5_1 }} </b> </th>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_HIDRAULICA_5_2 }} </td>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_HIDRAULICA_5_3 }} </td>
-    </tr>
-    </tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_6_1 }} </b> </th>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_HIDRAULICA_6_2 }} </td>
-        <td colspan="1" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_HIDRAULICA_6_3 }} </td>
-    </tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_7_1 }} </b> </th>
-        <td colspan="2" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_HIDRAULICA_7_2 }} </td>
-    </tr>
-    <tr>
-        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_HIDRAULICA_8_1 }} </b> </th>
-        <td colspan="2" style='background-color: rgb(255, 250, 250); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_HIDRAULICA_8_2 }} </td>
-    </tr>
-</table>
-
 
 <body>
-
-    <!-- Encabezado -->
-    <div>
-        <!-- Título del encabezado -->
-        <h1 style="font-size: 100%; text-align: left;">
-            3.1. ACTIVIDADES DE REFLEXIÓN INICIAL
-        </h1>
-
-        <!-- Título principal -->
-        <p><b>3.1.1 El papel vital de las redes de agua, tuberías y normativa en el suministro y manejo del agua potable y el saneamiento básico</b></p>
-
-        <!-- Introducción -->
-        <p style="text-align: justify;">
-            Al reflexionar sobre las temáticas de redes de agua, tuberías y normativa relacionada, podemos comprender la importancia vital de estos aspectos en el suministro y manejo del agua potable y el saneamiento básico. A continuación, te presento una reflexión inicial que abarca estas temáticas.
-        </p>
-
-        <!-- Contenido principal -->
-        <div style="width: 100%; text-align: justify; float: left; margin-right: 5px; ">
-            <!-- Pregunta -->
-            <p style="text-align: justify;">
-                De acuerdo a lo anteriormente expuesto, lo invito a responder la siguiente pregunta.
-            </p>
-
-            <!-- Imagen a la derecha -->
-            <div style="width: 25%; text-align: center; float: right;">
-                <div class="image-container" style="margin-top: 5px;">
-                    <img src="https://media0.giphy.com/media/wyUehgweohXIQ/giphy.gif?cid=ecf05e47764ku6n62vky8tmrriekhpb8qnvxsfb23r3xsolh&ep=v1_gifs_related&rid=giphy.gif&ct=g" alt="Imagen relacionada" style="width: 250px; height: 250px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
-                </div>
-            </div>
-
-            <!-- Pregunta principal -->
-            <b>¿Cuál es el papel de las redes de agua, las tuberías y la normativa en la garantía del suministro seguro y eficiente de agua potable y el adecuado saneamiento básico en nuestras comunidades?</b>
-
-            <!-- Explicación de la pregunta -->
-            <p style="text-align: justify;">
-                Esta pregunta abarca los conceptos, tipos y características de las redes de agua y las tuberías, así como los principios de funcionamiento, los tipos de variables y los manuales de operación y mantenimiento relacionados con estos sistemas. Además, hace referencia a la importancia de la normativa, incluyendo el reglamento técnico del sector de agua potable, residual y saneamiento básico, los manuales técnicos, los esquemas de intervención y los sistemas de acueducto y alcantarillado, como marco regulador para asegurar la calidad y la eficiencia en la gestión del agua.
-            </p>
-
-            <!-- Conclusión -->
-            <p style="text-align: justify;">
-                Responder a esta pregunta nos permitiría explorar la interconexión entre estas temáticas y comprender cómo influyen en la disponibilidad, la distribución y la calidad del agua, así como en la preservación del medio ambiente y el bienestar de las comunidades.
-            </p>
-
-            <!-- Materiales -->
-            <p><b>Materiales:</b> Borrador de acrílico; Marcadores borrables; Mesas colaborativas de trabajo; Tablero de acrílico; Computadores portátiles con acceso a WIFI; Televisor o proyector.</p>
-
-            <!-- Ambiente Requerido -->
-            <p><b>Ambiente Requerido:</b> Aula convencional con conexión a internet por cableado estructurado o wifi con tomas de Energía regulada suficiente para conectar mínimo 10 computadores a la vez.</p>
-        </div>
-
+    <div class="containertitle">
+        <div class="separatortitle"></div>
+    <p><strong>1. IDENTIFICACIÓN DE LA GUÍA DE APRENDIZAJE  </strong></p>
     </div>
+    <br>
+</body>
+<body>
+<table border='3px' width='100%' style='margin-bottom: 20px;'>
+    <tr>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>VALOR</b> </td>
+        <td colspan="2" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 60%;' ><b>DESCRIPCIÓN</b> </td>
+    </tr> 
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_1_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_1_2 }} </td>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_REC_MUESTRAS_1_3 }} </td>
+    </tr>
+    <tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_2_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_2_2 }} </td>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 60%;' > - </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_3_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_3_2 }} </td>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_REC_MUESTRAS_3_3 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_4_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_4_2 }} </td>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_REC_MUESTRAS_4_3 }} </td>
+    </tr>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_5_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_5_2 }} </td>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_REC_MUESTRAS_5_3 }} </td>
+    </tr>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_6_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_6_2 }} </td>
+        <td colspan="2" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 60%;' > {{ valor_ARQ_T1_REC_MUESTRAS_6_3 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_7_1 }} </b> </th>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_REC_MUESTRAS_7_2 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_8_1 }} </b> </th>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_REC_MUESTRAS_8_2 }} </td>
+    </tr>
+    <tr>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
+        <td colspan="3" style='background-color: lightgrey; height: 5x; text-align: left; font-size: 80%; width: 80%;' ><b>VALOR</b></td>
+    </tr> 
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_9_1 }} </b> </th>
+        <td colspan="3" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 80%;' > {{ valor_ARQ_T1_REC_MUESTRAS_9_2 }} </td>
+    </tr>
+    <tr>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 40%;' ><b>CONOCIMIENTOS</b></td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN DIRECTA</b></td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN AUTÓNOMA</b></td>
+    </tr> 
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_10_1 }} </b> </th>
+            <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_10_2 }} </td>
+            <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_10_3 }} </td>
+            <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_10_4 }} </td>
+        </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_11_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_11_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_11_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_11_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_12_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_12_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_12_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_12_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_13_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_13_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_13_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_13_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_14_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_14_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_14_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_14_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_15_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_15_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_15_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_15_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_16_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_16_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_16_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_16_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_17_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_17_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_17_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_17_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_18_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_18_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_18_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_18_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_19_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_19_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_19_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_19_4 }} </td>
+    </tr>
+    <tr>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%; '><b>CLAVE</b> </td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 40%;' ><b>EVIDENCIA DE PROYECTO</b></td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN DIRECTA</b></td>
+        <td colspan="1" style='background-color: lightgrey; height: 5x; text-align: center; font-size: 80%; width: 20%;' ><b>FORMACIÓN AUTÓNOMA</b></td>
+    </tr> 
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_20_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_20_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_20_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_20_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_21_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_21_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_21_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_21_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_22_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_22_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_22_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_22_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_23_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_23_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_23_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_23_4 }} </td>
+    </tr>
+    <tr>
+        <th style='background-color: DodgerBlue; height: 4x; border: 1px solid blue; text-align: center; width: 20%;'> <b> {{ valor_ARQ_T1_REC_MUESTRAS_24_1 }} </b> </th>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: left; font-size: 80%; width: 40%;' > {{ valor_ARQ_T1_REC_MUESTRAS_24_2 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_24_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_24_4 }} </td>
+    </tr>
+    <tr>
+        <td colspan="2" style='background-color: lightgrey; height: 5x; text-align: right; font-size: 80%; width: 60%; '><b>TOTALES</b> </td>
+        
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_25_3 }} </td>
+        <td colspan="1" style='background-color: rgb(255, 255, 255); height: 5x; text-align: center; font-size: 80%; width: 20%;' > {{ valor_ARQ_T1_REC_MUESTRAS_25_4 }} </td>
+        <script src="js/calcularPorcentaje.js"></script>
+    </tr>
+</table>
+</html>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <title>Recuadro de Cita</title>
-        <link rel="stylesheet" href="static/styles.css">
-    </head>
-    
+
+<!-- ================================================================= -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu página</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
     <body>
-    
-        <div id="cita">
-            <p id="frase"></p>
-            <p id="autor"></p>
+        <div class="containertitle">
+            <div class="separatortitle"></div>
+        <p><strong>3.1. ACTIVIDADES DE REFLEXIÓN INICIAL</strong></p>
         </div>
-    
-        <script src="static/script.js"></script>
     </body>
-    
-    </html>
-    
+    <body>
+        <div class="containersubtitle">
+            <div class="separatorsubtitle"></div>
+        <p><strong>3.1.1 Reconocer la Importancia de calidad del agua y muestreo de agua con base a conocimientos previos.</strong></p>
+        </div>
+    </body>
+    <body>
+        <div style="width: 30%; text-align: center; float: right;">
+            <div class="image-container" style="margin-top: 5px; margin-bottom:40;">
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG9wMmVtcmRwNHZld2NxdXFvbHJsdHEwOXJqOWVmM2toeGlhcGlwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/52Ywm818WNeuI/giphy.gif" alt="Imagen relacionada" style="width: 350px; height: 240px; object-fit: cover; border-radius: 0%; border: 2px solid black;">
+            </div>
+        </div>
+        <div class="chapter-info">
+            <p class="info"><strong>Duración:</strong> 4 Horas</p>
+            <p class="info"><strong>Técnica didáctica:</strong> dinámica de grupo – Socialización</p>
+            <p class="info"><strong>Instrumento de evaluación:</strong> Cuestionario</p>
+        </div>
+        <p class="texto" style="text-align: justify;">
+            El muestreo de agua es una actividad dirigida a la recolección de una pequeña porción de esta, que represente exactamente la calidad de la masa de agua en el lugar y en el momento de obtención de la muestra. La recolección de muestras de aguas es el primer paso de todo estudio de caracterización y de un medio y reviste gran importancia en la confiabilidad de los resultados de una investigación ya que, si las muestras son tomadas de una forma inadecuada y en un lugar no indicado, los resultados no serán confiables. 
+            <br>
+            De esta forma, los temas a tratar incluyen los conceptos fundamentales de muestreo, codificación, rotulación, cadena de custodia, procedimiento y protocolos de laboratorio al momento de tomar una muestra de agua.
+            <br>
+            <br>
+            Lo invito a ver el siguiente video de muestreo y medición.
+        </p>
+    </body>
+    <body>  
+        {% include 'video4.html' %}
+    </body>
+        <p style="text-align: justify;">
+            Responda inicialmente las siguientes preguntas de forma individual, después reúnanse en grupos de trabajo de 4 personas, consoliden la información y finalmente una persona del equipo sustentará ante el grupo de formación con moderación del instructor.
+        </p>
+        <p>Las preguntas son las siguientes:</p>
 
-</html>
-
-
-
-
-
-
-
-
-
-
-</html>
-    <!-- Botón en la parte inferior -->
-    <div class="button-container">
-        <a href="/T1_Trimestre" class="button">Ir a Trimestre 1 </a>
+        <div class="question-cards">
+            <div class="question-card">
+                <p>¿El agua que llega a su lugar de residencia la considera segura para tomar?</p>
+            </div>
+            <div class="question-card">
+                <p>¿Cómo cree que se garantiza que el agua que llega a su lugar de residencia sea segura para la salud humana?</p>
+            </div>
+            <div class="question-card">
+                <p>Defina el concepto de calidad de agua.</p>
+            </div>
+            <div class="question-card">
+                <p>¿Qué es agua potable?</p>
+            </div>
+            <div class="question-card">
+                <p>¿Conoce algún tipo de procedimiento que deba llevarse a cabo para establecer si el agua que llega a las viviendas es segura para la salud humana?</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

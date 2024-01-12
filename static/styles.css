@@ -346,6 +346,18 @@ z
   position: center; /* Necesario para que la línea esté posicionada correctamente */
 }
 
+.button:nth-child(3) {
+  background-color: #0066cc;
+  text-align: center;
+  position: center; /* Necesario para que la línea esté posicionada correctamente */
+}
+
+.button:nth-child(4) {
+  background-color: #0066cc;
+  text-align: center;
+  position: center; /* Necesario para que la línea esté posicionada correctamente */
+}
+
 
 /* Estilos para la línea */
 hr {
@@ -382,4 +394,12 @@ hr {
   transform: rotate(180deg); /* Rotación a 90 grados */
   transform-origin: bottom left; /* Cambio del origen de la rotación */
   font-size: 10px; /* Tamaño del texto */
+}
+
+.containertitle_1 {
+  text-align: center;
+}
+
+.containertitle_1 p {
+  margin: 0; /* Para quitar el espacio predeterminado alrededor del párrafo */
 }
