@@ -37,10 +37,10 @@ datos_PROYECTO = pd.read_excel('30122023 Arquitectura Curricular - Proyecto de F
 @app.route('/')
 def header():
     # Renderizar el encabezado y la introducción
-    with open('templates/header.html', 'r') as header_file:
+    with open('templates/header.html', 'r', encoding='utf-8-sig') as header_file:
         header_html = header_file.read()
 
-    with open('templates/introduccion.html', 'r') as intro_file:
+    with open('templates/introduccion.html', 'r', encoding='utf-8-sig') as intro_file:
         intro_html = intro_file.read()
 
     return render_template('header.html', header=header_html, intro=intro_html)
@@ -186,7 +186,7 @@ def ARQ_T1_REC_MUESTRAS():
 @app.route('/objetivos')
 def mostrar_objetivos():
     # Leer el contenido de objetivos.html
-    with open('templates/objetivos.html', 'r') as objetivos_file:
+    with open('templates/objetivos.html', 'r',  encoding='utf-8') as objetivos_file:
         objetivos_html = objetivos_file.read()
     
     return render_template('objetivos.html', objetivos=objetivos_html)
