@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 5px;
+            margin: 60px;
         }
 
         h1 {
@@ -57,14 +57,24 @@
         <h2 style="font-size: 100%; margin-bottom: 0; line-height: 0.5;"><b>PROCEDIMIENTO DE DESARROLLO CURRICULAR | ARQUITECTURA CURRICULAR - PROYECTO DE FORMACIÓN</b></h2>
         <h2 style="font-size: 100%; color: blue; margin-bottom: 0; line-height: 0.5;"><b>SUPERVISIÓN EN SISTEMAS DE AGUA Y SANEAMIENTO | 921200</b></h2>
         <!-- Agregué un párrafo vacío como separador -->
-        <p style="margin-bottom: 1;"></p>
+        <p style="margin-bottom: 0;"></p>
         <div>
-            <h4 style="font-size: 100%; margin-bottom: 20px;"><b> Implementación de un modelo de inteligencia artificial mediante el uso de redes neuronales multicapas (MLP) como alerta temprana de posible deserción de aprendices en condición de vulnerabilidad económica </b></h4>
+            <h1 style="font-size: 100%; margin-bottom: 20px;"><b> Implementación de un modelo de inteligencia artificial mediante el uso de redes neuronales multicapas (MLP) como alerta temprana de posible deserción de aprendices en condición de vulnerabilidad económica </b></h1>
         </div>    
         <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
         <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
-        
+        <hr>
+        <div class="button-container">
+          <a href="/" class="button"> PRESENTACIÓN </a>
+          <a href="/PROYECTO" class="button"> PROYECTO </a>
+          <a href="/FASES" class="button"> FASES </a>
+          <a href="/T1_Trimestre" class="button"> TRIMESTRE 1 </a>
+        </div>
+        <hr>
     </div>
+    </html>
+</body>
+</html>
 </body>
 
   <style>
@@ -652,37 +662,35 @@
     </select>
     </div>
 
-      <!-- Línea separadora -->
-      <hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
+<!-- Línea separadora -->
+<hr style="border-width: 4px; border-color: rgb(3, 29, 7); border-style: solid;">
 
-      <div class="button-container">
-        <a href="/resultado" class="button">Enviar Respuesta del formulario</a>
+<!-- Botón para enviar respuesta del formulario -->
+<div class="button-container">
+    <a href="/resultado" class="button">Enviar Respuesta del formulario</a>
+</div>
 
- <!-- Agregar el botón -->
- <style>
+<!-- Estilos para el botón -->
+<style>
     .my-button {
-      background-color: #4CAF50; /* Color de fondo */
-      color: white; /* Color del texto */
-      padding: 10px 20px; /* Espacio alrededor del contenido */
-      border: none; /* Sin borde */
-      text-align: center; /* Alineación del texto */
-      text-decoration: none; /* Sin subrayado de texto */
-      display: inline-block; /* Mostrar como elemento en línea */
-      font-size: 16px; /* Tamaño de fuente */
-      margin: 10px; /* Margen exterior */
-      cursor: pointer; /* Cambiar el cursor al pasar por encima */
-      border-radius: 5px; /* Radio de esquina */
+        background-color: #4CAF50; /* Color de fondo */
+        color: white; /* Color del texto */
+        padding: 10px 20px; /* Espacio alrededor del contenido */
+        border: none; /* Sin borde */
+        text-align: center; /* Alineación del texto */
+        text-decoration: none; /* Sin subrayado de texto */
+        display: inline-block; /* Mostrar como elemento en línea */
+        font-size: 16px; /* Tamaño de fuente */
+        margin: 10px; /* Margen exterior */
+        cursor: pointer; /* Cambiar el cursor al pasar por encima */
+        border-radius: 5px; /* Radio de esquina */
     }
-  </style>
+</style>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
-    <!-- Botón en la parte inferior -->
-    <div class="button-container">
-        <a href="/" class="button">Ir a Presentación Principal</a>
-    </div>
-</html>
+<!-- Enlaces a archivos CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles_button.css') }}"> <!-- Enlaza tu archivo CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='arrow-animation.css') }}"> <!-- Enlaza tu archivo de animación de flecha -->
+
+
 </body>
 </html>
-
-

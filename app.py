@@ -6,7 +6,6 @@ import csv
 import numpy as np
 import pickle
 import smtplib
-import json
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -181,16 +180,6 @@ def ARQ_T1_REC_MUESTRAS():
 ###############################################################################################
 ###############################################################################################
 
-
-
-@app.route('/objetivos')
-def mostrar_objetivos():
-    # Leer el contenido de objetivos.html
-    with open('templates/objetivos.html', 'r',  encoding='utf-8') as objetivos_file:
-        objetivos_html = objetivos_file.read()
-    
-    return render_template('objetivos.html', objetivos=objetivos_html)
-
 def load_weights_biases(filename):
     with open(filename, 'rb') as f:
         weights_biases = pickle.load(f)
@@ -201,6 +190,28 @@ filename = 'weights_biases_20_elu.pkl'
 
 # Cargar los pesos y sesgos
 W1, b1, W2, b2, W3, b3 = load_weights_biases(filename)
+
+
+def sigmoid(x):
+    """Función sigmoidal."""
+    return 1 / (1 + np.exp(-x))
+
+def sigmoid_derivative(x):
+    """Derivada de la función sigmoidal."""
+    sig = sigmoid(x)
+    return sig * (1 - sig)
+
+def relu(x):
+    '''
+    Función de activación ReLU.
+    '''
+    return np.maximum(0, x)
+
+def dRelu(x):
+    '''
+    Derivada de la función de activación ReLU.
+    '''
+    return np.where(x <= 0, 0, 1)
 
 def elu(self, x):
     '''
@@ -220,32 +231,25 @@ def selu(x, alpha=1.67326, scale=1.0507):
     condition = x > 0
     return scale * (alpha * (np.exp(x) - 1) * condition + x * (1 - condition))
 
+
+@app.route('/objetivos')
+def mostrar_objetivos():
+    # Leer el contenido de objetivos.html
+    with open('templates/objetivos.html', 'r',  encoding='utf-8') as objetivos_file:
+        objetivos_html = objetivos_file.read()
+    
+    return render_template('objetivos.html', objetivos=objetivos_html)
+
+
 # Hacer algo con los pesos y sesgos cargados
 # Por ejemplo, imprimirlos en la consola
-'''
-print("Pesos W1:")
-print(W1)
-print("Sesgos b1:")
-print(b1)
-print("Pesos W2:")
-print(W2)
-print("Sesgos b2:")
-print(b2)
-print("Pesos W3:")
-print(W3)
-print("Sesgos b3:")
-print(b3)
-'''
-
-
-
 @app.route('/formulario')
 def formulario():
     return render_template('formulario_5.html')
 
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
-    # Obtener los datos_TIME del formulario
+    # Obtener los datos del formulario
     nombre = request.form['nombre']
     tipo_identificacion = request.form['tipoIdentificacion']
     numero = request.form['numero']
@@ -310,44 +314,35 @@ def submit_form():
         # Mostrar un mensaje de error en el formulario
         return render_template('formulario_5.html', error_message='Por favor, ingrese números válidos en las preguntas.')
     
+    def softmax(x):
+    #Implementación de la función Softmax
+        e_x = np.exp(x - np.max(x))
+        return e_x / np.sum(e_x, axis=1, keepdims=True)
+    
     z1 = np.dot(preguntas, W1) + b1
-    z2 = np.dot(z1, W2) + b2
-    z3 = np.dot(z2, W3) + b3
+    a1 = np.tanh(z1)
+    z2 = np.dot(a1, W2) + b2
+    a2 = selu(z2)
+    z3 = np.dot(a2, W3) + b3
     prediccion = 1 / (1 + np.exp(-z3))
     # Imprimir la predicción en la consola
     print("La predicción es:", prediccion)
 
-    # Obtener el género del estudiante del formulario
-    genero_estudiante = pregunta3
 
-
-    # Definir el pronombre basado en el género del estudiante
-    if genero_estudiante == "Masculino":
-        pronombre = "el"
-    elif genero_estudiante == "Femenino":
-        pronombre = "la"
-    else:
-        pronombre = "el o la"
-
-    # Modificar la respuesta de la predicción basada en el género del estudiante
+# Modificar la respuesta de la predicción
     if prediccion[0][0] > 0.5:
-        resultado = f"Según el modelo neuronal predice que, ...en prueba"
+        resultado = f'Aprendiz {nombre} tiene probabilidad de GRADUARSE en el programa de formación.'
     else:
-        resultado = f"Según el modelo neuronal, predice que, ...en prueba"
+        resultado = f'Aprendiz {nombre} tiene probabilidad de DESERCION en el programa de formación.'
+
+
+    # Mostrar la predicción en la consola
+    print("Predicción:", prediccion)
 
     # Redirigir al usuario a la ruta '/resultado' con el parámetro 'resultado'
     return redirect('/resultado?resultado=' + resultado + '&prediccion=' + str(prediccion[0][0]))
 
-    '''
-    # Modificar la respuesta de la predicción basada en el género del estudiante
-    if prediccion[0][0] > 0.5:
-        resultado = f"Según el modelo neuronal predice que, {nombre} tiene probabilidad de DESERCION en el programa de formación."
-    else:
-        resultado = f"Según el modelo neuronal, predice que, {nombre} tiene probabilidad de GRADUARSE en el programa de formación."
-    '''
 
-
-    
 @app.route('/resultado')
 def resultado():
     # Obtener el resultado y la prediccion del parámetro de consulta 'resultado' y 'prediccion'
@@ -357,7 +352,5 @@ def resultado():
     # Devolver una respuesta al usuario
     return render_template('resultado.html', resultado=resultado, prediccion=prediccion)
 
-
-
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5005)
+    app.run(debug=True, host='0.0.0.0', port=5002)
